@@ -51,7 +51,7 @@ for r,d,f in os.walk("../../dude_library_simple/"):
 
 		#now read through all schrodinger ligand placements
 		#check if there is a corresponding -pose.mol2 file
-		if os.path.isfile("../../schrodinger_glide/binding_poses" + dire + "-poses.mol2"):
+		if os.path.isfile("../../schrodinger_glide/binding_poses/" + dire + "-poses.mol2"):
 			#read the file
 			#count the number of poses collected
 			#print all rmsds to a unique file for the system, and keep + note the best rmsd in the dictionary to compile all best
