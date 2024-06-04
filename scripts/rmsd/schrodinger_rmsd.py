@@ -41,7 +41,7 @@ for r,d,f in os.walk("../../dude_library_simple/"):
 
 			#set atom coordinates for atom id in native
 			if read:
-				native_atoms[line.split(1)] = [float(line.split(2)), float(line.split(3)), float(line.split(4))]
+				native_atoms[line.split()[1]] = [float(line.split()[2]), float(line.split()[3]), float(line.split()[4])]
 
 			#control reading at end of loop
 			if "@<TRIPOS>ATOM" in line:
@@ -87,6 +87,7 @@ for r,d,f in os.walk("../../dude_library_simple/"):
 					read = False
 					#derive the rmsd (distance sum/atom count)
 					rmsd = distance_sum/atom_count
+					print(rmsd)
 					#write the rmsd and pose numebr to the write file
 					rmsd_file.write(str(pose_counter) + "," + str(rmsd) + "\n")
 					#determine if this is the best rmsd so far
@@ -101,9 +102,9 @@ for r,d,f in os.walk("../../dude_library_simple/"):
 				if read:
 
 					#get difference of x,y,z coordinates and square
-					x = (native_atoms[line.split()[1]][0] - float(line.split(2))) ** 2
-					y = (native_atoms[line.split()[1]][1] - float(line.split(3))) ** 2
-					z = (native_atoms[line.split()[1]][2] - float(line.split(4))) ** 2
+					x = (native_atoms[line.split()[1]][0] - float(line.split()[2])) ** 2
+					y = (native_atoms[line.split()[1]][1] - float(line.split()[3])) ** 2
+					z = (native_atoms[line.split()[1]][2] - float(line.split()[4])) ** 2
 
 					#take sum of xyz square distances and get square root
 					distance = (x + y + z) ** 0.5
