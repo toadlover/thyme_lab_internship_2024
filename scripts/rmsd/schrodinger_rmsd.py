@@ -57,7 +57,7 @@ for r,d,f in os.walk("../../dude_library_simple/"):
 			#print all rmsds to a unique file for the system, and keep + note the best rmsd in the dictionary to compile all best
 			rmsd_file = open("../../schrodinger_glide/binding_poses/rmsd/" + dire + "_rmsd.csv", "w")
 
-			pose_file = open("../../schrodinger_glide/binding_poses" + dire + "-poses.mol2", "r")
+			pose_file = open("../../schrodinger_glide/binding_poses/" + dire + "-poses.mol2", "r")
 
 			#pose counter
 			pose_counter = 0
