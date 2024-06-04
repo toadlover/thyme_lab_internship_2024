@@ -134,6 +134,8 @@ best_rmsd_list = []
 for key in best_rmsd_dict.keys():
 	best_rmsd_list.append(str(key) + "," + best_rmsd_dict[key])
 
+print(best_rmsd_list)
+
 #sort the list
 best_rmsd_list = best_rmsd_list.sort()
 
