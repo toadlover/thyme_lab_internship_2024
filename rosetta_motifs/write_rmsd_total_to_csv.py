@@ -35,6 +35,8 @@ for line in read_file.readlines():
 temp_list = sorted(system_list, key=lambda x: x[0])
 system_list = temp_list
 
+write_file.write("system,rmsd,placement_pdb\n")
+
 #write the system list
 for item in system_list:
 	write_file.write(item[0] + "," + item[1] + "," + item[2] + "\n")
