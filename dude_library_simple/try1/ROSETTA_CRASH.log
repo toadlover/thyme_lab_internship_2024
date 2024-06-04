@@ -1,0 +1,233 @@
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2020.22.post.dev+743.LigandMotifLibraryAnalysis.43a513f
+[COMMIT_DATE]: 2021-06-16T15:21:04
+[APPLICATION]: /data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/bin/mol2_to_params.linuxgccrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: GNU/Linux
+[COMPILER]: GCC version "4.8.5 20150623 (Red Hat 4.8.5-39)"
+[STDLIB]: libstdc++ version 20150623
+[START_OPTIONS]
+ -motifs:mol2_file=crystal_ligand.mol2 -motifs:params_custom_file_name=d_lig.params -motifs:ligand_full_name= + d + "_lig" +  -motifs:write_param_to_pdb
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.6.so(backtrace_string(int)+0x39) [0x2aaab4f27539]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libutility.so(utility::excn::Exception::Exception(char const*, int, std::string const&)+0x51) [0x2aaaba1c4491]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libutility.so(utility::exit(char const*, int, std::string const&, int)+0xa5) [0x2aaaba18c5d5]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.2.so(core::chemical::ResidueType::perform_checks() const+0x891) [0x2aaab8b4ec91]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.2.so(core::chemical::ResidueType::make(core::chemical::MutableResidueType const&)+0xb0) [0x2aaab8b5d3e0]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/bin/mol2_to_params.linuxgccrelease() [0x40f838]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x2aaabc26e555]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/bin/mol2_to_params.linuxgccrelease() [0x411e2e]
+
+[END_BACKTRACE]
+
+[FILE]: src/core/chemical/ResidueType.cc
+[LINE]: 2135
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: One or more internal errors have occurred in residue type setup for + (cry, Z)
+In chi #8, the base of the third atom ( C22) is  N3 , rather than the second atom of the chi ( C27)
+In chi #8, the base of the fourth atom ( C19) is  C11, rather than the third atom of the chi ( C22)
+
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2020.22.post.dev+852.LigandMotifLibraryAnalysis.752e329
+[COMMIT_DATE]: 2021-06-18T22:36:35
+[APPLICATION]: /data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/bin/mol2_to_params.linuxgccrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: GNU/Linux
+[COMPILER]: GCC version "4.8.5 20150623 (Red Hat 4.8.5-39)"
+[STDLIB]: libstdc++ version 20150623
+[START_OPTIONS]
+ -motifs:mol2_file=crystal_ligand.mol2 -motifs:params_custom_file_name=d_lig.params -motifs:ligand_full_name= + d + "_lig" +  -motifs:write_param_to_pdb
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.6.so(backtrace_string(int)+0x39) [0x2aaab4e79d79]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libutility.so(utility::excn::Exception::Exception(char const*, int, std::string const&)+0x51) [0x2aaaba24fda1]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libutility.so(utility::exit(char const*, int, std::string const&, int)+0xa5) [0x2aaaba2f4f15]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.2.so(core::chemical::ResidueType::perform_checks() const+0x891) [0x2aaab8ccf4a1]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.2.so(core::chemical::ResidueType::make(core::chemical::MutableResidueType const&)+0xb0) [0x2aaab8cddbf0]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/bin/mol2_to_params.linuxgccrelease() [0x40f838]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x2aaabc23c555]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/bin/mol2_to_params.linuxgccrelease() [0x411e2e]
+
+[END_BACKTRACE]
+
+[FILE]: src/core/chemical/ResidueType.cc
+[LINE]: 2135
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: One or more internal errors have occurred in residue type setup for + (cry, Z)
+In chi #8, the base of the third atom ( C22) is  N3 , rather than the second atom of the chi ( C27)
+In chi #8, the base of the fourth atom ( C19) is  C11, rather than the third atom of the chi ( C22)
+
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2020.22.post.dev+852.LigandMotifLibraryAnalysis.752e329
+[COMMIT_DATE]: 2021-06-18T22:36:35
+[APPLICATION]: /data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/bin/mol2_to_params.linuxgccrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: GNU/Linux
+[COMPILER]: GCC version "4.8.5 20150623 (Red Hat 4.8.5-39)"
+[STDLIB]: libstdc++ version 20150623
+[START_OPTIONS]
+ -motifs:mol2_file=crystal_ligand.mol2 -motifs:params_custom_file_name=try1_lig.params -motifs:ligand_full_name= + d + "_lig" +  -motifs:write_param_to_pdb
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.6.so(backtrace_string(int)+0x39) [0x2aaab4e79d79]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libutility.so(utility::excn::Exception::Exception(char const*, int, std::string const&)+0x51) [0x2aaaba24fda1]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libutility.so(utility::exit(char const*, int, std::string const&, int)+0xa5) [0x2aaaba2f4f15]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.2.so(core::chemical::ResidueType::perform_checks() const+0x891) [0x2aaab8ccf4a1]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.2.so(core::chemical::ResidueType::make(core::chemical::MutableResidueType const&)+0xb0) [0x2aaab8cddbf0]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/bin/mol2_to_params.linuxgccrelease() [0x40f838]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x2aaabc23c555]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/bin/mol2_to_params.linuxgccrelease() [0x411e2e]
+
+[END_BACKTRACE]
+
+[FILE]: src/core/chemical/ResidueType.cc
+[LINE]: 2135
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: One or more internal errors have occurred in residue type setup for + (cry, Z)
+In chi #8, the base of the third atom ( C22) is  N3 , rather than the second atom of the chi ( C27)
+In chi #8, the base of the fourth atom ( C19) is  C11, rather than the third atom of the chi ( C22)
+
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2020.22.post.dev+852.LigandMotifLibraryAnalysis.752e329
+[COMMIT_DATE]: 2021-06-18T22:36:35
+[APPLICATION]: /data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/bin/mol2_to_params.linuxgccrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: GNU/Linux
+[COMPILER]: GCC version "4.8.5 20150623 (Red Hat 4.8.5-39)"
+[STDLIB]: libstdc++ version 20150623
+[START_OPTIONS]
+ -motifs:mol2_file=crystal_ligand.mol2 -motifs:params_custom_file_name=try1_lig.params -motifs:ligand_full_name= + d + "_lig" +  -motifs:write_param_to_pdb
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.6.so(backtrace_string(int)+0x39) [0x2aaab4e79d79]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libutility.so(utility::excn::Exception::Exception(char const*, int, std::string const&)+0x51) [0x2aaaba24fda1]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libutility.so(utility::exit(char const*, int, std::string const&, int)+0xa5) [0x2aaaba2f4f15]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.2.so(core::chemical::ResidueType::perform_checks() const+0x891) [0x2aaab8ccf4a1]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.2.so(core::chemical::ResidueType::make(core::chemical::MutableResidueType const&)+0xb0) [0x2aaab8cddbf0]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/bin/mol2_to_params.linuxgccrelease() [0x40f838]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x2aaabc23c555]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/bin/mol2_to_params.linuxgccrelease() [0x411e2e]
+
+[END_BACKTRACE]
+
+[FILE]: src/core/chemical/ResidueType.cc
+[LINE]: 2135
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: One or more internal errors have occurred in residue type setup for + (cry, Z)
+In chi #8, the base of the third atom ( C22) is  N3 , rather than the second atom of the chi ( C27)
+In chi #8, the base of the fourth atom ( C19) is  C11, rather than the third atom of the chi ( C22)
+
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2020.22.post.dev+852.LigandMotifLibraryAnalysis.752e329
+[COMMIT_DATE]: 2021-06-18T22:36:35
+[APPLICATION]: /data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/bin/neighbor.linuxgccrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: GNU/Linux
+[COMPILER]: GCC version "4.8.5 20150623 (Red Hat 4.8.5-39)"
+[STDLIB]: libstdc++ version 20150623
+[START_OPTIONS]
+ -in:file:l=list.txt -motifs:params_directory_path=test_params/
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.6.so(backtrace_string(int)+0x39) [0x2aaab4e79d79]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libutility.so(utility::excn::Exception::Exception(char const*, int, std::string const&)+0x51) [0x2aaaba24fda1]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libutility.so(utility::exit(char const*, int, std::string const&, int)+0xa5) [0x2aaaba2f4f15]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.2.so(core::chemical::ResidueType::perform_checks() const+0x891) [0x2aaab8ccf4a1]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.2.so(core::chemical::ResidueType::make(core::chemical::MutableResidueType const&)+0xb0) [0x2aaab8cddbf0]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.2.so(core::chemical::ResidueTypeSet::add_base_residue_type(std::shared_ptr<core::chemical::MutableResidueType>)+0xb5) [0x2aaab8d18d85]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.2.so(core::chemical::GlobalResidueTypeSet::init_restypes_from_database()+0x8cd) [0x2aaab8bdf4bd]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/build/src/release/linux/3.10/64/x86/gcc/8.2/default/libcore.2.so(core::chemical::GlobalResidueTypeSet::GlobalResidueTypeSet(std::string const&, std::string const&)+0x199) [0x2aaab8bebaa9]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/bin/neighbor.linuxgccrelease() [0x409d16]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x2aaabc23c555]
+/data/project/thymelab/running_Rosetta/ari_work/Rosetta_Code_copy/main/source/bin/neighbor.linuxgccrelease() [0x40c1b7]
+
+[END_BACKTRACE]
+
+[FILE]: src/core/chemical/ResidueType.cc
+[LINE]: 2135
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: One or more internal errors have occurred in residue type setup for + (cry, Z)
+In chi #8, the base of the third atom ( C22) is  N3 , rather than the second atom of the chi ( C27)
+In chi #8, the base of the fourth atom ( C19) is  C11, rather than the third atom of the chi ( C22)
+
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
