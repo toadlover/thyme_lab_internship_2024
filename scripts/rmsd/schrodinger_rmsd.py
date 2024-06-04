@@ -137,11 +137,11 @@ for key in best_rmsd_dict.keys():
 print(best_rmsd_list)
 
 #sort the list
-best_rmsd_list_sorted = best_rmsd_list.sort()
+#best_rmsd_list_sorted = best_rmsd_list.sort()
 
 rmsd_file = open("../../schrodinger_glide/binding_poses/rmsd/glide_best_rmsd.csv", "w")
 
-for lig in best_rmsd_list_sorted:
+for lig in sorted(best_rmsd_list):
 	rmsd_file.write(lig + "\n")
 
 rmsd_file.close()
