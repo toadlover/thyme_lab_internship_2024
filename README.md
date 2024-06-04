@@ -11,6 +11,10 @@ Things to go this repository (non-exhaustive):
 
 -Graphics (and corresponding Jupyter notebooks/scripts/excel files) of data for publishing
 
+-All ligand files used in attempting to replicate Enamine papers
+
+
+
 
 Things to NEVER go in this repository (because you can go back in the repo history and get these at any point):
 
