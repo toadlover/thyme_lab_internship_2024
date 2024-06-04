@@ -87,6 +87,7 @@ for r,d,f in os.walk("../../dude_library_simple/"):
 					read = False
 					#derive the rmsd (distance sum/atom count)
 					rmsd = distance_sum/atom_count
+					print(rmsd)
 					#write the rmsd and pose numebr to the write file
 					rmsd_file.write(str(pose_counter) + "," + str(rmsd) + "\n")
 					#determine if this is the best rmsd so far
