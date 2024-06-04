@@ -134,12 +134,15 @@ best_rmsd_list = []
 for key in best_rmsd_dict.keys():
 	best_rmsd_list.append(str(key) + "," + best_rmsd_dict[key])
 
-print(best_rmsd_list)
+#print(best_rmsd_list)
 
 #sort the list
 #best_rmsd_list_sorted = best_rmsd_list.sort()
 
-rmsd_file = open("../../schrodinger_glide/binding_poses/rmsd/glide_best_rmsd.csv", "w")
+rmsd_file = open("../../schrodinger_glide/glide_best_rmsd.csv", "w")
+
+#header line for output file
+rmsd_file.write("system_name,best_rmsd,best_rmsd_pose,total_poses\n")
 
 for lig in sorted(best_rmsd_list):
 	rmsd_file.write(lig + "\n")
