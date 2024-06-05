@@ -1,0 +1,35 @@
+(This is with the exception of 4S0V, as that was a separate test case, which was also used for learning how to use AutoDock)
+
+1. Pull ligand and receptor from benchmark set. Receptor found in /data/project/thymelab/running_Rosetta/ari_work/REU_shared_space/benchmark/files/all/(name)/ as (name).pdb. Ligand found in /data/project/thymelab/running_Rosetta/ari_work/REU_shared_space/benchmark/files/ as (name)-lig.pdb.
+2. Move ligand and receptor to new folder with the receptor name in. Found on PC under "\Users\Ari\Box Sync\Thyme Lab\AutoDock Vina Benchmarking\(name)"
+3. Use OpenBabel GUI to make PDBQT files of receptor and ligand (PDB -> PDBQT). Rename ligand to "ligand.pdbqt" and receptor to "receptor.pdbqt". In conversion options, select the following:
+
+"Preserve atom incides from input file"
+"Preserve hydrogens"
+"Preserve atom names"
+
+Exclusively for the receptor, also select "Output as rigid molecule". Receptor MUST be rigid and ligand CAN NOT be rigid.
+
+4. Open the ligand PDB and note coordinates of a central atom for the AutoDock run (needed to figure out where autoDock should be trying to place the ligand).
+
+5. Creage config args file as "args.txt". Config file contains parameters specific to the run. Example as follows:
+
+=============================================================================================
+receptor =  "\Users\Ari\Box Sync\Thyme Lab\AutoDock Vina Benchmarking\(name)\receptor.pdbqt"
+ligand = "\Users\Ari\Box Sync\Thyme Lab\AutoDock Vina Benchmarking\(name)\ligand.pdbqt" 
+
+center_x =  -8
+center_y =  -6
+center_z = 55
+
+size_x = 20
+size_y = 20
+size_z = 20
+
+out = "\Users\Ari\Box Sync\Thyme Lab\AutoDock Vina Benchmarking\(name)\output.pdbqt"
+==============================================================================================
+
+Can likely keep the same value for size_* as 20, since that seems to provide a large enough volume for investigating.
+
+6. Run AutoDock Vina. On my computer, run in Windows CMD as:
+"\Program Files (x86)\The Scripps Research Institute\Vina\vina.exe" --config "\Users\Ari\Box Sync\Thyme Lab\AutoDock Vina Benchmarking\(name)\args.txt"
