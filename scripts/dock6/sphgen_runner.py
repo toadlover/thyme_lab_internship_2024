@@ -8,6 +8,6 @@ for r,d,f in os.walk(os.getcwd()):
         # testing w/ aa2ar
         if dir == "aa2ar":
             os.chdir(dir)
-            # os.system("../../../../dock6/bin/ sphgen -i INSPH -o OUTSPH")
-            os.system("sphgen -i INSPH -o OUTSPH")
+            os.system("../../../../dock6/bin/sphgen sphgen -i INSPH -o OUTSPH")
+            # os.system("sphgen -i INSPH -o OUTSPH")
             
