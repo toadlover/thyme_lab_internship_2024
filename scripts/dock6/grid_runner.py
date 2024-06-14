@@ -13,6 +13,7 @@ path_09 = "082-091.txt"
 path_10 = "092-102.txt"
 
 target_list = sys.argv[1]
+print(target_list)
 
 system_list = []
 
