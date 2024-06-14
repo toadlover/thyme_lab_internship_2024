@@ -1,0 +1,48 @@
+
+
+        UUUUUUU    CCCCCCCC    SSSSSSS/  FFFFFFFFF  
+      UU/    UU/  CC/    CC/     SS/     FF/    FF/ 
+     UU/         CCCCCCCC/      SS/     FF/    FF/  
+    UU/  UUUU/  CC/ CC\        SS/     FF/    FF/   
+   UU/    UU/  CC/   CC\      SS/     FF/    FF/    
+   UUUUUUU/   CC/     CC\  SSSSSS/  FFFFFFFFF/      
+
+
+University of California at San Francisco, DOCK 4.0.1
+
+__________________Job_Information_________________
+launch_time                    Fri Jun 14 16:05:56 2024
+host_name                      unknown
+memory_limit                   0
+working_directory              /home/laura.lee5-umw/thyme_lab_internship_2024/dock6/input_files/dpp4
+user_name                      laura.lee5-umw
+
+________________General_Parameters________________
+compute_grids                  yes
+grid_spacing                   0.4
+output_molecule                no
+
+________________Scoring_Parameters________________
+contact_score                  no
+energy_score                   yes
+energy_cutoff_distance         9999
+atom_model                     a
+attractive_exponent            6
+repulsive_exponent             9
+distance_dielectric            yes
+dielectric_factor              4
+allow_non_integral_charges     yes
+bump_filter                    yes
+bump_overlap                   0.75
+
+____________________File_Input____________________
+receptor_file                  dpp4.mol2
+box_file                       dpp4.box.pdb
+vdw_definition_file            /home/laura.lee5-umw/dock6/parameters/vdw_AMBER_parm99.defn
+
+____________________File_Output___________________
+score_grid_prefix              grid
+
+
+
+Reading in coordinates of receptor.
