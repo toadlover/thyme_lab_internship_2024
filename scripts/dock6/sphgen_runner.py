@@ -9,7 +9,7 @@ for r,d,f in os.walk(os.getcwd()):
             for file in f_2:
                 if ".sph" in file:
                     done = True
-            if done = False:
+            if done == False:
                 print(f"{dir} is free")
         
                 
