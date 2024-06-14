@@ -13,7 +13,7 @@ path_09 = "082-091.txt"
 path_10 = "092-102.txt"
 
 target_list = sys.argv[1]
-print(target_list)
+
 
 system_list = []
 
@@ -24,6 +24,7 @@ if target_list == 1:
 
 if target_list == 2:
     with open(path_02, 'r') as file:
+        print(file)
         for system in file.split():
             system_list.append(system)
 
