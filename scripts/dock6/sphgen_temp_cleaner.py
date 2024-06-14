@@ -8,4 +8,5 @@ for r,d,f in os.walk(os.getcwd()):
             for file in f_2:
                 if "temp" in file:
                     print(file)
+                    os.system(f"rm {file}")
         os.chdir("..")
