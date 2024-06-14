@@ -12,7 +12,7 @@ path_08 = "072-081.txt"
 path_09 = "082-091.txt"
 path_10 = "092-102.txt"
 
-target_list = sys.argv[0]
+target_list = sys.argv[1]
 
 system_list = []
 
