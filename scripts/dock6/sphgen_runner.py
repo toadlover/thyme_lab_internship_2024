@@ -14,8 +14,14 @@ for r,d,f in os.walk(os.getcwd()):
                     outsph_done = True
             if sph_done == True and outsph_done == False:
                 print(f"{dir} needs OUTSPH")
+                os.system(f"rm {dir}.sph")
+                os.system("../../../../dock6/bin/sphgen sphgen -i INSPH -o OUTSPH")
+                print(f"{dir} fixed")
             if sph_done == False and outsph_done == True:
                 print(f"{dir} needs .sph")
+                os.system(f"rm OUTSPH")
+                os.system("../../../../dock6/bin/sphgen sphgen -i INSPH -o OUTSPH")
+                print(f"{dir} fixed")
         
                 
         # os.system("../../../../dock6/bin/sphgen sphgen -i INSPH -o OUTSPH")
