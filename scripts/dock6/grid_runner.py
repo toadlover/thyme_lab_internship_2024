@@ -22,9 +22,10 @@ if target_list == 1:
         for system in file:
             system_list.append(system.strip("\n"))
 
-if target_list == 2:
+elif target_list == 2:
     with open(path_02, 'r') as file:
         for system in file:
+            print(system)
             system_list.append(system.strip("\n"))
 
 print(system_list)
