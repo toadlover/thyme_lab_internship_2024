@@ -19,14 +19,13 @@ system_list = []
 
 if target_list == 1:
     with open(path_01, 'r') as file:
-        for system in file.split():
-            system_list.append(system)
+        for system in file:
+            system_list.append(system.strip("\n"))
 
 if target_list == 2:
     with open(path_02, 'r') as file:
-        print(file)
-        for system in file.split():
-            system_list.append(system)
+        for system in file:
+            system_list.append(system.strip("\n"))
 
 print(system_list)
 
