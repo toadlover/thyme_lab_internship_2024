@@ -18,12 +18,12 @@ system_list = []
 
 if target_list == 1:
     with open(path_01, 'r') as file:
-        for system in file.splitlines():
+        for system in file:
             system_list.append(system)
 
 if target_list == 2:
     with open(path_02, 'r') as file:
-        for system in file.splitlines():
+        for system in file:
             system_list.append(system)
 
 print(system_list)
