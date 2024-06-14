@@ -27,18 +27,55 @@ elif target_list == 2:
         for system in file:
             system_list.append(system.strip("\n"))
 
-print(system_list)
+elif target_list == 3:
+    with open(path_03, 'r') as file:
+        for system in file:
+            system_list.append(system.strip("\n"))
+
+elif target_list == 4:
+    with open(path_04, 'r') as file:
+        for system in file:
+            system_list.append(system.strip("\n"))
+
+elif target_list == 5:
+    with open(path_05, 'r') as file:
+        for system in file:
+            system_list.append(system.strip("\n"))
+
+elif target_list == 6:
+    with open(path_06, 'r') as file:
+        for system in file:
+            system_list.append(system.strip("\n"))
+
+elif target_list == 7:
+    with open(path_07, 'r') as file:
+        for system in file:
+            system_list.append(system.strip("\n"))
+
+elif target_list == 8:
+    with open(path_08, 'r') as file:
+        for system in file:
+            system_list.append(system.strip("\n"))
+
+elif target_list == 9:
+    with open(path_09, 'r') as file:
+        for system in file:
+            system_list.append(system.strip("\n"))
+
+elif target_list == 10:
+    with open(path_10, 'r') as file:
+        for system in file:
+            system_list.append(system.strip("\n"))
 
 
-
-
-'''for r,d,f in os.walk(os.getcwd()):
+for r,d,f in os.walk(os.getcwd()):
     for dir in d:
-        if dir == "aa2ar":
+        if dir in system_list:
+            print(f"Working on {dir}...")
             os.chdir(dir)
             os.system("../../../../dock6/bin/grid -i grid.in -o gridinfo.out")
+            print(f"{dir} done!")
 
-        os.chdir("..")'''
 
 
         
