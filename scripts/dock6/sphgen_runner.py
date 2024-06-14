@@ -22,6 +22,9 @@ for r,d,f in os.walk(os.getcwd()):
                 os.system(f"rm OUTSPH")
                 os.system("../../../../dock6/bin/sphgen sphgen -i INSPH -o OUTSPH")
                 print(f"{dir} fixed")
+            if sph_done == False and outsph_done == False:
+                os.system("../../../../dock6/bin/sphgen sphgen -i INSPH -o OUTSPH")
+                print(f"{dir} completed!")
         
                 
         # os.system("../../../../dock6/bin/sphgen sphgen -i INSPH -o OUTSPH")
