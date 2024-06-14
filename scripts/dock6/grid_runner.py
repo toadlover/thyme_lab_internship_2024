@@ -75,6 +75,7 @@ for r,d,f in os.walk(os.getcwd()):
             os.chdir(dir)
             os.system("../../../../dock6/bin/grid -i grid.in -o gridinfo.out")
             print(f"{dir} done!")
+            os.chdir("..")
 
 
 
