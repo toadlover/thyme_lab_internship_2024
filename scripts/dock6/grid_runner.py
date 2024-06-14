@@ -12,7 +12,7 @@ path_08 = "072-081.txt"
 path_09 = "082-091.txt"
 path_10 = "092-102.txt"
 
-target_list = sys.argv[1]
+target_list = int(sys.argv[1])
 
 
 system_list = []
@@ -25,7 +25,6 @@ if target_list == 1:
 elif target_list == 2:
     with open(path_02, 'r') as file:
         for system in file:
-            print(system)
             system_list.append(system.strip("\n"))
 
 print(system_list)
