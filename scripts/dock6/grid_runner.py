@@ -16,12 +16,19 @@ target_list = sys.argv[0]
 
 system_list = []
 
-if target_list = 1:
+if target_list == 1:
     with open(path_01, 'r') as file:
         for system in file.splitlines():
             system_list.append(system)
 
-    print(system_list)
+if target_list == 2:
+    with open(path_02, 'r') as file:
+        for system in file.splitlines():
+            system_list.append(system)
+
+print(system_list)
+
+
 
 
 '''for r,d,f in os.walk(os.getcwd()):
