@@ -1,3 +1,36 @@
+Tasks for Raheel to do in Rosetta:
+
+
+
+Move copy of paper data from Google Drive to GitHub repo.
+
+I made a new location in the repo for this: 
+
+/thyme_lab_internship_2024/rosetta_recovery_of_enamine_papers
+
+
+
+I uploaded what was present (it is incomplete) for Synthon-based_ligand_discovery_in_virtual_libraries_of_over_11_billion_compounds that was on drive
+
+Convert the names of all folders so that they do not have spaces in their names on the repo (spaces are annoying to deal with when calling for the directories or their files)
+
+After running Conformator on ligand sdf file, write a script that extracts each conformer into its own file (params conversion requires this). Additionally, the file from Conformator may lack a name for the molecule (first line of the molecule data, if it is blank, there needs to be a name put there). If this is the case, need to either manually or script the ligand name (Enamine ID) with a unique numerical identifier (i.e. add _0, _1, etc. to end) to this line.
+
+
+
+Note, in sdf format, the end of a molecule's data ends with a line that reads $$$$. If there are more molecules in the file, the next one follows immediately after.
+
+
+
+Run molfile_to_params.py on all single conformer files that Raheel made.
+
+/pi/summer.thyme-umw/2024_intern_lab_space/rosetta/source/scripts/python/public/molfile_to_params.py
+
+
 Example command for running molfile_to_params.py to convert a single conformer sdf to Rosetta params:
 python /pi/summer.thyme-umw/2024_intern_lab_space/rosetta/source/scripts/python/public/molfile_to_params.py Z4121492004_0.sdf -n Z4121492004_0 --keep-names --long-names --clobber --no-pdb
 python path_to_script conformer_sdf -n unique_name_of_conformer --keep-names --long-names --clobber --no-pdb
+
+Generate Rosetta argument files for discovery for each system (Ari is working on creating an example)
+
+Create test_params directory that has the single conformer params
