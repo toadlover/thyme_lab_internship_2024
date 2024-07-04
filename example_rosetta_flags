@@ -1,0 +1,19 @@
+#flags to keep constant:
+
+#use constant seed for operations that used randomness
+-constant_seed 1
+#motifs list file, edit this to include path if necessary
+-motif_filename FINAL_motifs_list_filtered_2_3_2023.motifs
+#constraint relax flag
+-constrain_relax_to_start_coords
+#keep all outputted pdb files
+-best_pdbs_to_keep = 0
+
+#flags to change:
+
+#pdb file (with path if necessary)
+-s 7l1u_receptor_only.pdb
+#test_params directory (with path if necessary, must end with slash) that contains all params files, residue_types.txt (lists all params),  exclude_pdb_component_list.txt (can be empty, but must exist) and patches.txt (can be empty, but must exist)
+-params_directory_path test_params/
+#residue index to use as anchor residue for discovery; can include a comma-separated list with no spaces for multiple indices (i.e. 86,134,257)
+-protein_discovery_locus 86
