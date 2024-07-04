@@ -3,11 +3,14 @@
 #use constant seed for operations that used randomness
 -constant_seed 1
 #motifs list file, edit this to include path if necessary
--motif_filename FINAL_motifs_list_filtered_2_3_2023.motifs
+#-motif_filename FINAL_motifs_list_filtered_2_3_2023.motifs
+-motif_filename /pi/summer.thyme-umw/2024_intern_lab_space/FINAL_motifs_list_filtered_2_3_2023.motifs
 #constraint relax flag
 -constrain_relax_to_start_coords
 #keep all outputted pdb files
 -best_pdbs_to_keep = 0
+#we want ddg to be at least below 0
+-ddg_cutoff = 0
 
 #flags to change:
 
