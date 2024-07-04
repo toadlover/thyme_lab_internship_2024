@@ -1,0 +1,14 @@
+Test params requires 3 text files to be present, which are exclude_pdb_component_list.txt, patches.txt, and residue_types.txt.
+For our purposes, exclude_pdb_component_list.txt and patches.txt can be empty, but they must exist in the test_params directory.
+The residue_types.txt file contains information on the atom types of the ligands, and lists the ligand params files that are to be used for discovery. The ligand param files are called by their location (no path needed if the files are in test_params, but you do need paths if they are located elsewhere).
+The residue_types.txt file should always start like:
+## the atom_type_set and mm-atom_type_set to be used for the subsequent parameter
+TYPE_SET_MODE full_atom
+ATOM_TYPE_SET fa_standard
+ELEMENT_SET default
+MM_ATOM_TYPE_SET fa_standard
+ORBITAL_TYPE_SET fa_standard
+## Test params files
+
+The contents should then be followed with a single params file on each subsequent line.
+
