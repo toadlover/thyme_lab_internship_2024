@@ -22,13 +22,13 @@ Note: Internal energy only includes repulsive VDW for growth and/or minimization
 
 Molecule Library Input Parameters
 ------------------------------------------------------------------------------------------
-ligand_atom_file                                             inha.mol2
+ligand_atom_file                                             crystal_ligand.mol2
 limit_max_ligands                                            no
 skip_molecule                                                no
 read_mol_solvation                                           no
 calculate_rmsd                                               yes
 use_rmsd_reference_mol                                       yes
-rmsd_reference_filename                                      inha.mol2
+rmsd_reference_filename                                      crystal_ligand.mol2
 
 Database Filter Parameters
 ------------------------------------------------------------------------------------------
@@ -123,30 +123,27 @@ write_orientations                                           no
 num_scored_conformers                                        1
 rank_ligands                                                 no
 ------------------------------------------------------------------------------------------
-
-Warning: parameter SASA_score_secondary has not been used.
-
-Warning: parameter amber_score_secondary has not been used.
-
-Warning: parameter contact_score_secondary has not been used.
-
-Warning: parameter continuous_score_secondary has not been used.
-
-Warning: parameter descriptor_score_secondary has not been used.
-
-Warning: parameter dock3.5_score_secondary has not been used.
-
-Warning: parameter footprint_similarity_score_secondary has not been used.
-
-Warning: parameter gbsa_hawkins_score_secondary has not been used.
-
-Warning: parameter gbsa_zou_score_secondary has not been used.
-
-Warning: parameter grid_score_secondary has not been used.
-
-Warning: parameter multigrid_score_secondary has not been used.
-
-Warning: parameter pharmacophore_score_secondary has not been used.
 Initializing Library File Routines...
 Initializing Grid Score Routines...
  Reading the energy grid from grid.nrg
+ Done reading the energy grid.
+ Reading the grid box quantifiers from grid.bmp
+ Done reading the grid box quantifiers.
+
+-----------------------------------
+Molecule: 665_401_2H7L
+
+ Elapsed time for docking:	0.005 seconds
+
+ Anchors:		1
+ Orientations:		1
+ Conformations:		1
+
+                          Grid_Score:          -41.485077
+                     Grid_vdw_energy:          -41.298592
+                      Grid_es_energy:           -0.186487
+           Internal_energy_repulsive:           12.494870
+
+
+1 Molecules Processed
+Total elapsed time:	0.019 seconds

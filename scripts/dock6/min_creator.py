@@ -12,19 +12,19 @@ for r,d,f in os.walk(os.getcwd()):
                        "use_internal_energy yes\n"
                        "internal_energy_rep_exp 12\n"
                        "internal_energy_cutoff 100.0\n"
-                       f"ligand_atom_file {dir}.mol2\n"
+                       f"ligand_atom_file crystal_ligand.mol2\n"
                        "limit_max_ligands no\n"
                        "skip_molecule no\n"
-                       "read_mol_solvation no\n"
+                       "read_mol_solvation no \n"
                        "calculate_rmsd yes\n"
                        "use_rmsd_reference_mol yes\n"
-                       f"rmsd_reference_filename {dir}.mol2\n"
+                       f"rmsd_reference_filename crystal_ligand.mol2\n"
                        "use_database_filter no\n"
                        "orient_ligand no\n"
                        "bump_filter no\n"
                        "score_molecules yes\n"
-                       "contact_score_primary no\n"
-                       "contact_score_secondary no\n"
+                       "contact_score_primary no \n"
+                       "contact_score_secondary no \n"
                        "grid_score_primary yes\n"
                        "grid_score_secondary no\n"
                        "grid_score_rep_rad_scale 1\n"
@@ -61,9 +61,8 @@ for r,d,f in os.walk(os.getcwd()):
                        "write_orientations no\n"
                        "num_scored_conformers 1\n"
                        "rank_ligands no")
-                       
-            
-                        
+        os.chdir("..")
+
                    
 
 

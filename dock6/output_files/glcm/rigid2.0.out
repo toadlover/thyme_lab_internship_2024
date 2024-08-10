@@ -1,0 +1,181 @@
+
+
+
+--------------------------------------
+DOCK v6.11
+
+Released November 2023
+Copyright UCSF
+--------------------------------------
+
+
+Conformational Sampling Parameters
+------------------------------------------------------------------------------------------
+conformer_search_type                                        rigid
+
+Internal Energy Parameters
+------------------------------------------------------------------------------------------
+use_internal_energy                                          yes
+Warning:  No legal value found for parameter internal_energy_rep_exp.
+  The default value of "12" will be used.
+Warning:  No legal value found for parameter internal_energy_cutoff.
+  The default value of "100.0" will be used.
+Note: Internal energy only includes repulsive VDW for growth and/or minimization.
+
+Molecule Library Input Parameters
+------------------------------------------------------------------------------------------
+ligand_atom_file                                             crystal_ligand.mol2
+limit_max_ligands                                            no
+skip_molecule                                                no
+read_mol_solvation                                           no
+calculate_rmsd                                               yes
+use_rmsd_reference_mol                                       yes
+rmsd_reference_filename                                      crystal_ligand.mol2
+
+Database Filter Parameters
+------------------------------------------------------------------------------------------
+use_database_filter                                          no
+
+Orient Ligand Parameters
+------------------------------------------------------------------------------------------
+orient_ligand                                                yes
+automated_matching                                           yes
+receptor_site_file                                           selected_spheres.sph
+max_orientations                                             1000
+critical_points                                              no
+chemical_matching                                            no
+use_ligand_spheres                                           no
+
+Bump Filter Parameters
+------------------------------------------------------------------------------------------
+bump_filter                                                  no
+
+Master Score Parameters
+------------------------------------------------------------------------------------------
+score_molecules                                              yes
+
+Contact Score Parameters
+------------------------------------------------------------------------------------------
+contact_score_primary                                        no
+
+Grid Score Parameters
+------------------------------------------------------------------------------------------
+grid_score_primary                                           yes
+grid_score_rep_rad_scale                                     1
+grid_score_vdw_scale                                         1
+grid_score_es_scale                                          1
+grid_score_grid_prefix                                       grid
+
+MultiGrid Score Parameters
+------------------------------------------------------------------------------------------
+
+Dock3.5 Score Parameters
+------------------------------------------------------------------------------------------
+
+Continuous Energy Score Parameters
+------------------------------------------------------------------------------------------
+
+Footprint Similarity Score Parameters
+------------------------------------------------------------------------------------------
+
+Pharmacophore Similarity Score Parameters
+------------------------------------------------------------------------------------------
+
+Hbond Energy Score Parameters
+------------------------------------------------------------------------------------------
+
+Internal Energy Score Parameters
+------------------------------------------------------------------------------------------
+
+Descriptor Score Parameters
+------------------------------------------------------------------------------------------
+
+Zou GB/SA Score Parameters
+------------------------------------------------------------------------------------------
+
+Hawkins GB/SA Score Parameters
+------------------------------------------------------------------------------------------
+
+SASA Score Parameters
+------------------------------------------------------------------------------------------
+
+Amber Score Parameters
+------------------------------------------------------------------------------------------
+
+Simplex Minimization Parameters
+------------------------------------------------------------------------------------------
+minimize_ligand                                              yes
+simplex_max_iterations                                       1000
+simplex_tors_premin_iterations                               0
+simplex_max_cycles                                           1
+simplex_score_converge                                       0.1
+simplex_cycle_converge                                       1.0
+simplex_trans_step                                           1.0
+simplex_rot_step                                             0.1
+simplex_tors_step                                            10.0
+simplex_random_seed                                          0
+simplex_restraint_min                                        no
+
+Atom Typing Parameters
+------------------------------------------------------------------------------------------
+atom_model                                                   all
+vdw_defn_file                                                /home/laura.lee5-umw/dock6/parameters/vdw_AMBER_parm99.defn
+flex_defn_file                                               /home/laura.lee5-umw/dock6/parameters/flex.defn
+flex_drive_file                                              /home/laura.lee5-umw/dock6/parameters/flex_drive.tbl
+
+Molecule Library Output Parameters
+------------------------------------------------------------------------------------------
+ligand_outfile_prefix                                        /home/laura.lee5-umw/thyme_lab_internship_2024/dock6/output_files/glcm/rigid2.0.out
+write_orientations                                           no
+num_scored_conformers                                        1
+rank_ligands                                                 no
+------------------------------------------------------------------------------------------
+
+Warning: parameter SASA_score_secondary has not been used.
+
+Warning: parameter amber_score_secondary has not been used.
+
+Warning: parameter contact_score_secondary has not been used.
+
+Warning: parameter continuous_score_secondary has not been used.
+
+Warning: parameter descriptor_score_secondary has not been used.
+
+Warning: parameter dock3.5_score_secondary has not been used.
+
+Warning: parameter footprint_similarity_score_secondary has not been used.
+
+Warning: parameter gbsa_hawkins_score_secondary has not been used.
+
+Warning: parameter gbsa_zou_score_secondary has not been used.
+
+Warning: parameter grid_score_secondary has not been used.
+
+Warning: parameter multigrid_score_secondary has not been used.
+
+Warning: parameter pharmacophore_score_secondary has not been used.
+Initializing Library File Routines...
+Initializing Orienting Routines...
+Initializing Grid Score Routines...
+ Reading the energy grid from grid.nrg
+ Done reading the energy grid.
+ Reading the grid box quantifiers from grid.bmp
+ Done reading the grid box quantifiers.
+
+-----------------------------------
+Molecule: BTB_A1501_2V3F
+
+ Elapsed time for docking:	13.388 seconds
+
+ Anchors:		1
+ Orientations:		1000
+ Conformations:		1000
+
+                          Grid_Score:         -135.946991
+                     Grid_vdw_energy:          -29.268982
+                      Grid_es_energy:         -106.678001
+           Internal_energy_repulsive:           20.633673
+
+
+1 Molecules Processed
+Total elapsed time:	13.401 seconds
