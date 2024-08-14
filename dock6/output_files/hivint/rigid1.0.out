@@ -165,17 +165,14 @@ Initializing Grid Score Routines...
 -----------------------------------
 Molecule: CIW_221_3NF7
 
- Elapsed time for docking:	9.884 seconds
+ Elapsed time:	0.001 seconds
 
- Anchors:		1
- Orientations:		1000
- Conformations:		997
-
-                          Grid_Score:           -2.759005
-                     Grid_vdw_energy:          -25.943024
-                      Grid_es_energy:           23.184019
-           Internal_energy_repulsive:           12.969551
+ ERROR:  Could not find a valid orientation.
+         (For rigid docking the sought orientation is the whole ligand;
+         for flexible docking the sought orientation is the anchor.)
+         Confirm that all spheres are inside the grid box         
+and that the grid box is big enough to contain an orientation.
 
 
 1 Molecules Processed
-Total elapsed time:	9.899 seconds
+Total elapsed time:	0.011 seconds
