@@ -144,7 +144,7 @@ for r_1,d_1,f_1 in os.walk(os.getcwd()):
 
         print(rmsd_list)
 
-        best_rmsd = min(rmsd_list)
+        best_rmsd = float(min(rmsd_list))
 
         print("Best: ", best_rmsd)
 
