@@ -10,8 +10,6 @@ rmsds_dict = {}
 for r_1,d_1,f_1 in os.walk(os.getcwd()):
     for dir in d_1:
 
-        print(dir)
-
         num_atoms = 0
         os.chdir(dir)
         native_ligand = {}
@@ -67,8 +65,6 @@ for r_1,d_1,f_1 in os.walk(os.getcwd()):
 
         
         for out_file in file_list:
-            
-            print(out_file)
 
             lines = []
             placement = {}
@@ -132,33 +128,18 @@ for r_1,d_1,f_1 in os.walk(os.getcwd()):
                     sqrt_dist = dist**0.5
                     
                     distance_sum += sqrt_dist
-
-                    print(atom,a1,a2,dist,sqrt_dist)
                 
                 #print(distance_sum, non_hydrogen_atoms)
                 rmsd = distance_sum/non_hydrogen_atoms
 
-                print(distance_sum,non_hydrogen_atoms,rmsd)
-
                 rmsd_list.append(rmsd)
-
-        print(rmsd_list)
 
         best_rmsd = float(min(rmsd_list))
 
-        print("Best: ", best_rmsd)
-
         rmsds_dict[dir] = best_rmsd
-
-        print(rmsds_dict[dir])
 
         os.chdir("..")
 
-        #test print of the rmsds dictionary as it grows
-        print(rmsds_dict)
-
-#final print of rmsds dict
-print(rmsds_dict)
 
 with open(csv_path, 'w') as rmsd_file:
     for key in rmsds_dict.keys():
