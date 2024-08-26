@@ -10,6 +10,8 @@ rmsds_dict = {}
 for r_1,d_1,f_1 in os.walk(os.getcwd()):
     for dir in d_1:
 
+        print(dir)
+
         num_atoms = 0
         os.chdir(dir)
         native_ligand = {}
@@ -65,6 +67,9 @@ for r_1,d_1,f_1 in os.walk(os.getcwd()):
 
         
         for out_file in file_list:
+            
+            print(out_file)
+
             lines = []
             placement = {}
             with open(out_file, 'r') as output:
@@ -128,9 +133,12 @@ for r_1,d_1,f_1 in os.walk(os.getcwd()):
                     
                     distance_sum += sqrt_dist
 
+                    print(atom,a1,a2,dist,sqrt_dist)
                 
                 #print(distance_sum, non_hydrogen_atoms)
                 rmsd = distance_sum/non_hydrogen_atoms
+
+                print(distance_sum,non_hydrogen_atoms,rmsd)
 
                 rmsd_list.append(rmsd)
 
