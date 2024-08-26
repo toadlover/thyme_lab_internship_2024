@@ -123,7 +123,10 @@ for r_1,d_1,f_1 in os.walk(os.getcwd()):
                     z = (a1[2] - a2[2])**2
 
                     dist = x+y+z
-                    distance_sum += dist
+
+                    sqrt_dist = dist**0.5
+                    
+                    distance_sum += sqrt_dist
 
                 
                 #print(distance_sum, non_hydrogen_atoms)
