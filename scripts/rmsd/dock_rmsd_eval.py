@@ -160,7 +160,7 @@ for r_1,d_1,f_1 in os.walk(os.getcwd()):
 #final print of rmsds dict
 print(rmsds_dict)
 
-with open(csv_path, 'a') as rmsd_file:
+with open(csv_path, 'w') as rmsd_file:
     for key in rmsds_dict.keys():
         rmsd_file.write(str(key) + "," + str(rmsds_dict[key]) + "\n")
         
