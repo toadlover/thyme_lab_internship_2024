@@ -154,6 +154,11 @@ for r_1,d_1,f_1 in os.walk(os.getcwd()):
 
         os.chdir("..")
 
+        #test print of the rmsds dictionary as it grows
+        print(rmsds_dict)
+
+#final print of rmsds dict
+print(rmsds_dict)
 
 with open(csv_path, 'a') as rmsd_file:
     for key in rmsds_dict.keys():
