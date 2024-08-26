@@ -146,7 +146,11 @@ for r_1,d_1,f_1 in os.walk(os.getcwd()):
 
         best_rmsd = min(rmsd_list)
 
+        print("Best: ", best_rmsd)
+
         rmsds_dict[dir] = best_rmsd
+
+        print(rmsds_dict[dir])
 
         os.chdir("..")
 
