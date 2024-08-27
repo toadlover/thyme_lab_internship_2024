@@ -28,7 +28,7 @@ for r,d,f in os.walk("../../rosetta_motifs/rmsd_out"):
 
 			#read through the rmsd total file
 			#open file stream
-			read_file - open(r + "/" + file,"r")
+			read_file = open(r + "/" + file,"r")
 
 			for line in read_file.readlines():
 				
