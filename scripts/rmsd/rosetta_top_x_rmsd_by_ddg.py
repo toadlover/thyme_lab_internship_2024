@@ -20,7 +20,7 @@ for r,d,f in os.walk("../../rosetta_motifs/rmsd_out"):
 			#get the system name from the front of the file
 			sys_name = file.split("_")[0]
 
-			print(sys_name)
+			#print(sys_name)
 
 			#set file line counter at 0
 			line_counter = 0
@@ -95,21 +95,16 @@ for r,d,f in os.walk("../../rosetta_motifs/rmsd_out"):
 						rmsd = float(temp_str)
 						temp.append(rmsd)
 
-			#run through the list before going on as a sanity check
-			for entry in best_rmsds_dict[sys_name]:
-				print(entry)
 
-"""
 #now, run through each system, obtain the best rmsd from the top x ddg placements and write them to a csv file
 for system in best_rmsds_dict.keys():
 	#run a sort on the list and get the best placement by rmsd
 	#print(best_rmsds_dict[system])
-	temp_list = sorted(best_rmsds_dict[sys_name], key=lambda x: x[2])
-	best_rmsds_dict[sys_name] = temp_list
+	temp_list = sorted(best_rmsds_dict[system], key=lambda x: x[2])
+	best_rmsds_dict[system] = temp_list
 
 	print(system)
 
 	#test print the sorted list
-	for item in best_rmsds_dict[sys_name]:
+	for item in best_rmsds_dict[system]:
 		print(item)
-"""
