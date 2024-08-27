@@ -38,6 +38,8 @@ for r,d,f in os.walk("../../rosetta_motifs/rmsd_out"):
 
 				line_counter = line_counter + 1
 
+				peinr(line,line_counter)
+
 				if line_counter % 4 == 0:
 					
 					#handling to potentially add a temp tuple to the best_rmsds_dict
@@ -71,7 +73,7 @@ for r,d,f in os.walk("../../rosetta_motifs/rmsd_out"):
 					temp_str = line.strip()
 
 					#if line_counter % 2 = 0, it is the placement name with the ddg inside, get the ddg and append it to the temp tuple
-					if line_counter % 1 == 0:
+					if line_counter % 2 == 0:
 						ddg = temp_str.split("_delta_")[1].split("_")[0]
 
 						#append the ddg and then temp string
