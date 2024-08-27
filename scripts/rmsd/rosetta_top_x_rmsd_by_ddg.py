@@ -62,6 +62,8 @@ for r,d,f in os.walk("../../rosetta_motifs/rmsd_out"):
 						#append the system to the list
 						best_rmsds_dict[sys_name].append(temp)
 
+						print(best_rmsds_dict[sys_name])
+
 						#sort the system list by ddg
 						#sort the system list
 						temp_list = sorted(best_rmsds_dict[sys_name], key=lambda x: x[0])
