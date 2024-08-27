@@ -41,6 +41,7 @@ for r,d,f in os.walk("../../rosetta_motifs/rmsd_out"):
 				#offset handling since the files start with a newline
 				if line_counter == 1:
 					line_counter = line_counter + 2
+					continue
 
 				print(line,line_counter)
 
