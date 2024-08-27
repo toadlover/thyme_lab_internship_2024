@@ -38,7 +38,7 @@ for r,d,f in os.walk("../../rosetta_motifs/rmsd_out"):
 
 				line_counter = line_counter + 1
 
-				peinr(line,line_counter)
+				print(line,line_counter)
 
 				if line_counter % 4 == 0:
 					
