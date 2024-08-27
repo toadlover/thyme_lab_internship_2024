@@ -81,12 +81,17 @@ for r,d,f in os.walk("../../rosetta_motifs/rmsd_out"):
 
 					#if line_counter % 4 = 2, it is the placement name with the ddg inside, get the ddg and append it to the temp tuple
 					if line_counter % 3 == 1:
-						ddg = temp_str.split("_delta_")[1].split("_")[0]
+						ddg = float(temp_str.split("_delta_")[1].split("_")[0])
 
 						#append the ddg and then temp string
 						temp.append(ddg)
 
-					temp.append(temp_str)
+						temp.append(temp_str)
+
+					#handling for the rmsd
+					if line_counter % 3 == 2:
+						rmsd = float(temp_str)
+						temp.append(temp_str)
 
 #now, run through each system, obtain the best rmsd from the top x ddg placements and write them to a csv file
 for system in best_rmsds_dict.keys():
