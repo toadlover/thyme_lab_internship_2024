@@ -91,23 +91,9 @@ for r,d,f in os.walk("../../rosetta_motifs/rmsd_out"):
 					#handling for the rmsd
 					if line_counter % 3 == 2:
 						rmsd = float(temp_str)
-						temp.append(temp_str)
+						temp.append(rmsd)
 
 
-#now, run through each system, obtain the best rmsd from the top x ddg placements and write them to a csv file
-for system in best_rmsds_dict.keys():
-	#run a sort on the list and get the best placement by rmsd
-	#print(best_rmsds_dict[system])
-	#temp_list = sorted(best_rmsds_dict[sys_name], key=lambda x: x[2])
-	#best_rmsds_dict[sys_name] = temp_list
-
-	print(system)
-
-	#test print the sorted list
-	for item in best_rmsds_dict[sys_name]:
-		print(item)
-
-"""
 #now, run through each system, obtain the best rmsd from the top x ddg placements and write them to a csv file
 for system in best_rmsds_dict.keys():
 	#run a sort on the list and get the best placement by rmsd
@@ -120,4 +106,3 @@ for system in best_rmsds_dict.keys():
 	#test print the sorted list
 	for item in best_rmsds_dict[sys_name]:
 		print(item)
-"""
