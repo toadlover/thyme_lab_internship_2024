@@ -130,10 +130,10 @@ for system in best_rmsds_dict.keys():
 	for item in range(len(best_rmsds_dict[system])):
 
 		#appened the best rmsd to the best all file
-		best_x_all_file.write(system + "," + str(best_rmsds_dict[system][2]) + "," + str(best_rmsds_dict[system][1]) + "\n")
+		best_x_all_file.write(system + "," + str(best_rmsds_dict[system][item][2]) + "," + str(best_rmsds_dict[system][item][1]) + "\n")
 
 		#append to the best only only if item == 1:
 		if item == 0:
-			best_x_file.write(system + "," + str(best_rmsds_dict[system][2]) + "," + str(best_rmsds_dict[system][1]) + "\n")
+			best_x_file.write(system + "," + str(best_rmsds_dict[system][item][2]) + "," + str(best_rmsds_dict[system][item][1]) + "\n")
 
 		
