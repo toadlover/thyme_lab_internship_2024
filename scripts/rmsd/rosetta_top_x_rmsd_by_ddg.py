@@ -38,9 +38,13 @@ for r,d,f in os.walk("../../rosetta_motifs/rmsd_out"):
 
 				line_counter = line_counter + 1
 
+				#offset handling since the files start with a newline
+				if line_counter == 1:
+					line_counter = line_counter + 2
+
 				print(line,line_counter)
 
-				if line_counter % 4 == 0:
+				if line_counter % 3 == 0:
 					
 					#handling to potentially add a temp tuple to the best_rmsds_dict
 					#if the system is not already in the dictionary, make a blank list and append the first temp system
@@ -73,7 +77,7 @@ for r,d,f in os.walk("../../rosetta_motifs/rmsd_out"):
 					temp_str = line.strip()
 
 					#if line_counter % 4 = 2, it is the placement name with the ddg inside, get the ddg and append it to the temp tuple
-					if line_counter % 4 == 2:
+					if line_counter % 3 == 1:
 						ddg = temp_str.split("_delta_")[1].split("_")[0]
 
 						#append the ddg and then temp string
