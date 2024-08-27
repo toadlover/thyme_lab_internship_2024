@@ -96,6 +96,7 @@ for r,d,f in os.walk("../../rosetta_motifs/rmsd_out"):
 						temp.append(rmsd)
 
 
+"""
 #now, run through each system, obtain the best rmsd from the top x ddg placements and write them to a csv file
 for system in best_rmsds_dict.keys():
 	#run a sort on the list and get the best placement by rmsd
@@ -108,3 +109,31 @@ for system in best_rmsds_dict.keys():
 	#test print the sorted list
 	for item in best_rmsds_dict[system]:
 		print(item)
+"""
+
+#write the best ddg to ../../rosetta_motifs/rmsd_total_best_x.csv
+#write all of the top x to ../../rosetta_motifs/rmsd_total_best_x_all.csv
+
+best_x_file = open("../../rosetta_motifs/rmsd_total_best_" + str(top_x) + ".csv", "w")
+best_x_all_file = open("../../rosetta_motifs/rmsd_total_best_" + str(top_x) + "_all.csv", "w")
+
+best_x_file.write("system,rmsd,placement_pdb\n")
+best_x_all_file.write("system,rmsd,placement_pdb\n")
+
+for system in best_rmsds_dict.keys():
+	#run a sort on the list and get the best placement by rmsd
+	#print(best_rmsds_dict[system])
+	temp_list = sorted(best_rmsds_dict[system], key=lambda x: x[2])
+	best_rmsds_dict[system] = temp_list
+
+	#test print the sorted list
+	for item in range(len(best_rmsds_dict[system])):
+
+		#appened the best rmsd to the best all file
+		best_x_all_file.write(system + "," + str(best_rmsds_dict[system][2]) + "," + str(best_rmsds_dict[system][1]) + "\n")
+
+		#append to the best only only if item == 1:
+		if item == 0:
+			best_x_file.write(system + "," + str(best_rmsds_dict[system][2]) + "," + str(best_rmsds_dict[system][1]) + "\n")
+
+		
