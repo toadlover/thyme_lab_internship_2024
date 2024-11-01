@@ -14,7 +14,7 @@ rmsds_dict = {}
 top_x_ddg_to_consider = -1
 if len(sys.argv) == 2:
     top_x_ddg_to_consider = int(sys.argv[1])
-    best_rmsds_path = "dock6_best_rmsds_top_" + str(top_x_ddg_to_consider) + ".csv"
+    csv_path = "dock6_best_rmsds_top_" + str(top_x_ddg_to_consider) + ".csv"
 
 for r_1,d_1,f_1 in os.walk(os.getcwd()):
     for dir in d_1:
