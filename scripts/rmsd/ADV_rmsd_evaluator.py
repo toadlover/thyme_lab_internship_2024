@@ -5,6 +5,14 @@ os.chdir(sys.argv[1])
 
 best_rmsds_path = "ADV_best_rmsds.csv"
 
+#variable to identify how many placements to consider based on being in the top X placements by ddg
+#default will be to check from all unless this flag is used
+#default is -1, which will be used to represent all placements
+top_x_ddg_to_consider = -1
+if len(sys.argv) == 3:
+    top_x_ddg_to_consider = int(sys.argv[2])
+    best_rmsds_path = "ADV_best_rmsds_top_" + str(top_x_ddg_to_consider) + ".csv"
+
 rmsd_dict = {}
 
 # walk through each directory and collect an RMSD that compares all ligands in output.pdbqt against {name}-lig.pdbqt
@@ -63,7 +71,13 @@ for r_1,d_1,f_1 in os.walk(os.getcwd()):
 
         rmsd_list = []
 
+        #implement a counter to count the number of ligands worked on and to stop if the user only wants to look at the top x
+        #we can use a simple counter because the placements are listed in descending ddg (so the best ddg are seen first)
+        looked_at_counter = 0
+
         for placement in placed_ligands:
+            looked_at_counter = looked_at_counter + 1
+
             distance_sum = 0
             atom_counter = 0
             
@@ -87,6 +101,10 @@ for r_1,d_1,f_1 in os.walk(os.getcwd()):
             #rmsd = average of distance sum (distance_sum/atom_counter)
             rmsd = distance_sum / atom_counter
             rmsd_list.append(rmsd)
+
+            #break if we have hit the limit that we want to look at
+            if looked_at_counter == top_x_ddg_to_consider:
+                break
         # print(dir, rmsd_list)
 
         # determine the best RMSD
