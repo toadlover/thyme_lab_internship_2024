@@ -12,8 +12,8 @@ rmsds_dict = {}
 #default is -1, which will be used to represent all placements
 #use Grid_Score as metric to select by
 top_x_ddg_to_consider = -1
-if len(sys.argv) == 3:
-    top_x_ddg_to_consider = int(sys.argv[2])
+if len(sys.argv) == 2:
+    top_x_ddg_to_consider = int(sys.argv[1])
     best_rmsds_path = "dock6_best_rmsds_top_" + str(top_x_ddg_to_consider) + ".csv"
 
 for r_1,d_1,f_1 in os.walk(os.getcwd()):
