@@ -147,7 +147,7 @@ for r_1,d_1,f_1 in os.walk(os.getcwd()):
                 #print(distance_sum, non_hydrogen_atoms)
                 rmsd = distance_sum/non_hydrogen_atoms
 
-                rmsd_list.append(rmsd,file_grid_score)
+                rmsd_list.append([rmsd,file_grid_score])
 
         #with rmsd_list, get the top x placements by grid score before finding the best by rmsd
         #handling for if we want all versus top x
