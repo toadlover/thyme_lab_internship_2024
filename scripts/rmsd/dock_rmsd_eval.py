@@ -7,6 +7,15 @@ csv_path = "dock6_best_rmsds.csv"
 
 rmsds_dict = {}
 
+#variable to identify how many placements to consider based on being in the top X placements by ddg
+#default will be to check from all unless this flag is used
+#default is -1, which will be used to represent all placements
+#use Grid_Score as metric to select by
+top_x_ddg_to_consider = -1
+if len(sys.argv) == 3:
+    top_x_ddg_to_consider = int(sys.argv[2])
+    best_rmsds_path = "dock6_best_rmsds_top_" + str(top_x_ddg_to_consider) + ".csv"
+
 for r_1,d_1,f_1 in os.walk(os.getcwd()):
     for dir in d_1:
 
@@ -66,6 +75,9 @@ for r_1,d_1,f_1 in os.walk(os.getcwd()):
         
         for out_file in file_list:
 
+            #hold the file grid score
+            file_grid_score = 0
+
             lines = []
             placement = {}
             with open(out_file, 'r') as output:
@@ -79,6 +91,9 @@ for r_1,d_1,f_1 in os.walk(os.getcwd()):
 
                     if "@<TRIPOS>BOND" in line:
                         atom_end_index_out = j
+
+                    if "Grid_Score:" in line:
+                        file_grid_score = float(line.strip().split()[2])
                  
             output.close()
 
@@ -132,9 +147,27 @@ for r_1,d_1,f_1 in os.walk(os.getcwd()):
                 #print(distance_sum, non_hydrogen_atoms)
                 rmsd = distance_sum/non_hydrogen_atoms
 
-                rmsd_list.append(rmsd)
+                rmsd_list.append(rmsd,file_grid_score)
+
+        #with rmsd_list, get the top x placements by grid score before finding the best by rmsd
+        #handling for if we want all versus top x
+        if top_x_ddg_to_consider == -1:
+            all_rmsd_list = []
+            #decouple rmsd from grid score
+            for entry in rmsd_list:
+                all_rmsd_list.append(entry[0])
+            rmsd_list = all_rmsd_list
+        else:
+            #get the top x by grid score
+            top_x_tuples = sorted(rmsd_list, key=lambda x: x[1])[:top_x_ddg_to_consider]
+            #now, decouple rmsd from grid score
+            for entry in top_x_tuples:
+                all_rmsd_list.append(entry[0])
+            rmsd_list = all_rmsd_list
 
         best_rmsd = float(min(rmsd_list))
+
+        #files are not necessarily listed by grid score, so we need to determine which are in the best x by grid score
 
         rmsds_dict[dir] = best_rmsd
 
