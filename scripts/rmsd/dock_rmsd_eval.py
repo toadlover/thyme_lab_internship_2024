@@ -1,7 +1,7 @@
 
 # calculates the best RMSD for the outputs of each system and stores it in a .csv file (format SYSTEM, BEST_RMSD)
 
-import os
+import os,sys
 
 csv_path = "dock6_best_rmsds.csv"
 
