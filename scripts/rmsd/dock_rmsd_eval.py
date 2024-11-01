@@ -158,6 +158,7 @@ for r_1,d_1,f_1 in os.walk(os.getcwd()):
                 all_rmsd_list.append(entry[0])
             rmsd_list = all_rmsd_list
         else:
+            all_rmsd_list = []
             #get the top x by grid score
             top_x_tuples = sorted(rmsd_list, key=lambda x: x[1])[:top_x_ddg_to_consider]
             #now, decouple rmsd from grid score
