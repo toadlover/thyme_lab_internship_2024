@@ -1,0 +1,22 @@
+#Using Singularity version 3.5.2
+#Loaded Singularity from existing module using:
+module load Singularity/3.5.2-GCC-5.4.0-2.26 
+
+#Singularity image file of alphafold3 was generated from pre-built instructions from UAB Research Computing
+#Built image as:
+singularity pull alphafold3.sif docker://gitlab.rc.uab.edu:4567/rc-data-science/community-containers/alphafold3/alphafold3:f0bc27f5
+
+#basic execution of alphafold from image, calling run_alphafold.py script to utilize
+singularity exec --nv alphafold3.sif python3 /app/alphafold/run_alphafold.py --help
+
+#Alphafold3 needs to be called with GPUs to function
+
+#helpful link to running/installing alphafold
+https://github.com/google-deepmind/alphafold3/blob/main/docs/installation.md#build-the-singularity-container-from-the-docker-image
+
+#link to test case for basic example:
+https://github.com/google-deepmind/alphafold3/blob/main/README.md#installation-and-running-your-first-prediction
+
+#to utilize alphafold, the following is needed:
+#Residue sequence of each protein chain
+#SMILES string of native ligand
