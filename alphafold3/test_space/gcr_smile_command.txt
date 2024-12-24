@@ -1,0 +1,5 @@
+#use cpp_env, which has rdkit
+#use mol2 (crystal_ligand.mol2), not pdb, as bonds are not as well defined in the pdb files and do not produce equivalent smiles strings
+#can use argument "." if using custom naming and want to print to working location
+#use 3rd argument to apply custom name if wanted, like gcr to make gcr.smi
+python /data/user/abgvg9/ginsparg_thymelab_thesis/misc/alphafold_prep/get_smiles_of_ligand_file.py ../../dude_library_simple/gcr/crystal_ligand.mol2 . gcr
