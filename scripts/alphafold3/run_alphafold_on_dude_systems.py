@@ -43,3 +43,72 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 
 			#hold the path for the residue sequences file so we can access later
 			residue_sequence_file_location = this_script_path + "/../../dude_library_simple/" + dire + "/" + dire + "_residue_sequences.csv"
+
+			#make folder in alphafold section of repo to runalphafold for the system
+			os.system("mkdir " + this_script_path + "/../../alphafold3/" + dire)
+
+			#now, create the json file to run alphafold
+			json_file = open(this_script_path + "/../../alphafold3/" + dire + "/" + dire + ".json", "w")
+
+			#open the smiles and residue sequence files to get that dat afor the json file as well
+			smiles_file = open(ligand_smile_location, "r")
+			residue_file = open(residue_sequence_file_location, "r")
+
+			#extract the smiles and residue sequence(s) so that we can write them into the json file
+			#extract smiles, file should only be a single line, so extraction is easy
+			lig_smiles = ""
+			for line in smiles_file.readlines():
+				lig_smiles = line.strip()
+
+			#extract residue sequence(s), store as a list in case there is more than one sequence, and we will iteratively add each sequence to the json file
+			#store as tuple of chain id in index 0 and the chain sequence in index 1
+			residue_sequences = []
+			for line in residue_file.readlines():
+				#each line is comma separated with the chain id in index 0 and the sequnce in index 1 (I think for the whole DUDE set, everything is just 1 chain that is a space, but other pdbs may have letter chain ids; this does mess up if the chain was named ',', but you probably shouldn't be naming a chain that anyway)
+				cur_sequence = line.split(",")[1].strip()
+
+				cur_chain = line.split(",")[0]
+
+				residue_sequences.append([cur_chain,cur_sequence])
+
+			#write the json file
+
+			#startign bracket
+			json_file.write("{\n")
+			#job name
+			json_file.write("\t\"name\": \"" + dire + "\",\n")
+			#model seeds, we want to give each system 10 attempts, so we will give all seeds 1-10
+			json_file.write("\t\"modelSeeds\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],\n")
+			#protein and ligand data
+			json_file.write("\t\"sequences\": [\n")
+			#iterate over each chain
+			for chain in residue_sequences:
+				#declare beginning of protein
+				json_file.write("\t\t{\n")
+				json_file.write("\t\t\t\"protein\": {\n")
+				#declare chain id
+				json_file.write("\t\t\t\t\"id\": \"" + chain[0] + "\",\n")
+				json_file.write("\t\t\t\t\"sequence\": \"" + chain[1] + "\",\n")
+				#end declaration, at least for now will not use unpaired/paired msa or templates
+				json_file.write("\t\t\t}n")
+				json_file.write("\t\t}n")
+
+			#declare the ligand
+			json_file.write("\t\t{\n")
+			json_file.write("\t\t\t\"ligand\": {\n")
+			#write id, name after system
+			json_file.write("\t\t\t\t\"id\": \"" + dire + "\",\n")
+			#declare smiles string
+			json_file.write("\t\t\t\t\"smiles\": \"" + lig_smiles + "\",\n")
+			#end declaration
+			json_file.write("\t\t\t}\n")
+			json_file.write("\t\t}\n")
+
+			#skipping bondedatompairs and userccd at least for now
+
+			#write dialect and version
+			json_file.write("\t\"dialect\": \"alphafold3\",\n")
+			json_file.write("\t\"version\": 2\n")
+			#close statement
+			json_file.write("}\n")
+
