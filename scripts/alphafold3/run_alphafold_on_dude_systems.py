@@ -9,12 +9,28 @@
 import os,sys
 
 #argument for path to ginsparg_thymelab_thesis repository
+#provide the location of the top of the ginsparg_thymelab_thesis directory (trailing slash optional, will be appended if not included)
 repo_location = sys.argv[1]
+if repo_location.endswith("/ginsparg_thymelab_thesis") == False and repo_location.endswith("/ginsparg_thymelab_thesis/") == False:
+	print("You need to provide the location of a copy of ginsparg_thymelab_thesis, please provide the location up to the top of the repository.")
+	quit()
+
+#add trailing slash if missing
+if repo_location.endswith("/") == False:
+	repo_location = repo_location + "/"
+
+#record this script path for referencing it and other files by relative location
+this_script_path = os.path.dirname(os.path.abspath(__file__))
 
 #iterate over each dude system to runalphafold
 #iterate over each system folder in thyme_lab_internship_2024/dude_library_simple
-for r,d,f in os.walk(os.path.dirname(os.path.abspath(__file__)) + "/../../dude_library_simple/"):
+for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 	for dire in d:
 		#only look at directories at the level within dude_library_simple
-		if r == os.path.dirname(os.path.abspath(__file__)) + "/../../dude_library_simple/":
+		if r == this_script_path + "/../../dude_library_simple/":
 			print(dire)
+
+			#derive the smiles string of the ligand and get the residue sequence(s) of the peptide
+			#derive smiles string first
+			#write the smiles string to the location where the ligand came from, and name it after the folder (instead of crystal_ligand)
+			os.system("python " + repo_location + "misc/alphafold_prep/get_smiles_of_ligand_file.py " + this_script_path + "/../../dude_library_simple/" + dire + "/crystal_ligand.mol2 " + repo_location + "misc/alphafold_prep/get_smiles_of_ligand_file.py " + this_script_path + "/../../dude_library_simple/" + dire + " " + dire)
