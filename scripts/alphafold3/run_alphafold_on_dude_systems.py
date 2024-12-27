@@ -34,3 +34,12 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 			#derive smiles string first
 			#write the smiles string to the location where the ligand came from, and name it after the folder (instead of crystal_ligand)
 			os.system("python " + repo_location + "misc/alphafold_prep/get_smiles_of_ligand_file.py " + this_script_path + "/../../dude_library_simple/" + dire + "/crystal_ligand.mol2 " + this_script_path + "/../../dude_library_simple/" + dire + " " + dire)
+
+			#hold the path for the smiles file so we can access later
+			ligand_smile_location = this_script_path + "/../../dude_library_simple/" + dire + "/" + dire + ".smi"
+
+			#now, derive the residue chain(s) for the system and write it to a file
+			os.system("python " + repo_location + "misc/alphafold_prep/get_residue_sequences_from_pdb_file.py " + this_script_path + "/../../dude_library_simple/" + dire + "/" + dire + ".pdb " + this_script_path + "/../../dude_library_simple/" + dire + "/" + dire + "_residue_sequences.csv")
+
+			#hold the path for the residue sequences file so we can access later
+			residue_sequence_file_location = this_script_path + "/../../dude_library_simple/" + dire + "/" + dire + "_residue_sequences.csv"
