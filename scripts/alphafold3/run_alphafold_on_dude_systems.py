@@ -90,8 +90,8 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 				json_file.write("\t\t\t\t\"id\": \"" + chain[0] + "\",\n")
 				json_file.write("\t\t\t\t\"sequence\": \"" + chain[1] + "\",\n")
 				#end declaration, at least for now will not use unpaired/paired msa or templates
-				json_file.write("\t\t\t}n")
-				json_file.write("\t\t}n")
+				json_file.write("\t\t\t}\n")
+				json_file.write("\t\t}\n")
 
 			#declare the ligand
 			json_file.write("\t\t{\n")
