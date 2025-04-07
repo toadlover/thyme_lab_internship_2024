@@ -90,7 +90,12 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 				json_file.write("\t\t{\n")
 				json_file.write("\t\t\t\"protein\": {\n")
 				#declare chain id
-				json_file.write("\t\t\t\t\"id\": \"" + dire + "_chain_" + chain[0] + "\",\n")
+
+				#if the chain id is " ", write it as "X"
+				if chain[0] == " ":
+					json_file.write("\t\t\t\t\"id\": \"" + dire + "_chain_X\",\n")
+				else:
+					json_file.write("\t\t\t\t\"id\": \"" + dire + "_chain_" + chain[0] + "\",\n")
 				json_file.write("\t\t\t\t\"sequence\": \"" + chain[1] + "\",\n")
 				#end declaration, at least for now will not use unpaired/paired msa or templates
 				json_file.write("\t\t\t}\n")
