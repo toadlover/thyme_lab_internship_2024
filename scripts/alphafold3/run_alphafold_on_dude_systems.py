@@ -79,7 +79,7 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 			json_file.write("\t\"name\": \"" + dire + "\",\n")
 			#write dialect and version
 			json_file.write("\t\"dialect\": \"alphafold3\",\n")
-			json_file.write("\t\"version\": 2\n")
+			json_file.write("\t\"version\": 2,\n")
 			#model seeds, we want to give each system 10 attempts, so we will give all seeds 1-10
 			json_file.write("\t\"modelSeeds\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],\n")
 			#protein and ligand data
