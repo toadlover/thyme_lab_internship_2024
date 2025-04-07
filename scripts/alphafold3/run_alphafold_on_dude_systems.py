@@ -77,6 +77,9 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 			json_file.write("{\n")
 			#job name
 			json_file.write("\t\"name\": \"" + dire + "\",\n")
+			#write dialect and version
+			json_file.write("\t\"dialect\": \"alphafold3\",\n")
+			json_file.write("\t\"version\": 2\n")
 			#model seeds, we want to give each system 10 attempts, so we will give all seeds 1-10
 			json_file.write("\t\"modelSeeds\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],\n")
 			#protein and ligand data
@@ -87,28 +90,28 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 				json_file.write("\t\t{\n")
 				json_file.write("\t\t\t\"protein\": {\n")
 				#declare chain id
-				json_file.write("\t\t\t\t\"id\": \"" + chain[0] + "\",\n")
+				json_file.write("\t\t\t\t\"id\": \"" + dire + "_chain_" + chain[0] + "\",\n")
 				json_file.write("\t\t\t\t\"sequence\": \"" + chain[1] + "\",\n")
 				#end declaration, at least for now will not use unpaired/paired msa or templates
 				json_file.write("\t\t\t}\n")
 				json_file.write("\t\t}\n")
+			json_file.write("\t],\n")
 
-			#declare the ligand
+			#ligand
+			json_file.write("\t\"ligands\": [\n")
 			json_file.write("\t\t{\n")
-			json_file.write("\t\t\t\"ligand\": {\n")
 			#write id, name after system
-			json_file.write("\t\t\t\t\"id\": \"" + dire + "\",\n")
+			json_file.write("\t\t\t\t\"id\": \"" + dire + "_lig\",\n")
 			#declare smiles string
 			json_file.write("\t\t\t\t\"smiles\": \"" + lig_smiles + "\",\n")
 			#end declaration
-			json_file.write("\t\t\t}\n")
 			json_file.write("\t\t}\n")
+			json_file.write("\t]\n")
+
 
 			#skipping bondedatompairs and userccd at least for now
 
-			#write dialect and version
-			json_file.write("\t\"dialect\": \"alphafold3\",\n")
-			json_file.write("\t\"version\": 2\n")
+
 			#close statement
 			json_file.write("}\n")
 
