@@ -1,19 +1,20 @@
 {
 	"name": "comt",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": " ",
+				"id": "comt_chain_X",
 				"sequence": "GDTKEQRILNHVLQHAEGNAQSVLEAIDTYCEQKEWAMNVGDKKGKIVDAVIQEHQPSVLLELGAYCGYSAVRMARLLSARLITIEINPDCAAITQRMVDFAGVKDKVTLVVGASQDIIPQLKYVTLDMVFLHWKDRYLPDTLLLEECGLLRGTVLLAVICPGAPDFLAHVRGSCFECTHYQSFLEYREVVDGLEKAIYK",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "comt",
+				"id": "comt_lig",
 				"smiles": "O=[N+]([O-])c1cc(O)c(O)c([N+](=O)[O-])c1",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }

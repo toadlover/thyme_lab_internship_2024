@@ -1,19 +1,20 @@
 {
 	"name": "wee1",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": " ",
+				"id": "wee1_chain_X",
 				"sequence": "SRYTTEFHELEKIGSSVFKCVKRLDGCIYAIKRSKKPSVDEQNALREVYAHAVLGQHSHVVRYFSAWAEDDHMLIQNEYCNGGSLADAISENYRIMSYFKEAELKDLLLQVGRGLRYIHSMSLVHMDIKPSNIFISKVMFKIGDLGHVTRISSPQVEEGDSRFLANEVLQENYTHLPKADIFALALTVVCAAGAEPLPRNWIRPRIPQVLFLMIRPSAMLVL",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "wee1",
+				"id": "wee1_lig",
 				"smiles": "Cn1c2cc(OCCC[NH+](C)C)c(O)cc2c2c3c(c(-c4ccccc4Cl)cc21)C(=O)NC3=O",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }

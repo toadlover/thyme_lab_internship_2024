@@ -1,25 +1,26 @@
 {
 	"name": "hivpr",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": "A",
+				"id": "hivpr_chain_A",
 				"sequence": "PQITLWQRPLVTIKIGGQLKEALLDTGADTVLEEMSLPGRWKPKMIGGIGGFIKVRQYDQILIEICGHKAIGTVLVGPTPVNIIGRNLLTQIGCTLNF",
 			}
 		}
 		{
 			"protein": {
-				"id": "B",
+				"id": "hivpr_chain_B",
 				"sequence": "PQITLWQRPLVTIKIGGQLKEALLTGADTVLEEMSLPGRWKPKMIGGIGGFIKVRQYDQILIEICGHKAIGTVLVGPTPVNIIGRNLLTQIGCTLNF",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "hivpr",
+				"id": "hivpr_lig",
 				"smiles": "Cc1cccc(C)c1OCC(=O)N(Cc1ccccc1)C[C@H]1C[NH2+]C[C@@H]1CN(CC(C)C)S(=O)(=O)c1ccccc1",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }

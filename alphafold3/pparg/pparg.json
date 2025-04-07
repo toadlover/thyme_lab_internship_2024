@@ -1,19 +1,20 @@
 {
 	"name": "pparg",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": " ",
+				"id": "pparg_chain_X",
 				"sequence": "LAKHLYDSYIKSFPLTKAKARAILTGKTTDKSPFVIYDMNSLMMGEDKKEVAIRIFQGCQFRSVEAVQEITEYAKSIPFVLDLNDQVTLLKYGVHEIIYTMLASLMNKDGVLISEGQGFMTREFLKSLRKPFGDFMEPKFEFAVKFNALELDDSDLAIFIAVIILSGDRPGLLIIQLLLQLNHLFAKLLQKMTDLRQIVTEHVQLLQVIKKTETDMSLHPLLQEIYKDLYHKLVQLLTTT",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "pparg",
+				"id": "pparg_lig",
 				"smiles": "CCO[C@@H](Cc1ccc2c(ccn2Cc2nc(-c3ccccc3Cl)oc2C)c1)C(=O)[O-]",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }

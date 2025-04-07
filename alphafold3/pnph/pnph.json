@@ -1,19 +1,20 @@
 {
 	"name": "pnph",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": " ",
+				"id": "pnph_chain_X",
 				"sequence": "MENGYYTLPQVAIICGSGLGGLTDKLAQIFDYSEIPNFPRSTVPGHAGRLVFGLACVMMQGRFHMYEGYPLWKVTFPVRVFHLVDTLVVTNAAGGLNPKFEVGDIMLIRDHINLPGFSGQNPLRPAMSDAYDRTMRQRALSTWKMGEQRELQEGTYVMVAGPSFETVAECRVLQKLGADAVGMSTVPEVIVARHCGLRVFGFSLITNKVIMDYESLEKANHEEVLAAGKQAAQKLEQFVSILMI",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "pnph",
+				"id": "pnph_lig",
 				"smiles": "O=c1[nH]cnc2c(C[N@H+]3C[C@@H](O)[C@H](CO)C3)c[nH]c12",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }

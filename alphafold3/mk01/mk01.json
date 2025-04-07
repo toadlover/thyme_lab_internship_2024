@@ -1,19 +1,20 @@
 {
 	"name": "mk01",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": " ",
+				"id": "mk01_chain_X",
 				"sequence": "FDVGPRYTNLSYIGEGAYGMVCSAYDNVNKVRVAIKKISPFEHQTYCQRTLREIKILLRFRHENIIGINDIIRAPTIEQMKDVYIVQDLMETDLYKLLKTQHLSNDHICYFLYQILRGLKYIHSANVLHRDLKPSNLLLNTTCDLKICDFGLARVADPDTEYVATRWYRAPEIMSKGYTKSIDIWSVGCILAEMLSNRPIFPGKHYLDQLHIFLLMLRIEVEALYLYDEPIAEAPFKFELDDLPKEKLKELIFEETARFQPG",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "mk01",
+				"id": "mk01_lig",
 				"smiles": "CN(C)C(=O)c1cc(-c2[nH]ncc2-c2ccccc2)c[nH]1",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }

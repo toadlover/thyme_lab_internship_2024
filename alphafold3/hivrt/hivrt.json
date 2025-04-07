@@ -1,19 +1,20 @@
 {
 	"name": "hivrt",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": " ",
+				"id": "hivrt_chain_X",
 				"sequence": "PISPIEVKKKRFWEVQLGIPHPAGLKKKKSVTVLDVGDAYFSVPLPQGWKGSPAIFQSSMTKILEPFRKQNPDIVIYQYMDDLYVGSDLEIGQHRTKIEELRQHLLRWGLTTPDKKHQKEPPFLWMGYELHPDKWTVQPIVLQKLVGKLNWASQIYPGIVNEILKEPVHGVYYDPSKDLIAEIWTYQIYQEPFKNLKTGKYAVQKITTESIVIWGKTPKFKVKQWPLTEEKIKALVEICTEKIGPENPYNTPVFAWFTIPSINNETPGIRYT",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "hivrt",
+				"id": "hivrt_lig",
 				"smiles": "CCCCn1c(C(=O)c2cc(C)cc(C#N)c2)c(C(C)C)c(=O)[nH]c1=O",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }

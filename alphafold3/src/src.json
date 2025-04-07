@@ -1,19 +1,20 @@
 {
 	"name": "src",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": " ",
+				"id": "src_chain_X",
 				"sequence": "DAWEIPRESLRLEVKLGQGCFGEVWMGTWNGTTRVAIKTLKPGTMSPEAFLQEAQVMKKLRHEKLVQLYAVVSEEPIYIVTEYGSKGSLLDFLKGEMGKYLRLPQLVDMAAQIASGMAYVERMNYVHRDLRAANILVGENLVCKVADFGLARLFPIKWTAPEAALYGRFTIKSDVWSFGILLTELTTKGRVPYPGMNVLVMPLLMCQCWRKDPEERPTFEYLQAFLEDYNLRG",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "src",
+				"id": "src_lig",
 				"smiles": "CC(C)n1nc(-c2ccc(NC(=O)Nc3cccc(C(F)(F)F)c3)cc2)c2c(N)ncnc21",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }

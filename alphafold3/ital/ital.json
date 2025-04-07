@@ -1,19 +1,20 @@
 {
 	"name": "ital",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": " ",
+				"id": "ital_chain_X",
 				"sequence": "MNVDLVFLFDGSMSLQPDEFQKILDFMKDVMKKLSNTSYQFAAVQFSTSYKTEFDFSDYVKRKDPDALLKHVKHMLLLTNTFGAINYVATEVFREELGARPDATKVLIIITDGEATDSGNIDAAKDIIRYIIGIGKHFQTKESQETLHKFASKPASEFVKILDTFEKLKDLFTELQKKI",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "ital",
+				"id": "ital_lig",
 				"smiles": "CN1C(=O)N(c2cc(Cl)cc(Cl)c2)C(=O)[C@]12C[N@@H+](Cc1cc(C(=O)[O-])cs1)C[C@H]2c1ccc(C#N)cc1",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }

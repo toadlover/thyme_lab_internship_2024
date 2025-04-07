@@ -1,19 +1,20 @@
 {
 	"name": "hivint",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": " ",
+				"id": "hivint_chain_X",
 				"sequence": "SPGIWQLCTHLEGKVILVAVHVASGYIEAEVIPAETGQETAYFLLKLAGRWPVKTVHTNGSNFTSTTVKAACWWAGIKQEDGIPYNPQSQGVIESMNKELKKIIGQVRDQAEHLKTAVQMAVFIHNHKRKGYSAGERIVDIIATDIQPGIWLAVHSYIEAEVQETAYFLLKLAGRWPVKTVTVKAACWWAGIKKQMVFNHRSAGERIVDIIATDIQ",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "hivint",
+				"id": "hivint_lig",
 				"smiles": "O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }

@@ -1,19 +1,20 @@
 {
 	"name": "cdk2",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": " ",
+				"id": "cdk2_chain_X",
 				"sequence": "MENFQKVEKIGEYGVVYKARNKLTGEVVALKKIVPSTAIREISLLKELNHPNIVKLLDVIHTENKLYLVFEFHQDLKKFMDASALTGIPLPLIKSYLFQLLQGLAFCHSHRVLHRDLKPQNLLINTEGAIKLADFGLARAEVVTLWYRAPEILLGCKYYSTAVDIWSLGCIFAEMVTRRALFPGDSEIDQLFRIFRTLGTPDEVVWPGVTSMPDYKPSFPKWARQDFSKVVPPLDEDGRSLLSQMLHYDPNKRISAKAALAHPFFQDVTKPVPHLRL",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "cdk2",
+				"id": "cdk2_lig",
 				"smiles": "C[NH+](C)C[C@H](O)COc1ccc(Nc2cc(Nc3c(F)cccc3F)ncn2)cc1",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }

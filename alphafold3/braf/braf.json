@@ -1,19 +1,20 @@
 {
 	"name": "braf",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": " ",
+				"id": "braf_chain_X",
 				"sequence": "DDWEIPDGQITVGQRIGSGSFGTVYKGKWHGDVAVKMLNVTAPTPQQLQAFKNEVGVLRKTRHVNILLFMGYSTKPQLAIVTQWCEGSSLYHHLHIIETKFEMIKLIDIARQTAQGMDYLHAKSIIHRDLKSNNIFLHEDLTVKIGDFGLATVLSGSILWMAPEVIRMQDKNPYSFQSDVYAFGIVLYELMTGQLPYSNINNRDQIIFVLPDKVRMLMCLRRPLFPILIEDDWEIKWHGDVAVGVLRKTRHVNILLFMGYVTQWCEGSFEMIKLIDIARQTAQGMDYLHAKSINIFLHEDLTVKIGDFFFPILASIELLARSLP",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "braf",
+				"id": "braf_lig",
 				"smiles": "ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }

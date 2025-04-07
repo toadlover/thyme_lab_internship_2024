@@ -1,19 +1,20 @@
 {
 	"name": "fak1",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": " ",
+				"id": "fak1_chain_X",
 				"sequence": "DYEIQRERIELGRCIGEGQFGDVHQGIYMSPLAVAIKTCKNCTSDSVREKFLQEALTMRQFDHPHIVKLIGVITENPVWIIMELCTLGELRSFLQVRKYSLDLASLILYAYQLSTALAYLESKRFVHRDIAARNVLVSSNDCVKLGDFGLSRYLPIKWMAPESINFRRFTSASDVWMFGVCMWEILMHGVKPFQGVKNNDVIIRLPMPPNCPLYLMTKCWAPRPRFTELKAQLSILKQ",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "fak1",
+				"id": "fak1_lig",
 				"smiles": "CN(c1ncccc1CNc1nc(Nc2ccc3c(c2)=CC(=O)N=3)ncc1C(F)(F)F)S(C)(=O)=O",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }

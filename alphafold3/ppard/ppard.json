@@ -1,19 +1,20 @@
 {
 	"name": "ppard",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": " ",
+				"id": "ppard_chain_X",
 				"sequence": "SHIYNAYLKNFNMTKKKARSILTGKASHTAPFVIHDIETLWQAEKGLVLPPYKEISVHVFYRCQCTTVETVRELTEFAKSIFSLFLNDQVTLLKYGVHEAIFAMLASIVNKDGLLVANGSGFVTREFLRSLRKPFSDIIEPKFEFAVKFNALELDDSDLALFIAAIILCGDRPGLMVIQILLHLNHAQYLFPKLLQKMADLRQLVTEHAQMMQRIKKTETETSLHPLLQEIYKDMKPSFSSLFLNDQVTLKRPGLMNVPRVKD",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "ppard",
+				"id": "ppard_lig",
 				"smiles": "CCCCOc1ccc(C[C@H](CC)C(=O)[O-])cc1CNC(=O)c1ccc(C(F)(F)F)cc1F",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }

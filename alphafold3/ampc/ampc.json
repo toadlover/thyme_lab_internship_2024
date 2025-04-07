@@ -1,19 +1,20 @@
 {
 	"name": "ampc",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": " ",
+				"id": "ampc_chain_X",
 				"sequence": "APQQINDIVHRTITPLIEQQKIPGMAVAVIYQGKPYYFTWGYADIAKKQPVTQQTLFELGVSKTFTGVLGGDAIARGEIKLSDPTTKYWPELTAKQWNGITLLHLATYTAGGLPLQVPDEVKSSSDLLRFYQNWQPAWAPGTQRLASSIGLFGALAVKPSGLSFEQAMQTRVFQPLKLNHTWINVPPAEEKNYAWGYREGKAVHVSPGALDAEAYGVKSTIEDMARWVQSNLKPLDINEKTLQQGIQLAQSRYWQTGDMYQGLGWEMLDWPVNPDSIINGSDNKIALAARPVKAITPPTPAVRASWVHKTGTGGFGSYVAFIPEKELGIVMLANKNYPNPARVDAAWQILNALQ",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "ampc",
+				"id": "ampc_lig",
 				"smiles": "[NH3+][C@H](C(=O)[O-])c1cccc(NS(=O)(=O)c2ccsc2C(=O)[O-])c1",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }

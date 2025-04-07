@@ -1,0 +1,24 @@
+#!/bin/bash
+#use amperenodes for GPUa
+#SBATCH -p amperenodes # Partition to submit to\n")
+#request 1 gpu
+#SBATCH --gres=gpu:1
+
+
+#SBATCH -n 1 # Number of cores requested\n")
+#SBATCH -N 1 # Ensure that all cores are on one machine\n")
+#SBATCH -t 120 # Runtime in minutes\n")
+#SBATCH --mem=12800 # Memory per cpu in MB (see also --mem-per-cpu)\n")
+#SBATCH -o hostname_%A_%a.out # Standard out goes to this file\n")
+#SBATCH -e hostname_%A_%a.err # Standard err goes to this filehostname\n")
+
+#load singularity
+module load Singularity/3.5.2-GCC-5.4.0-2.26
+
+#load cuda modules
+module load CUDA/12.1.1
+module load cuDNN/8.9.2.26-CUDA-12.1.1
+
+singularity exec --nv /data/user/abgvg9/alphafold3.sif python3 /app/alphafold/run_alphafold.py \
+    --input_json /data/project/thymelab/thyme_lab_internship_2024/alphafold3/aa2ar/aa2ar.json \
+    --output_dir /data/project/thymelab/thyme_lab_internship_2024/alphafold3/aa2ar

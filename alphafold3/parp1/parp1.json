@@ -1,19 +1,20 @@
 {
 	"name": "parp1",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": " ",
+				"id": "parp1_chain_X",
 				"sequence": "SKLPKPVQDLIKMIFDVESMKKAMVEYEIDLQKMPLGKLSKRQIQAAYSILSEVQQAVSQGSSDSQILDLSNRFYTLIPHDFGMKKPPLLNNADSVQAKAEMLDNLLDIEVAYSLLRGGSDDSSKDPIDVNYEKLKTDIKVVDRDSEEAEIIRKYVKNTHATTHNAYDLEVIDIFKIEREGECQRYKPFKQLHNRRLLWHGSRTTNFAGILSQGLRIAPPEAPVTGYMFGKGIYFADMVSKSANYCHTSQGDPIGLILLGEVALGNMYELKHASHISKLPKGKHSVKGLGKTTPDPSANISLDGVDVPLGTGISSGVNDTSLLYNEYIVYDIAQVNLKYLLKLKFNFK",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "parp1",
+				"id": "parp1_lig",
 				"smiles": "NC(=O)c1cccc2nc(-c3ccc([C@@H]4CCCC[NH2+]4)cc3F)[nH]c12",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }

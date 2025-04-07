@@ -1,19 +1,20 @@
 {
 	"name": "prgr",
+	"dialect": "alphafold3",
+	"version": 2,
 	"modelSeeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 	"sequences": [
 		{
 			"protein": {
-				"id": " ",
+				"id": "prgr_chain_X",
 				"sequence": "LINLLMSIEPDVIYAGHDTSSSLLTSLNQLGERQLLSVVKWSKSLPGFRLHIDDQITLIQYSWMSLMVFGLGWRSYKHVSGQMLYFAPDLILNEQRMKEFYSLCLTMWQIPQEFVKLQVSQEEFLCMKVLLLLNTIPLEGLFMRYIELAIRRFYQLTKLLDNLHDLVKQLHLYCLNTFIQSRALSVEFPEMMSEVIAAQLPKILAGMVKPLLFHKNLDDITLIQYSWMTIPLEGLRVKQLHLYCLNTFIQSRALSVEFPEMMSEVIAAQLPKILAGMVKP",
 			}
 		}
+	],
+	"ligands": [
 		{
-			"ligand": {
-				"id": "prgr",
+				"id": "prgr_lig",
 				"smiles": "Cc1ccccc1CN(c1ccc(C#N)c(Cl)c1)[C@H]1CCN(S(C)(=O)=O)C1",
-			}
 		}
-	"dialect": "alphafold3",
-	"version": 2
+	]
 }
