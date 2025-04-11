@@ -92,7 +92,7 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 				#declare chain id
 
 				json_file.write("\t\t\t\t\"id\": \"P\",\n")
-				json_file.write("\t\t\t\t\"sequence\": \"" + chain[1] + "\",\n")
+				json_file.write("\t\t\t\t\"sequence\": \"" + chain[1] + "\"\n")
 				#end declaration, at least for now will not use unpaired/paired msa or templates
 				json_file.write("\t\t\t}\n")
 				json_file.write("\t\t},\n")
@@ -104,7 +104,7 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 			#write id, name after system
 			json_file.write("\t\t\t\t\"id\": \"L\",\n")
 			#declare smiles string
-			json_file.write("\t\t\t\t\"smiles\": \"" + lig_smiles + "\",\n")
+			json_file.write("\t\t\t\t\"smiles\": \"" + lig_smiles + "\"\n")
 			json_file.write("\t\t\t}\n")
 			#end declaration
 			json_file.write("\t\t}\n")
