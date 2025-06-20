@@ -146,7 +146,7 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 			shell_file.write("     --json_path=/root/af_input/" + dire + "_protein_only.json" + " \\\n")
 			shell_file.write("     --model_dir=/root/models \\\n")
 			shell_file.write("     --db_dir=/root/public_databases \\\n")
-			shell_file.write("     --output_dir=/root/af_output\\n")
+			shell_file.write("     --output_dir=/root/af_output\\\n")
 			shell_file.write("\n")
 			shell_file.write("\n")
 			shell_file.write("\n")
