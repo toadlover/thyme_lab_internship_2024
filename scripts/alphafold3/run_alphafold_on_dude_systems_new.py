@@ -162,4 +162,4 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 			os.system("chmod 777 " + this_script_path + "/../../alphafold3/" + dire + "/" + dire + "_no_inference.sh")
 
 			#run a bsub job with the shell file
-			os.system("bsub -n 8 -R "rusage[mem=2048]" -W 300 -gpu "num=1:gmodel=TeslaV100_SXM2_32GB-30G:mode=shared:j_exclusive=no" -q gpu  -o " + this_script_path + "/../../alphafold3/" + dire + "/" + dire + "_protein_preparation_log.txt bash " + this_script_path + "/../../alphafold3/" + dire + "/" + dire + "_no_inference.sh")
+			os.system("bsub -n 8 -R \"rusage[mem=2048]\" -W 300 -gpu \"num=1:gmodel=TeslaV100_SXM2_32GB-30G:mode=shared:j_exclusive=no\" -q gpu  -o " + this_script_path + "/../../alphafold3/" + dire + "/" + dire + "_protein_preparation_log.txt bash " + this_script_path + "/../../alphafold3/" + dire + "/" + dire + "_no_inference.sh")
