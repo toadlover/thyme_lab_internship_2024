@@ -121,7 +121,7 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 			json_file.close()
 
 			#now write the corresponding shell script
-			shell_file = open(this_script_path + "/../../alphafold3/" + dire + "/" + dire + "_no_inference.sh")
+			shell_file = open(this_script_path + "/../../alphafold3/" + dire + "/" + dire + "_no_inference.sh", "w")
 
 			#for now at least, I'm just going to hard code the path variables, since I'm not sure if this will really be reused
 
