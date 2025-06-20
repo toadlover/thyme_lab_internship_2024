@@ -110,7 +110,7 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 			#json_file.write("\t\t\t}\n")
 			#end declaration
 			#json_file.write("\t\t}\n")
-			#json_file.write("\t]\n")
+			json_file.write("\t]\n")
 
 
 			#skipping bondedatompairs and userccd at least for now
