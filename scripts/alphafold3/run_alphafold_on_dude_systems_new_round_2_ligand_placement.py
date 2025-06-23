@@ -51,6 +51,16 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 			os.system("mkdir " + this_script_path + "/../../alphafold3/" + dire + "/af_input")
 			os.system("mkdir " + this_script_path + "/../../alphafold3/" + dire + "/af_output")
 
+			#open the previously made data file, which should exist in the af_output location
+			#this will be used as a template to write most of the new input file, and we just need to insert the ligand smiles data for a rerun
+
+			#check and make sure the file exists, since there were a handful of cases where alphafold died from a segfault
+			if not os.path.exists(this_script_path + "/../../alphafold3/" + dire + "/af_output/" + dire + "/" + dire +  "_data.json"):
+				print(this_script_path + "/../../alphafold3/" + dire + "/af_output/" + dire + "/" + dire +  "_data.json does not exist! Moving to next file.")
+				continue
+
+			msa_json_file = open(this_script_path + "/../../alphafold3/" + dire + "/af_output/" + dire + "/" + dire +  "_data.json", "r")
+
 			#now, create the json data file that has the msa data from an initial run of alphafold, and we include the corresponding smiles data
 			json_file = open(this_script_path + "/../../alphafold3/" + dire + "/af_input/" + dire + "_data.json", "w")
 
@@ -75,9 +85,7 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 
 				residue_sequences.append([cur_chain,cur_sequence])
 
-			#open the previously made data file, which should exist in the af_output location
-			#this will be used as a template to write most of the new input file, and we just need to insert the ligand smiles data for a rerun
-			msa_json_file = open(this_script_path + "/../../alphafold3/" + dire + "/af_output/" + dire + "/" + dire +  "_data.json", "r")
+
 
 			#write the json file
 
