@@ -102,13 +102,13 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 					hit_sequence_declaration = True
 
 					#new open bracket
-					json_file.write("\t{\n")
+					#json_file.write("\t{\n")
 
 					#write the ligand data
 					json_file.write("\t\t{\n")
 					json_file.write("\t\t\"ligand\": {\n")
 					json_file.write("\t\t\t\"id\": \"B\",\n")
-					json_file.write("\t\t\t\"smiles\": \"" + lig_smiles + "\",\n")
+					json_file.write("\t\t\t\"smiles\": \"" + lig_smiles + "\"\n")
 					json_file.write("\t\t\t}\n")
 					json_file.write("\t\t},\n")
 
@@ -190,7 +190,7 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 			shell_file.write("     $AF3_IMAGE \\\n")
 			#use run data pipeline instead of inference
 			shell_file.write("     python ${AF3_CODE_DIR}/alphafold3/run_alphafold.py --run_data_pipeline=FALSE --flash_attention_implementation=xla \\\n")
-			shell_file.write("     --json_path=/root/af_input/" + dire + "_protein_only.json" + " \\\n")
+			shell_file.write("     --json_path=/root/af_input/" + dire + "_data.json" + " \\\n")
 			shell_file.write("     --model_dir=/root/models \\\n")
 			shell_file.write("     --db_dir=/root/public_databases \\\n")
 			shell_file.write("     --output_dir=/root/af_output\\\n")
@@ -209,4 +209,4 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 			os.system("chmod 777 " + this_script_path + "/../../alphafold3/" + dire + "/" + dire + "_docking.sh")
 
 			#run a bsub job with the shell file
-			#os.system("bsub -n 8 -R \"rusage[mem=2048]\" -W 300 -gpu \"num=1:gmodel=TeslaV100_SXM2_32GB-30G:mode=shared:j_exclusive=no\" -q gpu  -o " + this_script_path + "/../../alphafold3/" + dire + "/" + dire + "_protein_preparation_log.txt bash " + this_script_path + "/../../alphafold3/" + dire + "/" + dire + "_docking.sh")
+			os.system("bsub -n 8 -R \"rusage[mem=2048]\" -W 300 -gpu \"num=1:gmodel=TeslaV100_SXM2_32GB-30G:mode=shared:j_exclusive=no\" -q gpu  -o " + this_script_path + "/../../alphafold3/" + dire + "/" + dire + "_docking_log.txt bash " + this_script_path + "/../../alphafold3/" + dire + "/" + dire + "_docking.sh")
