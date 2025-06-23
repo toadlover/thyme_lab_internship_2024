@@ -77,7 +77,7 @@ for r,d,f in os.walk(this_script_path + "/../../dude_library_simple/"):
 
 			#open the previously made data file, which should exist in the af_output location
 			#this will be used as a template to write most of the new input file, and we just need to insert the ligand smiles data for a rerun
-			msa_json_file = open(this_script_path + "/../../alphafold3/" + dire + "/af_output/" + dire + "/" + dire "_data.json", "r")
+			msa_json_file = open(this_script_path + "/../../alphafold3/" + dire + "/af_output/" + dire + "/" + dire +  "_data.json", "r")
 
 			#write the json file
 
