@@ -41,7 +41,7 @@ with pymol2.PyMOL() as pymol:
 
 			#open a file to write pairings of the files with confidence values and rmsd
 			#open it in the respective folder in the alphafold section of the repository
-			system_file = open("../../alphafold/" + dire + "/" + dire + "_placements_summary.csv", "w")
+			system_file = open("../../alphafold3/" + dire + "/" + dire + "_placements_summary.csv", "w")
 			system_file.write("file,confidence,rmsd\n")
 
 			#declare placeholder variables to hold the best placements for each group
