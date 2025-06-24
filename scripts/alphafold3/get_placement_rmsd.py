@@ -144,7 +144,7 @@ with pymol2.PyMOL() as pymol:
 				#add the confidence to the placements_data dictionary
 				placements_data[system][0] = float(system_confidence)
 
-				placements_list.append([system,float(system_confidence),float(placements_data[system][0])])
+				placements_list.append([system,float(system_confidence),float(placements_data[system][1])])
 
 			#now, sort placements_list by confidence score in descending order
 			sorted_list = sorted(placements_list, key=lambda x: x[1], reverse=True)
