@@ -108,9 +108,9 @@ with pymol2.PyMOL() as pymol:
 						
 
 						#sanitize the reference in case there are waters in it
-						frags = Chem.GetMolFrags(reference_ligand, asMols=True)
-						ligand = max(frags, key=lambda m: m.GetNumAtoms())
-						reference_ligand = ligand
+						#frags = Chem.GetMolFrags(reference_ligand, asMols=True)
+						#ligand = max(frags, key=lambda m: m.GetNumAtoms())
+						#reference_ligand = ligand
 
 
 						placement_ligand = Chem.MolFromPDBFile(r2 + "/" + file_basename + "_aligned_lig.pdb", removeHs=True)
