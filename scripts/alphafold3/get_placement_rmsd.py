@@ -108,7 +108,7 @@ with pymol2.PyMOL() as pymol:
 
 						#write new ligand pdb to mol2 for easier readability
 						mol = next(pybel.readfile("pdb", r + "/" + dire + "/" + dire + "-lig.pdb"))
-						mol.addh()  
+						#mol.addh()  
 						mol.write("mol2", r + "/" + dire + "/" + dire + "-lig.mol2", overwrite=True)
 
 						#os.system("cat " + r + "/" + dire + "/" + dire + "-lig.mol2")
