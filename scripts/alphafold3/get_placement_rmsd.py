@@ -131,6 +131,7 @@ with pymol2.PyMOL() as pymol:
 
 								#derive element
 								element = re.match(r"[A-Za-z]+", atom_name.strip()).group(0).capitalize()
+								print(element)
 
 								fixed_line = line[:76] + element.rjust(2) + line[78:]
 
