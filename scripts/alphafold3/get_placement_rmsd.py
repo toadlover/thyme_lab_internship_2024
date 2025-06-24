@@ -105,7 +105,7 @@ with pymol2.PyMOL() as pymol:
 						reference_ligand = Chem.MolFromPDBFile(r + "/" + dire + "/" + dire + "-lig.pdb", removeHs=True)
 
 						#sanitize the reference in case there are waters in it
-						frags = Chem.GetMolFrags(mol, asMols=True)
+						frags = Chem.GetMolFrags(reference_ligand, asMols=True)
 						ligand = max(frags, key=lambda m: m.GetNumAtoms())
 						reference_ligand = ligand
 
