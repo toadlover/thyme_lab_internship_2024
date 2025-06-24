@@ -78,7 +78,7 @@ with pymol2.PyMOL() as pymol:
 							sample = line.split(",")[1]
 							conf = line.split(",")[2].strip()
 							#assign
-							confidences[[seed,sample]] = conf
+							confidences[(seed,sample)] = conf
 
 					#if it is a placement file for the system
 					if file.startswith(dire + "_") and file.endswith("_model.cif"):
