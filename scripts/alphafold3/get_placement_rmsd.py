@@ -16,15 +16,15 @@ this_script_path = os.path.dirname(os.path.abspath(__file__))
 with pymol2.PyMOL() as pymol:
 	cmd = pymol.cmd
 
-	#write csv files for the different metrics and write a header line for the system, the placement file, and the rmsd
+	#write csv files for the different metrics and write a header line for the system, the placement file, confidence, and the rmsd
 	best_all = open("best_placements_all.csv", "w")
-	best_all.write("system,placement,rmsd\n")
+	best_all.write("system,placement,confidence,rmsd\n")
 
 	best_10 = open("best_placements_10.csv", "w")
-	best_10.write("system,placement,rmsd\n")
+	best_10.write("system,placement,confidence,rmsd\n")
 
-	best_10 = open("best_placements_10.csv", "w")
-	best_10.write("system,placement,rmsd\n")
+	best_1 = open("best_placements_1.csv", "w")
+	best_1.write("system,placement,confidence,rmsd\n")
 
 	best_summary = open("best_placements_summary.csv", "w")
 	best_all.write("system,all,10,1\n")
@@ -45,9 +45,10 @@ with pymol2.PyMOL() as pymol:
 			system_file.write("file,confidence,rmsd\n")
 
 			#declare placeholder variables to hold the best placements for each group
-			best_rmsd_all = "X"
-			best_rmsd_10 = "X"
-			best_rmsd_1 = "X"
+			blank_list = ["X","X","X"]
+			best_rmsd_all = ["X","X","X"]
+			best_rmsd_10 = ["X","X","X"]
+			best_rmsd_1 = ["X","X","X"]
 			
 			#get the original placement from the dude library and open it in pymol, the file we want is the "name"_orig.pdb
 			cmd.load(r + "/" + dire + "/" + dire + "_orig.pdb", "reference")
@@ -81,7 +82,7 @@ with pymol2.PyMOL() as pymol:
 							confidences[(seed,sample)] = conf
 
 					#if it is a placement file for the system
-					if file.startswith(dire + "_") and file.endswith("_model.cif"):
+					if file.startswith(dire + "_") and file.endswith("_model.cif") and "seed" in file and "sample" in file:
 						#load it into pymol
 						cmd.load(r2 + "/" + file, "placement")
 
@@ -118,3 +119,69 @@ with pymol2.PyMOL() as pymol:
 						if reference_ligand and placement_ligand:
 							rmsd = rdMolAlign.GetBestRMS(reference_ligand, placement_ligand)
 							print(r2 + "/" + file_basename + "_aligned_lig.pdb", rmsd)
+
+						#store the rmsd in the dictionary by the file name
+						placements_data[file] = ["X",rmsd]
+
+						#we are now done with the placement, and can move to the next
+
+			#done with all placements for the system, correlate rmsd and confidence and update dictionaries and finish the system-specific csv
+
+			#make a list that we can sort by confidence so we can derive the top rmsd from the single best, top 10, and all, and we will use it to write
+			#format is file,confidence,rmsd
+			placements_list = []
+
+			for system in placements_data.keys():
+				#remember, the keys are file names, so we can derive the placement seed and sample
+
+				#now, derive the seed and sample of the file, so we can note and write it and correlate to confidence
+				placement_seed = system.split("-")[1].split("_")[0]
+				placement_sample = system.split("-")[2].split("_")[0]
+
+				#obtain the corresponding confidence from the dictionary
+				system_confidence = confidences[(placement_seed,placement_sample)]
+
+				#add the confidence to the placements_data dictionary
+				placements_data[system][0] = float(system_confidence)
+
+				placements_list.append([system,float(system_confidence),float(placements_data[system][0])])
+
+			#now, sort placements_list by confidence score in descending order
+			sorted_list = sorted(placements_list, key=lambda x: x[1], reverse=True)
+
+			#iterate down the sorted list to derive the best values and write the the system file
+
+			#have a counter for the number of systems seen so we can cut off looking for the top 1 and top 10
+			counter = 1
+
+			for system in sorted_list:
+
+				#for top 1
+				if counter == 1:
+					best_rmsd_1 = system
+
+				#for top 10
+				if counter <= 10:
+					#if first encounter, a blank list, write current
+					if best_rmsd_10 == blank_list:
+						best_rmsd_10 = system
+					else:
+						#otherwise, see if the rmsd is better and overwrite
+						if best_rmsd_10[2] > system[2]:
+							best_rmsd_10 = system
+
+				#for all
+				if best_rmsd_all[2] > system[2]:
+					best_rmsd_all = system
+
+				#write the system to the system file
+				system_file.write(system[0] + "," + str(system[1]) + "," + str(system[2]) + "\n")
+
+				counter = counter + 1
+
+			#now that we have iterated over all systems, write the best of each category to the other csv files
+			best_all.write(dire + "," + best_rmsd_all[0] + "," + str(best_rmsd_all[1]) + "," + str(best_rmsd_all[2]) + "\n")
+			best_10.write(dire + "," + best_rmsd_10[0] + "," + str(best_rmsd_10[1]) + "," + str(best_rmsd_10[2]) + "\n")
+			best_1.write(dire + "," + best_rmsd_1[0] + "," + str(best_rmsd_1[1]) + "," + str(best_rmsd_1[2]) + "\n")
+
+			best_all.write(dire + "," + str(best_rmsd_all[2]) + "," + str(best_rmsd_10[2]) + "," + str(best_rmsd_1[2]) + "\n")
