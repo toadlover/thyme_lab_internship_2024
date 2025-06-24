@@ -133,6 +133,10 @@ with pymol2.PyMOL() as pymol:
 								element = re.match(r"[A-Za-z]+", atom_name.strip()).group(0).capitalize()
 								#print(element)
 
+								#skip hydrogens
+								if element == "H":
+									continue
+
 								stripped_line = line.rstrip("\n")
 
 								fixed_line = stripped_line[:76].ljust(76) + element.rjust(2) 
