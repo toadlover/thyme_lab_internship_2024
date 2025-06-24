@@ -190,4 +190,4 @@ with pymol2.PyMOL() as pymol:
 			best_all.write(dire + "," + str(best_rmsd_all[2]) + "," + str(best_rmsd_10[2]) + "," + str(best_rmsd_1[2]) + "\n")
 
 			#clear the reference from the pymol session:
-			cmd.delete("placement")
+			cmd.delete("reference")
