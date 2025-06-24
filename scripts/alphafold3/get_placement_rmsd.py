@@ -27,7 +27,7 @@ with pymol2.PyMOL() as pymol:
 	best_1.write("system,placement,confidence,rmsd\n")
 
 	best_summary = open("best_placements_summary.csv", "w")
-	best_all.write("system,all,10,1\n")
+	best_summary.write("system,all,10,1\n")
 
 	#iterate over each system in the dude library
 	for r,d,f in os.walk(this_script_path + "/../../dude_library_simple"):
@@ -187,7 +187,7 @@ with pymol2.PyMOL() as pymol:
 			best_10.write(dire + "," + best_rmsd_10[0] + "," + str(best_rmsd_10[1]) + "," + str(best_rmsd_10[2]) + "\n")
 			best_1.write(dire + "," + best_rmsd_1[0] + "," + str(best_rmsd_1[1]) + "," + str(best_rmsd_1[2]) + "\n")
 
-			best_all.write(dire + "," + str(best_rmsd_all[2]) + "," + str(best_rmsd_10[2]) + "," + str(best_rmsd_1[2]) + "\n")
+			best_summary.write(dire + "," + str(best_rmsd_all[2]) + "," + str(best_rmsd_10[2]) + "," + str(best_rmsd_1[2]) + "\n")
 
 			#clear the reference from the pymol session:
 			cmd.delete("reference")
