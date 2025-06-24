@@ -115,6 +115,11 @@ with pymol2.PyMOL() as pymol:
 
 						placement_ligand = Chem.MolFromPDBFile(r2 + "/" + file_basename + "_aligned_lig.pdb", removeHs=True)
 
+						ref_smiles = Chem.MolToSmiles(reference_ligand)
+						pla_smiles = Chem.MolToSmiles(placement_ligand)
+
+						print("reference",ref_smiles,"placement",pla_smiles)
+
 						rmsd = "X"
 
 						#use the get best RMS function to derive the rmsd
