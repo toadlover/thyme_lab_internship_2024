@@ -171,6 +171,9 @@ with pymol2.PyMOL() as pymol:
 							best_rmsd_10 = system
 
 				#for all
+				if best_rmsd_all == blank_list:
+					best_rmsd_all = system
+
 				if best_rmsd_all[2] > system[2]:
 					best_rmsd_all = system
 
@@ -185,3 +188,6 @@ with pymol2.PyMOL() as pymol:
 			best_1.write(dire + "," + best_rmsd_1[0] + "," + str(best_rmsd_1[1]) + "," + str(best_rmsd_1[2]) + "\n")
 
 			best_all.write(dire + "," + str(best_rmsd_all[2]) + "," + str(best_rmsd_10[2]) + "," + str(best_rmsd_1[2]) + "\n")
+
+			#clear the reference from the pymol session:
+			cmd.delete("placement")
