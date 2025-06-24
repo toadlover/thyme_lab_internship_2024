@@ -10,6 +10,7 @@ from rdkit.Chem import AllChem, rdMolAlign
 import numpy as np
 from openbabel import openbabel as ob
 from openbabel import pybel
+import re
 
 #this script acts locally, and looks for placement files from alphafold and the native files from DUD-E
 this_script_path = os.path.dirname(os.path.abspath(__file__))
@@ -110,11 +111,37 @@ with pymol2.PyMOL() as pymol:
 						#mol = next(pybel.readfile("pdb", r + "/" + dire + "/" + dire + "-lig.pdb"))
 						#mol.addh()  
 						#mol.write("mol2", r + "/" + dire + "/" + dire + "-lig.mol2", overwrite=True)
-						mol = next(pybel.readfile("pdb", r + "/" + dire + "/" + dire + "-lig.pdb"))
+						#mol = next(pybel.readfile("pdb", r + "/" + dire + "/" + dire + "-lig.pdb"))
 						#mol.addh()  
-						mol.write("pdb", r + "/" + dire + "/" + dire + "-lig_fixed.pdb", overwrite=True)
+						#mol.write("pdb", r + "/" + dire + "/" + dire + "-lig_fixed.pdb", overwrite=True)
 
 						#os.system("cat " + r + "/" + dire + "/" + dire + "-lig.mol2")
+
+						#make a fixed version of the reference from the original so that the element is regognized
+						old_reference_file = open(r + "/" + dire + "/" + dire + "-lig.pdb", "r")
+						fixed_reference_file = open(r + "/" + dire + "/" + dire + "-lig_fixed.pdb", "r")
+
+						for line in old_reference_file.readlines():
+							#remove waters
+							if " HOH " in line:
+								continue
+
+							if line.startswith(('ATOM', 'HETATM')):
+								atom_name = line[12:16]
+
+								#derive element
+								element = re.match(r"[A-Za-z]+", atom_name.strip()).group(0).capitalize()
+
+								fixed_line = line[:76] + element.rjust(2) + line[78:]
+
+								fixed_reference_file.write(fixed_line)
+
+						#close streams
+						old_reference_file.close()
+						fixed_reference_file.close()
+
+
+
 
 						#reference_ligand = Chem.MolFromPDBFile(r + "/" + dire + "/" + dire + "-lig.pdb", removeHs=True)
 						reference_ligand = Chem.MolFromPDBFile(r + "/" + dire + "/" + dire + "-lig_fixed.pdb", removeHs=True)
