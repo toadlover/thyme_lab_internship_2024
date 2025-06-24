@@ -65,7 +65,7 @@ with pymol2.PyMOL() as pymol:
 			for r2,d2,f2 in os.walk(this_script_path + "/../../alphafold3"):
 				for file in f2:
 					#if it is the confidence file
-					if f2 == (dire + "_ranking_scores.csv"):
+					if file == (dire + "_ranking_scores.csv"):
 						#read the file
 						confidences_file = open(r2 + "/" + dire + "_ranking_scores.csv", "r")
 
@@ -81,9 +81,9 @@ with pymol2.PyMOL() as pymol:
 							confidences[[seed,sample]] = conf
 
 					#if it is a placement file for the system
-					if f2.startswith(dire + "_") and f2.endswith("_model.cif"):
+					if file.startswith(dire + "_") and file.endswith("_model.cif"):
 						#load it into pymol
-						cmd.load(r2 + "/" + f2, "placement")
+						cmd.load(r2 + "/" + file, "placement")
 
 						#align the placement to the reference
 						cmd.align("placement", "reference")
@@ -92,7 +92,7 @@ with pymol2.PyMOL() as pymol:
 						cmd.select("aligned_lig", "placement and not polymer.protein")
 
 						#derive a name to save the aligned ligand as
-						file_basename = f2.split(".")[0]
+						file_basename = file.split(".")[0]
 
 						cmd.save(r2 + "/" + file_basename + "_aligned_lig.pdb", "aligned_lig")
 
