@@ -1,0 +1,65 @@
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+
+Running fold job kpcb...
+Output will be written in /root/af_output/kpcb
+Running data pipeline...
+Running data pipeline for chain A...
+I0620 16:59:29.472176 22900877030528 pipeline.py:82] Getting protein MSAs for sequence LTDFNFLMVLGKGSFGKVMLSERKGTDELYAVKILKKDVVIQDDDVECTMVEKRVLALPGKPPFLTQLHSCFQTMDRLYFVMEYVNGGDLMYHIQQVGRFKEPHAVFYAAEIAIGLFFLQSKGIIYRDLKLDNVMLDSEGHIKIADFGMCKENIWVTTKTFCGTPDYIAPEIIAYQPYGKSVDWWAFGVLLYEMLAGQAPFEGEDEDELFQSIMVMICLMRLGCEIKFFIDWEKLERKEIQPPYKPKACGRENFDRFFTRHPPVLTPPDVINIDQSEFEGFSFVNSEFLKPERGKENIWDGVTTK
+I0620 16:59:29.473722 22897461917248 jackhmmer.py:78] Query sequence: LTDFNFLMVLGKGSFGKVMLSERKGTDELYAVKILKKDVVIQDDDVECTMVEKRVLALPGKPPFLTQLHSCFQTMDRLYFVMEYVNGGDLMYHIQQVGRFKEPHAVFYAAEIAIGLFFLQSKGIIYRDLKLDNVMLDSEGHIKIADFGMCKENIWVTTKTFCGTPDYIAPEIIAYQPYGKSVDWWAFGVLLYEMLAGQAPFEGEDEDELFQSIMVMICLMRLGCEIKFFIDWEKLERKEIQPPYKPKACGRENFDRFFTRHPPVLTPPDVINIDQSEFEGFSFVNSEFLKPERGKENIWDGVTTK
+I0620 16:59:29.474015 22897459816000 jackhmmer.py:78] Query sequence: LTDFNFLMVLGKGSFGKVMLSERKGTDELYAVKILKKDVVIQDDDVECTMVEKRVLALPGKPPFLTQLHSCFQTMDRLYFVMEYVNGGDLMYHIQQVGRFKEPHAVFYAAEIAIGLFFLQSKGIIYRDLKLDNVMLDSEGHIKIADFGMCKENIWVTTKTFCGTPDYIAPEIIAYQPYGKSVDWWAFGVLLYEMLAGQAPFEGEDEDELFQSIMVMICLMRLGCEIKFFIDWEKLERKEIQPPYKPKACGRENFDRFFTRHPPVLTPPDVINIDQSEFEGFSFVNSEFLKPERGKENIWDGVTTK
+I0620 16:59:29.474285 22897457714752 jackhmmer.py:78] Query sequence: LTDFNFLMVLGKGSFGKVMLSERKGTDELYAVKILKKDVVIQDDDVECTMVEKRVLALPGKPPFLTQLHSCFQTMDRLYFVMEYVNGGDLMYHIQQVGRFKEPHAVFYAAEIAIGLFFLQSKGIIYRDLKLDNVMLDSEGHIKIADFGMCKENIWVTTKTFCGTPDYIAPEIIAYQPYGKSVDWWAFGVLLYEMLAGQAPFEGEDEDELFQSIMVMICLMRLGCEIKFFIDWEKLERKEIQPPYKPKACGRENFDRFFTRHPPVLTPPDVINIDQSEFEGFSFVNSEFLKPERGKENIWDGVTTK
+I0620 16:59:29.474577 22897461917248 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpxogxvifi/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpxogxvifi/query.fasta /root/public_databases/uniref90_2022_05.fa"
+I0620 16:59:29.474695 22897455613504 jackhmmer.py:78] Query sequence: LTDFNFLMVLGKGSFGKVMLSERKGTDELYAVKILKKDVVIQDDDVECTMVEKRVLALPGKPPFLTQLHSCFQTMDRLYFVMEYVNGGDLMYHIQQVGRFKEPHAVFYAAEIAIGLFFLQSKGIIYRDLKLDNVMLDSEGHIKIADFGMCKENIWVTTKTFCGTPDYIAPEIIAYQPYGKSVDWWAFGVLLYEMLAGQAPFEGEDEDELFQSIMVMICLMRLGCEIKFFIDWEKLERKEIQPPYKPKACGRENFDRFFTRHPPVLTPPDVINIDQSEFEGFSFVNSEFLKPERGKENIWDGVTTK
+I0620 16:59:29.474875 22897459816000 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmp7qnli51_/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmp7qnli51_/query.fasta /root/public_databases/mgy_clusters_2022_05.fa"
+I0620 16:59:29.475847 22897457714752 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmppvihj3mv/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmppvihj3mv/query.fasta /root/public_databases/bfd-first_non_consensus_sequences.fasta"
+I0620 16:59:29.476135 22897455613504 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmp85o0z1c0/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmp85o0z1c0/query.fasta /root/public_databases/uniprot_all_2021_04.fa"
+I0620 17:01:27.273012 22897457714752 subprocess_utils.py:97] Finished Jackhmmer (bfd-first_non_consensus_sequences.fasta) in 117.796 seconds
+E0620 17:08:23.735496 22897461917248 subprocess_utils.py:83] Jackhmmer (uniref90_2022_05.fa) failed. Jackhmmer (uniref90_2022_05.fa) stderr begin:
+E0620 17:08:23.754880 22897461917248 subprocess_utils.py:87] Jackhmmer (uniref90_2022_05.fa) stderr end.
+/pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/kpcb/kpcb_no_inference.sh: line 23: 672013 Segmentation fault      (core dumped) apptainer exec --nv --env XLA_PYTHON_CLIENT_PREALLOCATE=false,TF_FORCE_UNIFIED_MEMORY=true,XLA_CLIENT_MEM_FRACTION=3.2 --bind $AF3_INPUT_DIR:/root/af_input --bind $AF3_OUTPUT_DIR:/root/af_output --bind $AF3_MODEL_PARAMETERS_DIR:/root/models --bind $AF3_DATABASES_DIR:/root/public_databases $AF3_IMAGE python ${AF3_CODE_DIR}/alphafold3/run_alphafold.py --run_inference=FALSE --flash_attention_implementation=xla --json_path=/root/af_input/kpcb_protein_only.json --model_dir=/root/models --db_dir=/root/public_databases --output_dir=/root/af_output
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c01>
+Subject: Job 435367: <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/kpcb/kpcb_no_inference.sh> in cluster <sci> Exited
+
+Job <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/kpcb/kpcb_no_inference.sh> was submitted from host <r640c29> by user <ari.ginsparg-umw> in cluster <sci> at Fri Jun 20 15:42:33 2025
+Job was executed on host(s) <8*c4140c01>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Fri Jun 20 16:59:10 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3> was used as the working directory.
+Started at Fri Jun 20 16:59:10 2025
+Terminated at Fri Jun 20 17:08:43 2025
+Results reported at Fri Jun 20 17:08:43 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/kpcb/kpcb_no_inference.sh
+------------------------------------------------------------
+
+TERM_MEMLIMIT: job killed after reaching LSF memory usage limit.
+Exited with exit code 139.
+
+Resource usage summary:
+
+    CPU time :                                   8624.00 sec.
+    Max Memory :                                 16384 MB
+    Average Memory :                             5562.14 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               0.00 MB
+    Max Swap :                                   -
+    Max Processes :                              10
+    Max Threads :                                135
+    Run time :                                   543 sec.
+    Turnaround time :                            5170 sec.
+
+The output (if any) is above this job summary.
+

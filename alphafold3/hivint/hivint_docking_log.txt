@@ -1,0 +1,175 @@
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+I0623 17:32:35.154147 23026212295808 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+I0623 17:32:35.176973 23026212295808 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+Found local devices: [CudaDevice(id=0)], using device 0: cuda:0
+Building model from scratch...
+Checking that model parameters can be loaded...
+
+Running fold job hivint...
+Output will be written in /root/af_output/hivint_20250623_173240 since /root/af_output/hivint is non-empty.
+Skipping data pipeline...
+Writing model input JSON to /root/af_output/hivint_20250623_173240/hivint_data.json
+Predicting 3D structure for hivint with 10 seed(s)...
+Featurising data with 10 seed(s)...
+Featurising data with seed 1.
+I0623 17:32:47.302816 23026212295808 pipeline.py:166] processing hivint, random_seed=1
+I0623 17:32:47.330254 23026212295808 pipeline.py:259] Calculating bucket size for input with 240 tokens.
+I0623 17:32:47.330418 23026212295808 pipeline.py:265] Got bucket size 256 for input with 240 tokens, resulting in 16 padded tokens.
+I0623 17:32:49.029672 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+I0623 17:32:50.234140 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+Featurising data with seed 1 took 2.97 seconds.
+Featurising data with seed 2.
+I0623 17:32:50.269535 23026212295808 pipeline.py:166] processing hivint, random_seed=2
+I0623 17:32:50.284680 23026212295808 pipeline.py:259] Calculating bucket size for input with 240 tokens.
+I0623 17:32:50.284762 23026212295808 pipeline.py:265] Got bucket size 256 for input with 240 tokens, resulting in 16 padded tokens.
+I0623 17:32:51.990756 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+I0623 17:32:53.201452 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+Featurising data with seed 2 took 2.96 seconds.
+Featurising data with seed 3.
+I0623 17:32:53.228019 23026212295808 pipeline.py:166] processing hivint, random_seed=3
+I0623 17:32:53.243181 23026212295808 pipeline.py:259] Calculating bucket size for input with 240 tokens.
+I0623 17:32:53.243258 23026212295808 pipeline.py:265] Got bucket size 256 for input with 240 tokens, resulting in 16 padded tokens.
+I0623 17:32:54.899417 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+I0623 17:32:56.103002 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+Featurising data with seed 3 took 2.90 seconds.
+Featurising data with seed 4.
+I0623 17:32:56.129632 23026212295808 pipeline.py:166] processing hivint, random_seed=4
+I0623 17:32:56.144600 23026212295808 pipeline.py:259] Calculating bucket size for input with 240 tokens.
+I0623 17:32:56.144673 23026212295808 pipeline.py:265] Got bucket size 256 for input with 240 tokens, resulting in 16 padded tokens.
+I0623 17:32:57.783110 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+I0623 17:32:58.988754 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+Featurising data with seed 4 took 2.89 seconds.
+Featurising data with seed 5.
+I0623 17:32:59.015687 23026212295808 pipeline.py:166] processing hivint, random_seed=5
+I0623 17:32:59.030575 23026212295808 pipeline.py:259] Calculating bucket size for input with 240 tokens.
+I0623 17:32:59.030658 23026212295808 pipeline.py:265] Got bucket size 256 for input with 240 tokens, resulting in 16 padded tokens.
+I0623 17:33:00.710795 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+I0623 17:33:01.929832 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+Featurising data with seed 5 took 2.94 seconds.
+Featurising data with seed 6.
+I0623 17:33:01.956973 23026212295808 pipeline.py:166] processing hivint, random_seed=6
+I0623 17:33:01.972361 23026212295808 pipeline.py:259] Calculating bucket size for input with 240 tokens.
+I0623 17:33:01.972449 23026212295808 pipeline.py:265] Got bucket size 256 for input with 240 tokens, resulting in 16 padded tokens.
+I0623 17:33:03.637498 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+I0623 17:33:04.837272 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+Featurising data with seed 6 took 2.91 seconds.
+Featurising data with seed 7.
+I0623 17:33:04.864164 23026212295808 pipeline.py:166] processing hivint, random_seed=7
+I0623 17:33:04.879146 23026212295808 pipeline.py:259] Calculating bucket size for input with 240 tokens.
+I0623 17:33:04.879219 23026212295808 pipeline.py:265] Got bucket size 256 for input with 240 tokens, resulting in 16 padded tokens.
+I0623 17:33:06.521681 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+I0623 17:33:07.726999 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+Featurising data with seed 7 took 2.89 seconds.
+Featurising data with seed 8.
+I0623 17:33:07.753961 23026212295808 pipeline.py:166] processing hivint, random_seed=8
+I0623 17:33:07.769550 23026212295808 pipeline.py:259] Calculating bucket size for input with 240 tokens.
+I0623 17:33:07.769639 23026212295808 pipeline.py:265] Got bucket size 256 for input with 240 tokens, resulting in 16 padded tokens.
+I0623 17:33:09.414602 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+I0623 17:33:10.612526 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+Featurising data with seed 8 took 2.89 seconds.
+Featurising data with seed 9.
+I0623 17:33:10.639017 23026212295808 pipeline.py:166] processing hivint, random_seed=9
+I0623 17:33:10.654022 23026212295808 pipeline.py:259] Calculating bucket size for input with 240 tokens.
+I0623 17:33:10.654094 23026212295808 pipeline.py:265] Got bucket size 256 for input with 240 tokens, resulting in 16 padded tokens.
+I0623 17:33:12.332960 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+I0623 17:33:13.533629 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+Featurising data with seed 9 took 2.92 seconds.
+Featurising data with seed 10.
+I0623 17:33:13.560820 23026212295808 pipeline.py:166] processing hivint, random_seed=10
+I0623 17:33:13.576252 23026212295808 pipeline.py:259] Calculating bucket size for input with 240 tokens.
+I0623 17:33:13.576329 23026212295808 pipeline.py:265] Got bucket size 256 for input with 240 tokens, resulting in 16 padded tokens.
+I0623 17:33:15.233859 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+I0623 17:33:16.439358 23026212295808 features.py:1520] Using SMILES for: LIG_B - O=C([O-])c1c(CN2C(=O)Cc3cc(Cl)ccc32)ccc2c1OCO2
+Featurising data with seed 10 took 2.92 seconds.
+Featurising data with 10 seed(s) took 36.26 seconds.
+Running model inference and extracting output structure samples with 10 seed(s)...
+Running model inference with seed 1...
+Running model inference with seed 1 took 53.91 seconds.
+Extracting inference results with seed 1...
+Extracting 5 inference samples with seed 1 took 0.23 seconds.
+Running model inference with seed 2...
+Running model inference with seed 2 took 27.57 seconds.
+Extracting inference results with seed 2...
+Extracting 5 inference samples with seed 2 took 0.21 seconds.
+Running model inference with seed 3...
+Running model inference with seed 3 took 27.59 seconds.
+Extracting inference results with seed 3...
+Extracting 5 inference samples with seed 3 took 0.21 seconds.
+Running model inference with seed 4...
+Running model inference with seed 4 took 27.62 seconds.
+Extracting inference results with seed 4...
+Extracting 5 inference samples with seed 4 took 0.21 seconds.
+Running model inference with seed 5...
+Running model inference with seed 5 took 27.61 seconds.
+Extracting inference results with seed 5...
+Extracting 5 inference samples with seed 5 took 0.39 seconds.
+Running model inference with seed 6...
+Running model inference with seed 6 took 27.63 seconds.
+Extracting inference results with seed 6...
+Extracting 5 inference samples with seed 6 took 0.21 seconds.
+Running model inference with seed 7...
+Running model inference with seed 7 took 27.63 seconds.
+Extracting inference results with seed 7...
+Extracting 5 inference samples with seed 7 took 0.21 seconds.
+Running model inference with seed 8...
+Running model inference with seed 8 took 27.64 seconds.
+Extracting inference results with seed 8...
+Extracting 5 inference samples with seed 8 took 0.21 seconds.
+Running model inference with seed 9...
+Running model inference with seed 9 took 27.64 seconds.
+Extracting inference results with seed 9...
+Extracting 5 inference samples with seed 9 took 0.21 seconds.
+Running model inference with seed 10...
+Running model inference with seed 10 took 27.65 seconds.
+Extracting inference results with seed 10...
+Extracting 5 inference samples with seed 10 took 0.21 seconds.
+Running model inference and extracting output structures with 10 seed(s) took 304.78 seconds.
+Writing outputs with 10 seed(s)...
+Fold job hivint done, output written to /root/af_output/hivint_20250623_173240
+
+Done running 1 fold jobs.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c05>
+Subject: Job 456159: <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/hivint/hivint_docking.sh> in cluster <sci> Done
+
+Job <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/hivint/hivint_docking.sh> was submitted from host <r640c58> by user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:38:42 2025
+Job was executed on host(s) <8*c4140c05>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 17:32:27 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3> was used as the working directory.
+Started at Mon Jun 23 17:32:27 2025
+Terminated at Mon Jun 23 17:38:28 2025
+Results reported at Mon Jun 23 17:38:28 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/hivint/hivint_docking.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   361.99 sec.
+    Max Memory :                                 4818 MB
+    Average Memory :                             4416.52 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               11566.00 MB
+    Max Swap :                                   -
+    Max Processes :                              7
+    Max Threads :                                343
+    Run time :                                   366 sec.
+    Turnaround time :                            3586 sec.
+
+The output (if any) is above this job summary.
+
