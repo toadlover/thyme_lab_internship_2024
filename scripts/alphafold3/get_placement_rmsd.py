@@ -133,9 +133,11 @@ with pymol2.PyMOL() as pymol:
 								element = re.match(r"[A-Za-z]+", atom_name.strip()).group(0).capitalize()
 								#print(element)
 
-								fixed_line = line[:76] + element.rjust(2) + line[78:]
+								stripped_line = line.rstrip("\n")
 
-								fixed_reference_file.write(fixed_line)
+								fixed_line = stripped_line[:76] + element.rjust(2) + stripped_line[78:]
+
+								fixed_reference_file.write(fixed_line + "\n")
 
 						#close streams
 						old_reference_file.close()
