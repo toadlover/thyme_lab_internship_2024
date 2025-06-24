@@ -103,7 +103,9 @@ with pymol2.PyMOL() as pymol:
 
 						#next, work on getting the rmsd
 						#remove hydrogens
-						reference_ligand = Chem.MolFromPDBFile(r + "/" + dire + "/" + dire + "-lig.pdb", removeHs=True)
+						#reference_ligand = Chem.MolFromPDBFile(r + "/" + dire + "/" + dire + "-lig.pdb", removeHs=True)
+						reference_ligand = Chem.MolFromMol2File(r + "/" + dire + "/crystal_ligand.mol2", removeHs=True)
+						
 
 						#sanitize the reference in case there are waters in it
 						frags = Chem.GetMolFrags(reference_ligand, asMols=True)
