@@ -100,4 +100,14 @@ with pymol2.PyMOL() as pymol:
 						cmd.delete("aligned_lig")
 						cmd.delete("placement")
 
-						#next work on getting the rmsd
+						#next, work on getting the rmsd
+						#remove hydrogens
+						reference_ligand = Chem.MolFromPDBFile(r + "/" + dire + "/" + dire + "-lig.pdb", removeHs=True)
+						placement_ligand = Chem.MolFromPDBFile(r2 + "/" + file_basename + "_aligned_lig.pdb", removeHs=True)
+
+						rmsd = "X"
+
+						#use the get best RMS function to derive the rmsd
+						if reference_ligand and placement_ligand:
+							rmsd = rdMolAlign.GetBestRMS(reference_ligand, placement_ligand)
+							print(r2 + "/" + file_basename + "_aligned_lig.pdb", rmsd)
