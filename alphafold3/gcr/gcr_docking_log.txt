@@ -1,0 +1,175 @@
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+I0623 17:22:39.709559 23357355361408 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+I0623 17:22:39.723590 23357355361408 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+Found local devices: [CudaDevice(id=0)], using device 0: cuda:0
+Building model from scratch...
+Checking that model parameters can be loaded...
+
+Running fold job gcr...
+Output will be written in /root/af_output/gcr_20250623_172243 since /root/af_output/gcr is non-empty.
+Skipping data pipeline...
+Writing model input JSON to /root/af_output/gcr_20250623_172243/gcr_data.json
+Predicting 3D structure for gcr with 10 seed(s)...
+Featurising data with 10 seed(s)...
+Featurising data with seed 1.
+I0623 17:22:49.862219 23357355361408 pipeline.py:166] processing gcr, random_seed=1
+I0623 17:22:49.888009 23357355361408 pipeline.py:259] Calculating bucket size for input with 282 tokens.
+I0623 17:22:49.888163 23357355361408 pipeline.py:265] Got bucket size 512 for input with 282 tokens, resulting in 230 padded tokens.
+I0623 17:22:51.755481 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+I0623 17:22:53.374418 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+Featurising data with seed 1 took 3.71 seconds.
+Featurising data with seed 2.
+I0623 17:22:53.572988 23357355361408 pipeline.py:166] processing gcr, random_seed=2
+I0623 17:22:53.589961 23357355361408 pipeline.py:259] Calculating bucket size for input with 282 tokens.
+I0623 17:22:53.590046 23357355361408 pipeline.py:265] Got bucket size 512 for input with 282 tokens, resulting in 230 padded tokens.
+I0623 17:22:55.383732 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+I0623 17:22:57.009759 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+Featurising data with seed 2 took 3.63 seconds.
+Featurising data with seed 3.
+I0623 17:22:57.200512 23357355361408 pipeline.py:166] processing gcr, random_seed=3
+I0623 17:22:57.218083 23357355361408 pipeline.py:259] Calculating bucket size for input with 282 tokens.
+I0623 17:22:57.218174 23357355361408 pipeline.py:265] Got bucket size 512 for input with 282 tokens, resulting in 230 padded tokens.
+I0623 17:22:59.065623 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+I0623 17:23:00.711692 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+Featurising data with seed 3 took 3.70 seconds.
+Featurising data with seed 4.
+I0623 17:23:00.903306 23357355361408 pipeline.py:166] processing gcr, random_seed=4
+I0623 17:23:00.920266 23357355361408 pipeline.py:259] Calculating bucket size for input with 282 tokens.
+I0623 17:23:00.920343 23357355361408 pipeline.py:265] Got bucket size 512 for input with 282 tokens, resulting in 230 padded tokens.
+I0623 17:23:02.741965 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+I0623 17:23:04.506759 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+Featurising data with seed 4 took 3.80 seconds.
+Featurising data with seed 5.
+I0623 17:23:04.701666 23357355361408 pipeline.py:166] processing gcr, random_seed=5
+I0623 17:23:04.719339 23357355361408 pipeline.py:259] Calculating bucket size for input with 282 tokens.
+I0623 17:23:04.719420 23357355361408 pipeline.py:265] Got bucket size 512 for input with 282 tokens, resulting in 230 padded tokens.
+I0623 17:23:06.605021 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+I0623 17:23:08.250293 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+Featurising data with seed 5 took 3.74 seconds.
+Featurising data with seed 6.
+I0623 17:23:08.441177 23357355361408 pipeline.py:166] processing gcr, random_seed=6
+I0623 17:23:08.458474 23357355361408 pipeline.py:259] Calculating bucket size for input with 282 tokens.
+I0623 17:23:08.458562 23357355361408 pipeline.py:265] Got bucket size 512 for input with 282 tokens, resulting in 230 padded tokens.
+I0623 17:23:10.237854 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+I0623 17:23:11.855967 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+Featurising data with seed 6 took 3.60 seconds.
+Featurising data with seed 7.
+I0623 17:23:12.044895 23357355361408 pipeline.py:166] processing gcr, random_seed=7
+I0623 17:23:12.062359 23357355361408 pipeline.py:259] Calculating bucket size for input with 282 tokens.
+I0623 17:23:12.062448 23357355361408 pipeline.py:265] Got bucket size 512 for input with 282 tokens, resulting in 230 padded tokens.
+I0623 17:23:13.829077 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+I0623 17:23:15.458912 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+Featurising data with seed 7 took 3.60 seconds.
+Featurising data with seed 8.
+I0623 17:23:15.648257 23357355361408 pipeline.py:166] processing gcr, random_seed=8
+I0623 17:23:15.665126 23357355361408 pipeline.py:259] Calculating bucket size for input with 282 tokens.
+I0623 17:23:15.665208 23357355361408 pipeline.py:265] Got bucket size 512 for input with 282 tokens, resulting in 230 padded tokens.
+I0623 17:23:17.463501 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+I0623 17:23:19.124820 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+Featurising data with seed 8 took 3.69 seconds.
+Featurising data with seed 9.
+I0623 17:23:19.333982 23357355361408 pipeline.py:166] processing gcr, random_seed=9
+I0623 17:23:19.352453 23357355361408 pipeline.py:259] Calculating bucket size for input with 282 tokens.
+I0623 17:23:19.352550 23357355361408 pipeline.py:265] Got bucket size 512 for input with 282 tokens, resulting in 230 padded tokens.
+I0623 17:23:21.210711 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+I0623 17:23:22.874262 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+Featurising data with seed 9 took 3.73 seconds.
+Featurising data with seed 10.
+I0623 17:23:23.066993 23357355361408 pipeline.py:166] processing gcr, random_seed=10
+I0623 17:23:23.084260 23357355361408 pipeline.py:259] Calculating bucket size for input with 282 tokens.
+I0623 17:23:23.084342 23357355361408 pipeline.py:265] Got bucket size 512 for input with 282 tokens, resulting in 230 padded tokens.
+I0623 17:23:24.900956 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+I0623 17:23:26.566745 23357355361408 features.py:1520] Using SMILES for: LIG_B - CC1=C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2C[C@@H](C)[C@]3(O)C(=O)CO)[C@@]2(C)CC3=C(C=C12)[N+](c1ccccc1)=NC3
+Featurising data with seed 10 took 3.69 seconds.
+Featurising data with 10 seed(s) took 42.80 seconds.
+Running model inference and extracting output structure samples with 10 seed(s)...
+Running model inference with seed 1...
+Running model inference with seed 1 took 122.14 seconds.
+Extracting inference results with seed 1...
+Extracting 5 inference samples with seed 1 took 0.28 seconds.
+Running model inference with seed 2...
+Running model inference with seed 2 took 93.06 seconds.
+Extracting inference results with seed 2...
+Extracting 5 inference samples with seed 2 took 0.26 seconds.
+Running model inference with seed 3...
+Running model inference with seed 3 took 93.07 seconds.
+Extracting inference results with seed 3...
+Extracting 5 inference samples with seed 3 took 0.26 seconds.
+Running model inference with seed 4...
+Running model inference with seed 4 took 93.07 seconds.
+Extracting inference results with seed 4...
+Extracting 5 inference samples with seed 4 took 0.44 seconds.
+Running model inference with seed 5...
+Running model inference with seed 5 took 93.12 seconds.
+Extracting inference results with seed 5...
+Extracting 5 inference samples with seed 5 took 0.26 seconds.
+Running model inference with seed 6...
+Running model inference with seed 6 took 93.06 seconds.
+Extracting inference results with seed 6...
+Extracting 5 inference samples with seed 6 took 0.26 seconds.
+Running model inference with seed 7...
+Running model inference with seed 7 took 92.75 seconds.
+Extracting inference results with seed 7...
+Extracting 5 inference samples with seed 7 took 0.26 seconds.
+Running model inference with seed 8...
+Running model inference with seed 8 took 93.07 seconds.
+Extracting inference results with seed 8...
+Extracting 5 inference samples with seed 8 took 0.25 seconds.
+Running model inference with seed 9...
+Running model inference with seed 9 took 93.01 seconds.
+Extracting inference results with seed 9...
+Extracting 5 inference samples with seed 9 took 0.25 seconds.
+Running model inference with seed 10...
+Running model inference with seed 10 took 92.91 seconds.
+Extracting inference results with seed 10...
+Extracting 5 inference samples with seed 10 took 0.26 seconds.
+Running model inference and extracting output structures with 10 seed(s) took 962.04 seconds.
+Writing outputs with 10 seed(s)...
+Fold job gcr done, output written to /root/af_output/gcr_20250623_172243
+
+Done running 1 fold jobs.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c07>
+Subject: Job 456153: <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/gcr/gcr_docking.sh> in cluster <sci> Done
+
+Job <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/gcr/gcr_docking.sh> was submitted from host <r640c58> by user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:38:39 2025
+Job was executed on host(s) <8*c4140c07>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 17:22:30 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3> was used as the working directory.
+Started at Mon Jun 23 17:22:30 2025
+Terminated at Mon Jun 23 17:39:41 2025
+Results reported at Mon Jun 23 17:39:41 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/gcr/gcr_docking.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1012.78 sec.
+    Max Memory :                                 5042 MB
+    Average Memory :                             4889.37 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               11342.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                342
+    Run time :                                   1033 sec.
+    Turnaround time :                            3662 sec.
+
+The output (if any) is above this job summary.
+

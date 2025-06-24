@@ -1,0 +1,74 @@
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+I0623 16:56:13.733848 23424583791744 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+I0623 16:56:13.755969 23424583791744 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+Found local devices: [CudaDevice(id=0)], using device 0: cuda:0
+Building model from scratch...
+Checking that model parameters can be loaded...
+Traceback (most recent call last):
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 829, in <module>
+    app.run(main)
+  File "/alphafold3_venv/lib/python3.11/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+  File "/alphafold3_venv/lib/python3.11/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ^^^^^^^^^^
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 808, in main
+    for fold_input in fold_inputs:
+  File "/alphafold3_venv/lib/python3.11/site-packages/alphafold3/common/folding_input.py", line 1413, in load_fold_inputs_from_path
+    raw_json = json.loads(json_str)
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Invalid \escape: line 9 column 53 (char 165)
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c05>
+Subject: Job 456134: <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/cp3a4/cp3a4_docking.sh> in cluster <sci> Exited
+
+Job <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/cp3a4/cp3a4_docking.sh> was submitted from host <r640c58> by user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:38:31 2025
+Job was executed on host(s) <8*c4140c05>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:56:05 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3> was used as the working directory.
+Started at Mon Jun 23 16:56:05 2025
+Terminated at Mon Jun 23 16:56:19 2025
+Results reported at Mon Jun 23 16:56:19 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/cp3a4/cp3a4_docking.sh
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   18.54 sec.
+    Max Memory :                                 172 MB
+    Average Memory :                             131.25 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               16212.00 MB
+    Max Swap :                                   -
+    Max Processes :                              7
+    Max Threads :                                222
+    Run time :                                   14 sec.
+    Turnaround time :                            1068 sec.
+
+The output (if any) is above this job summary.
+

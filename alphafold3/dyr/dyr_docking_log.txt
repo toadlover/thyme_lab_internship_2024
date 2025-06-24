@@ -1,0 +1,175 @@
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+I0623 17:03:16.859237 22951800603776 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+I0623 17:03:16.873506 22951800603776 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+Found local devices: [CudaDevice(id=0)], using device 0: cuda:0
+Building model from scratch...
+Checking that model parameters can be loaded...
+
+Running fold job dyr...
+Output will be written in /root/af_output/dyr_20250623_170321 since /root/af_output/dyr is non-empty.
+Skipping data pipeline...
+Writing model input JSON to /root/af_output/dyr_20250623_170321/dyr_data.json
+Predicting 3D structure for dyr with 10 seed(s)...
+Featurising data with 10 seed(s)...
+Featurising data with seed 1.
+I0623 17:03:27.699761 22951800603776 pipeline.py:166] processing dyr, random_seed=1
+I0623 17:03:27.722321 22951800603776 pipeline.py:259] Calculating bucket size for input with 210 tokens.
+I0623 17:03:27.722491 22951800603776 pipeline.py:265] Got bucket size 256 for input with 210 tokens, resulting in 46 padded tokens.
+I0623 17:03:30.030251 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+I0623 17:03:31.281870 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+Featurising data with seed 1 took 3.65 seconds.
+Featurising data with seed 2.
+I0623 17:03:31.350548 22951800603776 pipeline.py:166] processing dyr, random_seed=2
+I0623 17:03:31.365761 22951800603776 pipeline.py:259] Calculating bucket size for input with 210 tokens.
+I0623 17:03:31.365863 22951800603776 pipeline.py:265] Got bucket size 256 for input with 210 tokens, resulting in 46 padded tokens.
+I0623 17:03:33.636793 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+I0623 17:03:34.888058 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+Featurising data with seed 2 took 3.61 seconds.
+Featurising data with seed 3.
+I0623 17:03:34.955606 22951800603776 pipeline.py:166] processing dyr, random_seed=3
+I0623 17:03:34.970835 22951800603776 pipeline.py:259] Calculating bucket size for input with 210 tokens.
+I0623 17:03:34.970957 22951800603776 pipeline.py:265] Got bucket size 256 for input with 210 tokens, resulting in 46 padded tokens.
+I0623 17:03:37.233191 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+I0623 17:03:38.487188 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+Featurising data with seed 3 took 3.59 seconds.
+Featurising data with seed 4.
+I0623 17:03:38.550357 22951800603776 pipeline.py:166] processing dyr, random_seed=4
+I0623 17:03:38.565157 22951800603776 pipeline.py:259] Calculating bucket size for input with 210 tokens.
+I0623 17:03:38.565244 22951800603776 pipeline.py:265] Got bucket size 256 for input with 210 tokens, resulting in 46 padded tokens.
+I0623 17:03:40.786230 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+I0623 17:03:42.031743 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+Featurising data with seed 4 took 3.54 seconds.
+Featurising data with seed 5.
+I0623 17:03:42.095358 22951800603776 pipeline.py:166] processing dyr, random_seed=5
+I0623 17:03:42.110347 22951800603776 pipeline.py:259] Calculating bucket size for input with 210 tokens.
+I0623 17:03:42.110451 22951800603776 pipeline.py:265] Got bucket size 256 for input with 210 tokens, resulting in 46 padded tokens.
+I0623 17:03:44.375939 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+I0623 17:03:45.626142 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+Featurising data with seed 5 took 3.59 seconds.
+Featurising data with seed 6.
+I0623 17:03:45.689200 22951800603776 pipeline.py:166] processing dyr, random_seed=6
+I0623 17:03:45.704162 22951800603776 pipeline.py:259] Calculating bucket size for input with 210 tokens.
+I0623 17:03:45.704258 22951800603776 pipeline.py:265] Got bucket size 256 for input with 210 tokens, resulting in 46 padded tokens.
+I0623 17:03:47.970084 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+I0623 17:03:49.235652 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+Featurising data with seed 6 took 3.61 seconds.
+Featurising data with seed 7.
+I0623 17:03:49.299180 22951800603776 pipeline.py:166] processing dyr, random_seed=7
+I0623 17:03:49.314059 22951800603776 pipeline.py:259] Calculating bucket size for input with 210 tokens.
+I0623 17:03:49.314146 22951800603776 pipeline.py:265] Got bucket size 256 for input with 210 tokens, resulting in 46 padded tokens.
+I0623 17:03:51.547643 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+I0623 17:03:52.790544 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+Featurising data with seed 7 took 3.55 seconds.
+Featurising data with seed 8.
+I0623 17:03:52.853448 22951800603776 pipeline.py:166] processing dyr, random_seed=8
+I0623 17:03:52.868295 22951800603776 pipeline.py:259] Calculating bucket size for input with 210 tokens.
+I0623 17:03:52.868393 22951800603776 pipeline.py:265] Got bucket size 256 for input with 210 tokens, resulting in 46 padded tokens.
+I0623 17:03:55.079144 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+I0623 17:03:56.328431 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+Featurising data with seed 8 took 3.54 seconds.
+Featurising data with seed 9.
+I0623 17:03:56.391877 22951800603776 pipeline.py:166] processing dyr, random_seed=9
+I0623 17:03:56.407123 22951800603776 pipeline.py:259] Calculating bucket size for input with 210 tokens.
+I0623 17:03:56.407232 22951800603776 pipeline.py:265] Got bucket size 256 for input with 210 tokens, resulting in 46 padded tokens.
+I0623 17:03:58.663722 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+I0623 17:03:59.916868 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+Featurising data with seed 9 took 3.59 seconds.
+Featurising data with seed 10.
+I0623 17:03:59.980138 22951800603776 pipeline.py:166] processing dyr, random_seed=10
+I0623 17:03:59.995098 22951800603776 pipeline.py:259] Calculating bucket size for input with 210 tokens.
+I0623 17:03:59.995188 22951800603776 pipeline.py:265] Got bucket size 256 for input with 210 tokens, resulting in 46 padded tokens.
+I0623 17:04:02.228800 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+I0623 17:04:03.469535 22951800603776 features.py:1520] Using SMILES for: LIG_B - COc1ccccc1[C@@H](Cc1coc2nc(N)nc(N)c12)C(C)C
+Featurising data with seed 10 took 3.55 seconds.
+Featurising data with 10 seed(s) took 41.80 seconds.
+Running model inference and extracting output structure samples with 10 seed(s)...
+Running model inference with seed 1...
+Running model inference with seed 1 took 56.23 seconds.
+Extracting inference results with seed 1...
+Extracting 5 inference samples with seed 1 took 0.21 seconds.
+Running model inference with seed 2...
+Running model inference with seed 2 took 27.58 seconds.
+Extracting inference results with seed 2...
+Extracting 5 inference samples with seed 2 took 0.19 seconds.
+Running model inference with seed 3...
+Running model inference with seed 3 took 27.64 seconds.
+Extracting inference results with seed 3...
+Extracting 5 inference samples with seed 3 took 0.19 seconds.
+Running model inference with seed 4...
+Running model inference with seed 4 took 27.67 seconds.
+Extracting inference results with seed 4...
+Extracting 5 inference samples with seed 4 took 0.19 seconds.
+Running model inference with seed 5...
+Running model inference with seed 5 took 27.65 seconds.
+Extracting inference results with seed 5...
+Extracting 5 inference samples with seed 5 took 0.19 seconds.
+Running model inference with seed 6...
+Running model inference with seed 6 took 27.64 seconds.
+Extracting inference results with seed 6...
+Extracting 5 inference samples with seed 6 took 0.19 seconds.
+Running model inference with seed 7...
+Running model inference with seed 7 took 27.61 seconds.
+Extracting inference results with seed 7...
+Extracting 5 inference samples with seed 7 took 0.19 seconds.
+Running model inference with seed 8...
+Running model inference with seed 8 took 27.59 seconds.
+Extracting inference results with seed 8...
+Extracting 5 inference samples with seed 8 took 0.19 seconds.
+Running model inference with seed 9...
+Running model inference with seed 9 took 27.58 seconds.
+Extracting inference results with seed 9...
+Extracting 5 inference samples with seed 9 took 0.19 seconds.
+Running model inference with seed 10...
+Running model inference with seed 10 took 27.57 seconds.
+Extracting inference results with seed 10...
+Extracting 5 inference samples with seed 10 took 0.19 seconds.
+Running model inference and extracting output structures with 10 seed(s) took 306.68 seconds.
+Writing outputs with 10 seed(s)...
+Fold job dyr done, output written to /root/af_output/dyr_20250623_170321
+
+Done running 1 fold jobs.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c03>
+Subject: Job 456141: <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/dyr/dyr_docking.sh> in cluster <sci> Done
+
+Job <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/dyr/dyr_docking.sh> was submitted from host <r640c58> by user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:38:34 2025
+Job was executed on host(s) <8*c4140c03>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 17:03:06 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3> was used as the working directory.
+Started at Mon Jun 23 17:03:06 2025
+Terminated at Mon Jun 23 17:09:24 2025
+Results reported at Mon Jun 23 17:09:24 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/dyr/dyr_docking.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   370.11 sec.
+    Max Memory :                                 4703 MB
+    Average Memory :                             4412.24 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               11681.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                342
+    Run time :                                   379 sec.
+    Turnaround time :                            1850 sec.
+
+The output (if any) is above this job summary.
+

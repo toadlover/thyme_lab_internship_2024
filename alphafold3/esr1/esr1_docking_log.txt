@@ -1,0 +1,175 @@
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+I0623 17:06:40.126289 22890475984000 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+I0623 17:06:40.149454 22890475984000 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+Found local devices: [CudaDevice(id=0)], using device 0: cuda:0
+Building model from scratch...
+Checking that model parameters can be loaded...
+
+Running fold job esr1...
+Output will be written in /root/af_output/esr1_20250623_170644 since /root/af_output/esr1 is non-empty.
+Skipping data pipeline...
+Writing model input JSON to /root/af_output/esr1_20250623_170644/esr1_data.json
+Predicting 3D structure for esr1 with 10 seed(s)...
+Featurising data with 10 seed(s)...
+Featurising data with seed 1.
+I0623 17:06:52.376675 22890475984000 pipeline.py:166] processing esr1, random_seed=1
+I0623 17:06:52.404896 22890475984000 pipeline.py:259] Calculating bucket size for input with 246 tokens.
+I0623 17:06:52.405077 22890475984000 pipeline.py:265] Got bucket size 256 for input with 246 tokens, resulting in 10 padded tokens.
+I0623 17:06:54.301874 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+I0623 17:06:55.684521 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+Featurising data with seed 1 took 3.44 seconds.
+Featurising data with seed 2.
+I0623 17:06:55.811916 22890475984000 pipeline.py:166] processing esr1, random_seed=2
+I0623 17:06:55.828878 22890475984000 pipeline.py:259] Calculating bucket size for input with 246 tokens.
+I0623 17:06:55.828979 22890475984000 pipeline.py:265] Got bucket size 256 for input with 246 tokens, resulting in 10 padded tokens.
+I0623 17:06:57.669526 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+I0623 17:06:59.078119 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+Featurising data with seed 2 took 3.38 seconds.
+Featurising data with seed 3.
+I0623 17:06:59.196883 22890475984000 pipeline.py:166] processing esr1, random_seed=3
+I0623 17:06:59.213622 22890475984000 pipeline.py:259] Calculating bucket size for input with 246 tokens.
+I0623 17:06:59.213717 22890475984000 pipeline.py:265] Got bucket size 256 for input with 246 tokens, resulting in 10 padded tokens.
+I0623 17:07:01.037732 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+I0623 17:07:02.425848 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+Featurising data with seed 3 took 3.35 seconds.
+Featurising data with seed 4.
+I0623 17:07:02.543338 22890475984000 pipeline.py:166] processing esr1, random_seed=4
+I0623 17:07:02.560428 22890475984000 pipeline.py:259] Calculating bucket size for input with 246 tokens.
+I0623 17:07:02.560533 22890475984000 pipeline.py:265] Got bucket size 256 for input with 246 tokens, resulting in 10 padded tokens.
+I0623 17:07:04.382545 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+I0623 17:07:05.790050 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+Featurising data with seed 4 took 3.37 seconds.
+Featurising data with seed 5.
+I0623 17:07:05.908425 22890475984000 pipeline.py:166] processing esr1, random_seed=5
+I0623 17:07:05.925134 22890475984000 pipeline.py:259] Calculating bucket size for input with 246 tokens.
+I0623 17:07:05.925231 22890475984000 pipeline.py:265] Got bucket size 256 for input with 246 tokens, resulting in 10 padded tokens.
+I0623 17:07:07.799805 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+I0623 17:07:09.176902 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+Featurising data with seed 5 took 3.39 seconds.
+Featurising data with seed 6.
+I0623 17:07:09.294621 22890475984000 pipeline.py:166] processing esr1, random_seed=6
+I0623 17:07:09.311723 22890475984000 pipeline.py:259] Calculating bucket size for input with 246 tokens.
+I0623 17:07:09.311817 22890475984000 pipeline.py:265] Got bucket size 256 for input with 246 tokens, resulting in 10 padded tokens.
+I0623 17:07:11.151599 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+I0623 17:07:12.542360 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+Featurising data with seed 6 took 3.37 seconds.
+Featurising data with seed 7.
+I0623 17:07:12.660417 22890475984000 pipeline.py:166] processing esr1, random_seed=7
+I0623 17:07:12.677249 22890475984000 pipeline.py:259] Calculating bucket size for input with 246 tokens.
+I0623 17:07:12.677341 22890475984000 pipeline.py:265] Got bucket size 256 for input with 246 tokens, resulting in 10 padded tokens.
+I0623 17:07:14.515293 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+I0623 17:07:15.890896 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+Featurising data with seed 7 took 3.35 seconds.
+Featurising data with seed 8.
+I0623 17:07:16.010852 22890475984000 pipeline.py:166] processing esr1, random_seed=8
+I0623 17:07:16.027812 22890475984000 pipeline.py:259] Calculating bucket size for input with 246 tokens.
+I0623 17:07:16.027924 22890475984000 pipeline.py:265] Got bucket size 256 for input with 246 tokens, resulting in 10 padded tokens.
+I0623 17:07:17.854542 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+I0623 17:07:19.225943 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+Featurising data with seed 8 took 3.33 seconds.
+Featurising data with seed 9.
+I0623 17:07:19.343675 22890475984000 pipeline.py:166] processing esr1, random_seed=9
+I0623 17:07:19.360311 22890475984000 pipeline.py:259] Calculating bucket size for input with 246 tokens.
+I0623 17:07:19.360400 22890475984000 pipeline.py:265] Got bucket size 256 for input with 246 tokens, resulting in 10 padded tokens.
+I0623 17:07:21.274055 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+I0623 17:07:22.677218 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+Featurising data with seed 9 took 3.45 seconds.
+Featurising data with seed 10.
+I0623 17:07:22.794750 22890475984000 pipeline.py:166] processing esr1, random_seed=10
+I0623 17:07:22.811411 22890475984000 pipeline.py:259] Calculating bucket size for input with 246 tokens.
+I0623 17:07:22.811507 22890475984000 pipeline.py:265] Got bucket size 256 for input with 246 tokens, resulting in 10 padded tokens.
+I0623 17:07:24.648427 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+I0623 17:07:26.047507 22890475984000 features.py:1520] Using SMILES for: LIG_B - Oc1ccc([C@H]2Sc3cc(O)ccc3O[C@H]2c2ccc(OCC[NH+]3CCCCC3)cc2)cc1
+Featurising data with seed 10 took 3.37 seconds.
+Featurising data with 10 seed(s) took 41.20 seconds.
+Running model inference and extracting output structure samples with 10 seed(s)...
+Running model inference with seed 1...
+Running model inference with seed 1 took 54.80 seconds.
+Extracting inference results with seed 1...
+Extracting 5 inference samples with seed 1 took 0.24 seconds.
+Running model inference with seed 2...
+Running model inference with seed 2 took 27.59 seconds.
+Extracting inference results with seed 2...
+Extracting 5 inference samples with seed 2 took 0.22 seconds.
+Running model inference with seed 3...
+Running model inference with seed 3 took 27.64 seconds.
+Extracting inference results with seed 3...
+Extracting 5 inference samples with seed 3 took 0.22 seconds.
+Running model inference with seed 4...
+Running model inference with seed 4 took 27.64 seconds.
+Extracting inference results with seed 4...
+Extracting 5 inference samples with seed 4 took 0.22 seconds.
+Running model inference with seed 5...
+Running model inference with seed 5 took 27.62 seconds.
+Extracting inference results with seed 5...
+Extracting 5 inference samples with seed 5 took 0.40 seconds.
+Running model inference with seed 6...
+Running model inference with seed 6 took 27.61 seconds.
+Extracting inference results with seed 6...
+Extracting 5 inference samples with seed 6 took 0.22 seconds.
+Running model inference with seed 7...
+Running model inference with seed 7 took 27.60 seconds.
+Extracting inference results with seed 7...
+Extracting 5 inference samples with seed 7 took 0.22 seconds.
+Running model inference with seed 8...
+Running model inference with seed 8 took 27.57 seconds.
+Extracting inference results with seed 8...
+Extracting 5 inference samples with seed 8 took 0.22 seconds.
+Running model inference with seed 9...
+Running model inference with seed 9 took 27.56 seconds.
+Extracting inference results with seed 9...
+Extracting 5 inference samples with seed 9 took 0.22 seconds.
+Running model inference with seed 10...
+Running model inference with seed 10 took 27.56 seconds.
+Extracting inference results with seed 10...
+Extracting 5 inference samples with seed 10 took 0.21 seconds.
+Running model inference and extracting output structures with 10 seed(s) took 305.56 seconds.
+Writing outputs with 10 seed(s)...
+Fold job esr1 done, output written to /root/af_output/esr1_20250623_170644
+
+Done running 1 fold jobs.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c08>
+Subject: Job 456143: <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/esr1/esr1_docking.sh> in cluster <sci> Done
+
+Job <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/esr1/esr1_docking.sh> was submitted from host <r640c58> by user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:38:35 2025
+Job was executed on host(s) <8*c4140c08>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 17:06:28 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3> was used as the working directory.
+Started at Mon Jun 23 17:06:28 2025
+Terminated at Mon Jun 23 17:12:46 2025
+Results reported at Mon Jun 23 17:12:46 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/esr1/esr1_docking.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   368.38 sec.
+    Max Memory :                                 4725 MB
+    Average Memory :                             4301.54 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               11659.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                342
+    Run time :                                   374 sec.
+    Turnaround time :                            2051 sec.
+
+The output (if any) is above this job summary.
+

@@ -1,0 +1,79 @@
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+
+Running fold job fa7...
+Output will be written in /root/af_output/fa7
+Running data pipeline...
+Running data pipeline for chain A...
+I0620 16:26:58.938155 22917125723264 pipeline.py:82] Getting protein MSAs for sequence IVGGKVCPKGECPWQVLLLVNGAQLCGGTLINTIWVVSAAHCFDKIKNWRNLIAVLGEHDLSEEQSRRVAQVIIPSTYVPGTTNHDIALLRLHQVHVVPLCLPERTFSERTLAFVRFSLVSGWGQLLDRGATALELMVLNVPRLMTQDCLQQSRSPNITEYMFCAGYSDGSKDSCKGDSGGPHATHYRGTWYLTGIVSWGQGCATVGHFGVYTRVSQYIEWLQKLMSPRPGVLLRAPFPYHCGKIL
+I0620 16:26:58.940234 22913710540352 jackhmmer.py:78] Query sequence: IVGGKVCPKGECPWQVLLLVNGAQLCGGTLINTIWVVSAAHCFDKIKNWRNLIAVLGEHDLSEEQSRRVAQVIIPSTYVPGTTNHDIALLRLHQVHVVPLCLPERTFSERTLAFVRFSLVSGWGQLLDRGATALELMVLNVPRLMTQDCLQQSRSPNITEYMFCAGYSDGSKDSCKGDSGGPHATHYRGTWYLTGIVSWGQGCATVGHFGVYTRVSQYIEWLQKLMSPRPGVLLRAPFPYHCGKIL
+I0620 16:26:58.940638 22913708439104 jackhmmer.py:78] Query sequence: IVGGKVCPKGECPWQVLLLVNGAQLCGGTLINTIWVVSAAHCFDKIKNWRNLIAVLGEHDLSEEQSRRVAQVIIPSTYVPGTTNHDIALLRLHQVHVVPLCLPERTFSERTLAFVRFSLVSGWGQLLDRGATALELMVLNVPRLMTQDCLQQSRSPNITEYMFCAGYSDGSKDSCKGDSGGPHATHYRGTWYLTGIVSWGQGCATVGHFGVYTRVSQYIEWLQKLMSPRPGVLLRAPFPYHCGKIL
+I0620 16:26:58.940920 22913706337856 jackhmmer.py:78] Query sequence: IVGGKVCPKGECPWQVLLLVNGAQLCGGTLINTIWVVSAAHCFDKIKNWRNLIAVLGEHDLSEEQSRRVAQVIIPSTYVPGTTNHDIALLRLHQVHVVPLCLPERTFSERTLAFVRFSLVSGWGQLLDRGATALELMVLNVPRLMTQDCLQQSRSPNITEYMFCAGYSDGSKDSCKGDSGGPHATHYRGTWYLTGIVSWGQGCATVGHFGVYTRVSQYIEWLQKLMSPRPGVLLRAPFPYHCGKIL
+I0620 16:26:58.941120 22913704236608 jackhmmer.py:78] Query sequence: IVGGKVCPKGECPWQVLLLVNGAQLCGGTLINTIWVVSAAHCFDKIKNWRNLIAVLGEHDLSEEQSRRVAQVIIPSTYVPGTTNHDIALLRLHQVHVVPLCLPERTFSERTLAFVRFSLVSGWGQLLDRGATALELMVLNVPRLMTQDCLQQSRSPNITEYMFCAGYSDGSKDSCKGDSGGPHATHYRGTWYLTGIVSWGQGCATVGHFGVYTRVSQYIEWLQKLMSPRPGVLLRAPFPYHCGKIL
+I0620 16:26:58.941390 22913710540352 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmp0luobpft/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmp0luobpft/query.fasta /root/public_databases/uniref90_2022_05.fa"
+I0620 16:26:58.941645 22913708439104 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmp6pfvlewa/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmp6pfvlewa/query.fasta /root/public_databases/mgy_clusters_2022_05.fa"
+I0620 16:26:58.943025 22913706337856 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpezqrm48i/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpezqrm48i/query.fasta /root/public_databases/bfd-first_non_consensus_sequences.fasta"
+I0620 16:26:58.943234 22913704236608 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpuae9bun5/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpuae9bun5/query.fasta /root/public_databases/uniprot_all_2021_04.fa"
+I0620 16:28:58.101659 22913706337856 subprocess_utils.py:97] Finished Jackhmmer (bfd-first_non_consensus_sequences.fasta) in 119.147 seconds
+I0620 16:37:31.246058 22913710540352 subprocess_utils.py:97] Finished Jackhmmer (uniref90_2022_05.fa) in 632.305 seconds
+I0620 16:42:01.222185 22913704236608 subprocess_utils.py:97] Finished Jackhmmer (uniprot_all_2021_04.fa) in 902.267 seconds
+I0620 16:45:13.644327 22913708439104 subprocess_utils.py:97] Finished Jackhmmer (mgy_clusters_2022_05.fa) in 1094.703 seconds
+I0620 16:45:13.820198 22917125723264 pipeline.py:115] Getting protein MSAs took 1094.88 seconds for sequence IVGGKVCPKGECPWQVLLLVNGAQLCGGTLINTIWVVSAAHCFDKIKNWRNLIAVLGEHDLSEEQSRRVAQVIIPSTYVPGTTNHDIALLRLHQVHVVPLCLPERTFSERTLAFVRFSLVSGWGQLLDRGATALELMVLNVPRLMTQDCLQQSRSPNITEYMFCAGYSDGSKDSCKGDSGGPHATHYRGTWYLTGIVSWGQGCATVGHFGVYTRVSQYIEWLQKLMSPRPGVLLRAPFPYHCGKIL
+I0620 16:45:13.820365 22917125723264 pipeline.py:121] Deduplicating MSAs for sequence IVGGKVCPKGECPWQVLLLVNGAQLCGGTLINTIWVVSAAHCFDKIKNWRNLIAVLGEHDLSEEQSRRVAQVIIPSTYVPGTTNHDIALLRLHQVHVVPLCLPERTFSERTLAFVRFSLVSGWGQLLDRGATALELMVLNVPRLMTQDCLQQSRSPNITEYMFCAGYSDGSKDSCKGDSGGPHATHYRGTWYLTGIVSWGQGCATVGHFGVYTRVSQYIEWLQKLMSPRPGVLLRAPFPYHCGKIL
+I0620 16:45:13.868242 22917125723264 pipeline.py:134] Deduplicating MSAs took 0.05 seconds for sequence IVGGKVCPKGECPWQVLLLVNGAQLCGGTLINTIWVVSAAHCFDKIKNWRNLIAVLGEHDLSEEQSRRVAQVIIPSTYVPGTTNHDIALLRLHQVHVVPLCLPERTFSERTLAFVRFSLVSGWGQLLDRGATALELMVLNVPRLMTQDCLQQSRSPNITEYMFCAGYSDGSKDSCKGDSGGPHATHYRGTWYLTGIVSWGQGCATVGHFGVYTRVSQYIEWLQKLMSPRPGVLLRAPFPYHCGKIL, found 18898 unpaired sequences, 50000 paired sequences
+I0620 16:45:13.878436 22917125723264 pipeline.py:40] Getting protein templates for sequence IVGGKVCPKGECPWQVLLLVNGAQLCGGTLINTIWVVSAAHCFDKIKNWRNLIAVLGEHDLSEEQSRRVAQVIIPSTYVPGTTNHDIALLRLHQVHVVPLCLPERTFSERTLAFVRFSLVSGWGQLLDRGATALELMVLNVPRLMTQDCLQQSRSPNITEYMFCAGYSDGSKDSCKGDSGGPHATHYRGTWYLTGIVSWGQGCATVGHFGVYTRVSQYIEWLQKLMSPRPGVLLRAPFPYHCGKIL
+I0620 16:45:14.543763 22917125723264 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/hmmbuild --informat stockholm --hand --amino /tmp/tmp3yl4ec6n/output.hmm /tmp/tmp3yl4ec6n/query.msa"
+I0620 16:45:15.503305 22917125723264 subprocess_utils.py:97] Finished Hmmbuild in 0.959 seconds
+I0620 16:45:15.510687 22917125723264 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/hmmsearch --noali --cpu 8 --F1 0.1 --F2 0.1 --F3 0.1 -E 100 --incE 100 --domE 100 --incdomE 100 -A /tmp/tmplybtg95h/output.sto /tmp/tmplybtg95h/query.hmm /root/public_databases/pdb_seqres_2022_09_28.fasta"
+I0620 16:45:20.362000 22917125723264 subprocess_utils.py:97] Finished Hmmsearch (pdb_seqres_2022_09_28.fasta) in 4.851 seconds
+I0620 16:45:20.568807 22917125723264 pipeline.py:52] Getting 4 protein templates took 6.69 seconds for sequence IVGGKVCPKGECPWQVLLLVNGAQLCGGTLINTIWVVSAAHCFDKIKNWRNLIAVLGEHDLSEEQSRRVAQVIIPSTYVPGTTNHDIALLRLHQVHVVPLCLPERTFSERTLAFVRFSLVSGWGQLLDRGATALELMVLNVPRLMTQDCLQQSRSPNITEYMFCAGYSDGSKDSCKGDSGGPHATHYRGTWYLTGIVSWGQGCATVGHFGVYTRVSQYIEWLQKLMSPRPGVLLRAPFPYHCGKIL
+Running data pipeline for chain A took 1101.74 seconds
+Writing model input JSON to /root/af_output/fa7/fa7_data.json
+Skipping model inference...
+Fold job fa7 done, output written to /root/af_output/fa7
+
+Done running 1 fold jobs.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c06>
+Subject: Job 435341: <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/fa7/fa7_no_inference.sh> in cluster <sci> Done
+
+Job <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/fa7/fa7_no_inference.sh> was submitted from host <r640c29> by user <ari.ginsparg-umw> in cluster <sci> at Fri Jun 20 15:42:25 2025
+Job was executed on host(s) <8*c4140c06>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Fri Jun 20 16:26:49 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3> was used as the working directory.
+Started at Fri Jun 20 16:26:49 2025
+Terminated at Fri Jun 20 16:45:27 2025
+Results reported at Fri Jun 20 16:45:27 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/fa7/fa7_no_inference.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   5532.92 sec.
+    Max Memory :                                 1342 MB
+    Average Memory :                             774.50 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               15042.00 MB
+    Max Swap :                                   -
+    Max Processes :                              10
+    Max Threads :                                135
+    Run time :                                   1112 sec.
+    Turnaround time :                            3782 sec.
+
+The output (if any) is above this job summary.
+

@@ -1,0 +1,175 @@
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+I0623 16:50:53.972100 23029475206272 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+I0623 16:50:53.986549 23029475206272 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+Found local devices: [CudaDevice(id=0)], using device 0: cuda:0
+Building model from scratch...
+Checking that model parameters can be loaded...
+
+Running fold job braf...
+Output will be written in /root/af_output/braf_20250623_165058 since /root/af_output/braf is non-empty.
+Skipping data pipeline...
+Writing model input JSON to /root/af_output/braf_20250623_165058/braf_data.json
+Predicting 3D structure for braf with 10 seed(s)...
+Featurising data with 10 seed(s)...
+Featurising data with seed 1.
+I0623 16:51:04.621165 23029475206272 pipeline.py:166] processing braf, random_seed=1
+I0623 16:51:04.650618 23029475206272 pipeline.py:259] Calculating bucket size for input with 352 tokens.
+I0623 16:51:04.650773 23029475206272 pipeline.py:265] Got bucket size 512 for input with 352 tokens, resulting in 160 padded tokens.
+I0623 16:51:08.615919 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+I0623 16:51:10.610336 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+Featurising data with seed 1 took 6.06 seconds.
+Featurising data with seed 2.
+I0623 16:51:10.678747 23029475206272 pipeline.py:166] processing braf, random_seed=2
+I0623 16:51:10.699930 23029475206272 pipeline.py:259] Calculating bucket size for input with 352 tokens.
+I0623 16:51:10.700022 23029475206272 pipeline.py:265] Got bucket size 512 for input with 352 tokens, resulting in 160 padded tokens.
+I0623 16:51:14.720993 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+I0623 16:51:16.710162 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+Featurising data with seed 2 took 6.10 seconds.
+Featurising data with seed 3.
+I0623 16:51:16.776707 23029475206272 pipeline.py:166] processing braf, random_seed=3
+I0623 16:51:16.797819 23029475206272 pipeline.py:259] Calculating bucket size for input with 352 tokens.
+I0623 16:51:16.797905 23029475206272 pipeline.py:265] Got bucket size 512 for input with 352 tokens, resulting in 160 padded tokens.
+I0623 16:51:20.642500 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+I0623 16:51:22.735785 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+Featurising data with seed 3 took 6.02 seconds.
+Featurising data with seed 4.
+I0623 16:51:22.799940 23029475206272 pipeline.py:166] processing braf, random_seed=4
+I0623 16:51:22.822285 23029475206272 pipeline.py:259] Calculating bucket size for input with 352 tokens.
+I0623 16:51:22.822383 23029475206272 pipeline.py:265] Got bucket size 512 for input with 352 tokens, resulting in 160 padded tokens.
+I0623 16:51:26.700337 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+I0623 16:51:28.664190 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+Featurising data with seed 4 took 5.93 seconds.
+Featurising data with seed 5.
+I0623 16:51:28.727106 23029475206272 pipeline.py:166] processing braf, random_seed=5
+I0623 16:51:28.747989 23029475206272 pipeline.py:259] Calculating bucket size for input with 352 tokens.
+I0623 16:51:28.748081 23029475206272 pipeline.py:265] Got bucket size 512 for input with 352 tokens, resulting in 160 padded tokens.
+I0623 16:51:32.627049 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+I0623 16:51:34.592820 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+Featurising data with seed 5 took 5.93 seconds.
+Featurising data with seed 6.
+I0623 16:51:34.655248 23029475206272 pipeline.py:166] processing braf, random_seed=6
+I0623 16:51:34.676252 23029475206272 pipeline.py:259] Calculating bucket size for input with 352 tokens.
+I0623 16:51:34.676330 23029475206272 pipeline.py:265] Got bucket size 512 for input with 352 tokens, resulting in 160 padded tokens.
+I0623 16:51:38.669639 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+I0623 16:51:40.645663 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+Featurising data with seed 6 took 6.05 seconds.
+Featurising data with seed 7.
+I0623 16:51:40.709686 23029475206272 pipeline.py:166] processing braf, random_seed=7
+I0623 16:51:40.730978 23029475206272 pipeline.py:259] Calculating bucket size for input with 352 tokens.
+I0623 16:51:40.731061 23029475206272 pipeline.py:265] Got bucket size 512 for input with 352 tokens, resulting in 160 padded tokens.
+I0623 16:51:44.532916 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+I0623 16:51:46.654618 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+Featurising data with seed 7 took 6.01 seconds.
+Featurising data with seed 8.
+I0623 16:51:46.720272 23029475206272 pipeline.py:166] processing braf, random_seed=8
+I0623 16:51:46.741702 23029475206272 pipeline.py:259] Calculating bucket size for input with 352 tokens.
+I0623 16:51:46.741789 23029475206272 pipeline.py:265] Got bucket size 512 for input with 352 tokens, resulting in 160 padded tokens.
+I0623 16:51:50.611133 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+I0623 16:51:52.568249 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+Featurising data with seed 8 took 5.91 seconds.
+Featurising data with seed 9.
+I0623 16:51:52.630861 23029475206272 pipeline.py:166] processing braf, random_seed=9
+I0623 16:51:52.652093 23029475206272 pipeline.py:259] Calculating bucket size for input with 352 tokens.
+I0623 16:51:52.652184 23029475206272 pipeline.py:265] Got bucket size 512 for input with 352 tokens, resulting in 160 padded tokens.
+I0623 16:51:56.549487 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+I0623 16:51:58.517405 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+Featurising data with seed 9 took 5.95 seconds.
+Featurising data with seed 10.
+I0623 16:51:58.581197 23029475206272 pipeline.py:166] processing braf, random_seed=10
+I0623 16:51:58.601505 23029475206272 pipeline.py:259] Calculating bucket size for input with 352 tokens.
+I0623 16:51:58.601584 23029475206272 pipeline.py:265] Got bucket size 512 for input with 352 tokens, resulting in 160 padded tokens.
+I0623 16:52:02.605477 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+I0623 16:52:04.595454 23029475206272 features.py:1520] Using SMILES for: LIG_B - ONC1=C2C=CC(c3cn(C4CC[NH2+]CC4)nc3-c3ccncc3)=CC2C=C1
+Featurising data with seed 10 took 6.08 seconds.
+Featurising data with 10 seed(s) took 65.99 seconds.
+Running model inference and extracting output structure samples with 10 seed(s)...
+Running model inference with seed 1...
+Running model inference with seed 1 took 122.04 seconds.
+Extracting inference results with seed 1...
+Extracting 5 inference samples with seed 1 took 0.38 seconds.
+Running model inference with seed 2...
+Running model inference with seed 2 took 93.61 seconds.
+Extracting inference results with seed 2...
+Extracting 5 inference samples with seed 2 took 0.53 seconds.
+Running model inference with seed 3...
+Running model inference with seed 3 took 93.26 seconds.
+Extracting inference results with seed 3...
+Extracting 5 inference samples with seed 3 took 0.35 seconds.
+Running model inference with seed 4...
+Running model inference with seed 4 took 93.42 seconds.
+Extracting inference results with seed 4...
+Extracting 5 inference samples with seed 4 took 0.34 seconds.
+Running model inference with seed 5...
+Running model inference with seed 5 took 93.46 seconds.
+Extracting inference results with seed 5...
+Extracting 5 inference samples with seed 5 took 0.36 seconds.
+Running model inference with seed 6...
+Running model inference with seed 6 took 93.44 seconds.
+Extracting inference results with seed 6...
+Extracting 5 inference samples with seed 6 took 0.34 seconds.
+Running model inference with seed 7...
+Running model inference with seed 7 took 93.48 seconds.
+Extracting inference results with seed 7...
+Extracting 5 inference samples with seed 7 took 0.34 seconds.
+Running model inference with seed 8...
+Running model inference with seed 8 took 93.47 seconds.
+Extracting inference results with seed 8...
+Extracting 5 inference samples with seed 8 took 0.34 seconds.
+Running model inference with seed 9...
+Running model inference with seed 9 took 93.49 seconds.
+Extracting inference results with seed 9...
+Extracting 5 inference samples with seed 9 took 0.34 seconds.
+Running model inference with seed 10...
+Running model inference with seed 10 took 93.49 seconds.
+Extracting inference results with seed 10...
+Extracting 5 inference samples with seed 10 took 0.35 seconds.
+Running model inference and extracting output structures with 10 seed(s) took 966.82 seconds.
+Writing outputs with 10 seed(s)...
+Fold job braf done, output written to /root/af_output/braf_20250623_165058
+
+Done running 1 fold jobs.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c05>
+Subject: Job 456129: <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/braf/braf_docking.sh> in cluster <sci> Done
+
+Job <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/braf/braf_docking.sh> was submitted from host <r640c58> by user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:38:28 2025
+Job was executed on host(s) <8*c4140c05>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:50:46 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3> was used as the working directory.
+Started at Mon Jun 23 16:50:46 2025
+Terminated at Mon Jun 23 17:08:24 2025
+Results reported at Mon Jun 23 17:08:24 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/braf/braf_docking.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1042.00 sec.
+    Max Memory :                                 5117 MB
+    Average Memory :                             4934.27 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               11267.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                262
+    Run time :                                   1048 sec.
+    Turnaround time :                            1796 sec.
+
+The output (if any) is above this job summary.
+
