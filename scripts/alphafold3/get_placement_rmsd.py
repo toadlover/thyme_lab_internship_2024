@@ -36,8 +36,8 @@ with pymol2.PyMOL() as pymol:
 
 			#temporary filter so we only test this on aa2ar until it is time to run on the full set
 			#comment/delete when done testing!
-			if dire != "aa2ar":
-				continue
+			#if dire != "aa2ar":
+			#	continue
 
 			#open a file to write pairings of the files with confidence values and rmsd
 			#open it in the respective folder in the alphafold section of the repository
