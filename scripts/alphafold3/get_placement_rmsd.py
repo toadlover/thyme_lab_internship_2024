@@ -135,7 +135,8 @@ with pymol2.PyMOL() as pymol:
 
 								stripped_line = line.rstrip("\n")
 
-								fixed_line = stripped_line[:76] + element.rjust(2) + stripped_line[78:]
+								fixed_line = stripped_line[:76].ljust(76) + element.rjust(2) 
+								#fixed_line = stripped_line[:76].ljust(76) + element.rjust(2) + stripped_line[78:]
 
 								fixed_reference_file.write(fixed_line + "\n")
 
