@@ -8,6 +8,8 @@ import pymol2
 from rdkit import Chem
 from rdkit.Chem import AllChem, rdMolAlign
 import numpy as np
+from openbabel import openbabel as ob
+from openbabel import pybel
 
 #this script acts locally, and looks for placement files from alphafold and the native files from DUD-E
 this_script_path = os.path.dirname(os.path.abspath(__file__))
@@ -103,8 +105,14 @@ with pymol2.PyMOL() as pymol:
 
 						#next, work on getting the rmsd
 						#remove hydrogens
+
+						#write new ligand pdb to mol2 for easier readability
+						mol = next(pybel.readfile("pdb", r + "/" + dire + "/" + dire + "-lig.pdb"))
+						mol.write("mol2", r + "/" + dire + "/" + dire + "-lig.mol2", overwrite=True)
+
 						#reference_ligand = Chem.MolFromPDBFile(r + "/" + dire + "/" + dire + "-lig.pdb", removeHs=True)
-						reference_ligand = Chem.MolFromMol2File(r + "/" + dire + "/crystal_ligand.mol2", removeHs=True)
+						reference_ligand = Chem.MolFromPDBFile(r + "/" + dire + "/" + dire + "-lig.mol2", removeHs=True)
+						#reference_ligand = Chem.MolFromMol2File(r + "/" + dire + "/crystal_ligand.mol2", removeHs=True)
 						
 
 						#sanitize the reference in case there are waters in it
