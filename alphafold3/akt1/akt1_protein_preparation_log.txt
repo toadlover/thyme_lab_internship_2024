@@ -1,0 +1,66 @@
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+
+Running fold job akt1...
+Output will be written in /root/af_output/akt1
+Running data pipeline...
+Running data pipeline for chain A...
+I0620 15:42:29.078479 23059102680192 pipeline.py:82] Getting protein MSAs for sequence RVTMNEFEYLKLLGKGTFGKVILVKEKATGRYYAMKILKKEVIVAKDEVAHTLTENRVLQNSRHPFLTALKYSFQTHDRLCFVMEYANGGELFFHLSRERVFSEDRARFYGAEIVSALDYLHSEKNVVYRDLKLENLMLDKDGHIKITDFGLCKEGIKATMKTFCGTPEYLAPEVLYGRAVDWWGLGVVMYEMMCGRLPFYNQDHEKLFELIILLLGLLKRLGDAKIMFFIVWQHVYEKKLSPPFKPQVTSETDTRYFDEEFTAQMIERRPHFPQFDYSASSGRPRTTSFAE
+I0620 15:42:29.081791 23055687591488 jackhmmer.py:78] Query sequence: RVTMNEFEYLKLLGKGTFGKVILVKEKATGRYYAMKILKKEVIVAKDEVAHTLTENRVLQNSRHPFLTALKYSFQTHDRLCFVMEYANGGELFFHLSRERVFSEDRARFYGAEIVSALDYLHSEKNVVYRDLKLENLMLDKDGHIKITDFGLCKEGIKATMKTFCGTPEYLAPEVLYGRAVDWWGLGVVMYEMMCGRLPFYNQDHEKLFELIILLLGLLKRLGDAKIMFFIVWQHVYEKKLSPPFKPQVTSETDTRYFDEEFTAQMIERRPHFPQFDYSASSGRPRTTSFAE
+I0620 15:42:29.082026 23055685490240 jackhmmer.py:78] Query sequence: RVTMNEFEYLKLLGKGTFGKVILVKEKATGRYYAMKILKKEVIVAKDEVAHTLTENRVLQNSRHPFLTALKYSFQTHDRLCFVMEYANGGELFFHLSRERVFSEDRARFYGAEIVSALDYLHSEKNVVYRDLKLENLMLDKDGHIKITDFGLCKEGIKATMKTFCGTPEYLAPEVLYGRAVDWWGLGVVMYEMMCGRLPFYNQDHEKLFELIILLLGLLKRLGDAKIMFFIVWQHVYEKKLSPPFKPQVTSETDTRYFDEEFTAQMIERRPHFPQFDYSASSGRPRTTSFAE
+I0620 15:42:29.082442 23055683388992 jackhmmer.py:78] Query sequence: RVTMNEFEYLKLLGKGTFGKVILVKEKATGRYYAMKILKKEVIVAKDEVAHTLTENRVLQNSRHPFLTALKYSFQTHDRLCFVMEYANGGELFFHLSRERVFSEDRARFYGAEIVSALDYLHSEKNVVYRDLKLENLMLDKDGHIKITDFGLCKEGIKATMKTFCGTPEYLAPEVLYGRAVDWWGLGVVMYEMMCGRLPFYNQDHEKLFELIILLLGLLKRLGDAKIMFFIVWQHVYEKKLSPPFKPQVTSETDTRYFDEEFTAQMIERRPHFPQFDYSASSGRPRTTSFAE
+I0620 15:42:29.082817 23055681287744 jackhmmer.py:78] Query sequence: RVTMNEFEYLKLLGKGTFGKVILVKEKATGRYYAMKILKKEVIVAKDEVAHTLTENRVLQNSRHPFLTALKYSFQTHDRLCFVMEYANGGELFFHLSRERVFSEDRARFYGAEIVSALDYLHSEKNVVYRDLKLENLMLDKDGHIKITDFGLCKEGIKATMKTFCGTPEYLAPEVLYGRAVDWWGLGVVMYEMMCGRLPFYNQDHEKLFELIILLLGLLKRLGDAKIMFFIVWQHVYEKKLSPPFKPQVTSETDTRYFDEEFTAQMIERRPHFPQFDYSASSGRPRTTSFAE
+I0620 15:42:29.082916 23055687591488 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpby1x8u0g/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpby1x8u0g/query.fasta /root/public_databases/uniref90_2022_05.fa"
+I0620 15:42:29.083158 23055685490240 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpekc_cq5t/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpekc_cq5t/query.fasta /root/public_databases/mgy_clusters_2022_05.fa"
+I0620 15:42:29.083766 23055683388992 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpmq8f0505/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpmq8f0505/query.fasta /root/public_databases/bfd-first_non_consensus_sequences.fasta"
+I0620 15:42:29.083955 23055681287744 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpk9enlgsv/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpk9enlgsv/query.fasta /root/public_databases/uniprot_all_2021_04.fa"
+I0620 15:45:48.797636 23055683388992 subprocess_utils.py:97] Finished Jackhmmer (bfd-first_non_consensus_sequences.fasta) in 199.713 seconds
+I0620 15:55:05.614872 23055687591488 subprocess_utils.py:97] Finished Jackhmmer (uniref90_2022_05.fa) in 756.530 seconds
+E0620 16:00:08.669201 23055681287744 subprocess_utils.py:83] Jackhmmer (uniprot_all_2021_04.fa) failed. Jackhmmer (uniprot_all_2021_04.fa) stderr begin:
+E0620 16:00:08.687554 23055681287744 subprocess_utils.py:87] Jackhmmer (uniprot_all_2021_04.fa) stderr end.
+/pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/akt1/akt1_no_inference.sh: line 23: 4007103 Segmentation fault      (core dumped) apptainer exec --nv --env XLA_PYTHON_CLIENT_PREALLOCATE=false,TF_FORCE_UNIFIED_MEMORY=true,XLA_CLIENT_MEM_FRACTION=3.2 --bind $AF3_INPUT_DIR:/root/af_input --bind $AF3_OUTPUT_DIR:/root/af_output --bind $AF3_MODEL_PARAMETERS_DIR:/root/models --bind $AF3_DATABASES_DIR:/root/public_databases $AF3_IMAGE python ${AF3_CODE_DIR}/alphafold3/run_alphafold.py --run_inference=FALSE --flash_attention_implementation=xla --json_path=/root/af_input/akt1_protein_only.json --model_dir=/root/models --db_dir=/root/public_databases --output_dir=/root/af_output
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c03>
+Subject: Job 435315: <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/akt1/akt1_no_inference.sh> in cluster <sci> Exited
+
+Job <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/akt1/akt1_no_inference.sh> was submitted from host <r640c29> by user <ari.ginsparg-umw> in cluster <sci> at Fri Jun 20 15:42:17 2025
+Job was executed on host(s) <8*c4140c03>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Fri Jun 20 15:42:18 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3> was used as the working directory.
+Started at Fri Jun 20 15:42:18 2025
+Terminated at Fri Jun 20 16:00:35 2025
+Results reported at Fri Jun 20 16:00:35 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/akt1/akt1_no_inference.sh
+------------------------------------------------------------
+
+TERM_MEMLIMIT: job killed after reaching LSF memory usage limit.
+Exited with exit code 139.
+
+Resource usage summary:
+
+    CPU time :                                   11219.00 sec.
+    Max Memory :                                 16384 MB
+    Average Memory :                             5311.72 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               0.00 MB
+    Max Swap :                                   -
+    Max Processes :                              8
+    Max Threads :                                107
+    Run time :                                   1063 sec.
+    Turnaround time :                            1098 sec.
+
+The output (if any) is above this job summary.
+

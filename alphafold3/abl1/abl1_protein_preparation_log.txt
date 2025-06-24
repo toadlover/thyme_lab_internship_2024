@@ -1,0 +1,824 @@
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+
+Running fold job abl1...
+Output will be written in /root/af_output/abl1
+Running data pipeline...
+Running data pipeline for chain A...
+I0620 15:42:29.559437 23089730245760 pipeline.py:82] Getting protein MSAs for sequence DKWEMERTDITMKHKLGGGQYGEVYEGVWKKYSLTVAVKTLKEDTMEVEEFLKEAAVMKEIKHPNLVQLLGVCTREPPFYIITEFMTYGNLLDYLRECNRQEVNAVVLLYMATQISSAMEYLEKKNFIHRDLAARNCLVGENHLVKVADFGLSRLMTGDTYTAHAGAKFPIKWTAPESLNKFSIKSDVWAFGVLLWEIATYGMSPYPLMPVMCWRPSFAEIHQFEFKHPNYQEVNAVVLLYMATQISSAEGENHLVKAIHQAFETMFQES
+I0620 15:42:29.562072 23086315046464 jackhmmer.py:78] Query sequence: DKWEMERTDITMKHKLGGGQYGEVYEGVWKKYSLTVAVKTLKEDTMEVEEFLKEAAVMKEIKHPNLVQLLGVCTREPPFYIITEFMTYGNLLDYLRECNRQEVNAVVLLYMATQISSAMEYLEKKNFIHRDLAARNCLVGENHLVKVADFGLSRLMTGDTYTAHAGAKFPIKWTAPESLNKFSIKSDVWAFGVLLWEIATYGMSPYPLMPVMCWRPSFAEIHQFEFKHPNYQEVNAVVLLYMATQISSAEGENHLVKAIHQAFETMFQES
+I0620 15:42:29.562391 23086312945216 jackhmmer.py:78] Query sequence: DKWEMERTDITMKHKLGGGQYGEVYEGVWKKYSLTVAVKTLKEDTMEVEEFLKEAAVMKEIKHPNLVQLLGVCTREPPFYIITEFMTYGNLLDYLRECNRQEVNAVVLLYMATQISSAMEYLEKKNFIHRDLAARNCLVGENHLVKVADFGLSRLMTGDTYTAHAGAKFPIKWTAPESLNKFSIKSDVWAFGVLLWEIATYGMSPYPLMPVMCWRPSFAEIHQFEFKHPNYQEVNAVVLLYMATQISSAEGENHLVKAIHQAFETMFQES
+I0620 15:42:29.562675 23086310843968 jackhmmer.py:78] Query sequence: DKWEMERTDITMKHKLGGGQYGEVYEGVWKKYSLTVAVKTLKEDTMEVEEFLKEAAVMKEIKHPNLVQLLGVCTREPPFYIITEFMTYGNLLDYLRECNRQEVNAVVLLYMATQISSAMEYLEKKNFIHRDLAARNCLVGENHLVKVADFGLSRLMTGDTYTAHAGAKFPIKWTAPESLNKFSIKSDVWAFGVLLWEIATYGMSPYPLMPVMCWRPSFAEIHQFEFKHPNYQEVNAVVLLYMATQISSAEGENHLVKAIHQAFETMFQES
+I0620 15:42:29.563127 23086308742720 jackhmmer.py:78] Query sequence: DKWEMERTDITMKHKLGGGQYGEVYEGVWKKYSLTVAVKTLKEDTMEVEEFLKEAAVMKEIKHPNLVQLLGVCTREPPFYIITEFMTYGNLLDYLRECNRQEVNAVVLLYMATQISSAMEYLEKKNFIHRDLAARNCLVGENHLVKVADFGLSRLMTGDTYTAHAGAKFPIKWTAPESLNKFSIKSDVWAFGVLLWEIATYGMSPYPLMPVMCWRPSFAEIHQFEFKHPNYQEVNAVVLLYMATQISSAEGENHLVKAIHQAFETMFQES
+I0620 15:42:29.563370 23086315046464 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpi40qcc9g/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpi40qcc9g/query.fasta /root/public_databases/uniref90_2022_05.fa"
+I0620 15:42:29.563756 23086310843968 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpbf54z3ks/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpbf54z3ks/query.fasta /root/public_databases/bfd-first_non_consensus_sequences.fasta"
+I0620 15:42:29.565333 23086312945216 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmp7wl2ut4i/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmp7wl2ut4i/query.fasta /root/public_databases/mgy_clusters_2022_05.fa"
+I0620 15:42:29.565970 23086308742720 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpiuxhema5/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpiuxhema5/query.fasta /root/public_databases/uniprot_all_2021_04.fa"
+I0620 15:45:50.662010 23086310843968 subprocess_utils.py:97] Finished Jackhmmer (bfd-first_non_consensus_sequences.fasta) in 201.096 seconds
+I0620 15:52:30.401702 23086315046464 subprocess_utils.py:97] Finished Jackhmmer (uniref90_2022_05.fa) in 600.837 seconds
+I0620 15:58:34.596881 23086308742720 subprocess_utils.py:97] Finished Jackhmmer (uniprot_all_2021_04.fa) in 965.030 seconds
+I0620 16:00:48.965330 23086312945216 subprocess_utils.py:97] Finished Jackhmmer (mgy_clusters_2022_05.fa) in 1099.398 seconds
+I0620 16:00:53.111364 23089730245760 pipeline.py:115] Getting protein MSAs took 1103.55 seconds for sequence DKWEMERTDITMKHKLGGGQYGEVYEGVWKKYSLTVAVKTLKEDTMEVEEFLKEAAVMKEIKHPNLVQLLGVCTREPPFYIITEFMTYGNLLDYLRECNRQEVNAVVLLYMATQISSAMEYLEKKNFIHRDLAARNCLVGENHLVKVADFGLSRLMTGDTYTAHAGAKFPIKWTAPESLNKFSIKSDVWAFGVLLWEIATYGMSPYPLMPVMCWRPSFAEIHQFEFKHPNYQEVNAVVLLYMATQISSAEGENHLVKAIHQAFETMFQES
+I0620 16:00:53.111644 23089730245760 pipeline.py:121] Deduplicating MSAs for sequence DKWEMERTDITMKHKLGGGQYGEVYEGVWKKYSLTVAVKTLKEDTMEVEEFLKEAAVMKEIKHPNLVQLLGVCTREPPFYIITEFMTYGNLLDYLRECNRQEVNAVVLLYMATQISSAMEYLEKKNFIHRDLAARNCLVGENHLVKVADFGLSRLMTGDTYTAHAGAKFPIKWTAPESLNKFSIKSDVWAFGVLLWEIATYGMSPYPLMPVMCWRPSFAEIHQFEFKHPNYQEVNAVVLLYMATQISSAEGENHLVKAIHQAFETMFQES
+I0620 16:00:53.166277 23089730245760 pipeline.py:134] Deduplicating MSAs took 0.05 seconds for sequence DKWEMERTDITMKHKLGGGQYGEVYEGVWKKYSLTVAVKTLKEDTMEVEEFLKEAAVMKEIKHPNLVQLLGVCTREPPFYIITEFMTYGNLLDYLRECNRQEVNAVVLLYMATQISSAMEYLEKKNFIHRDLAARNCLVGENHLVKVADFGLSRLMTGDTYTAHAGAKFPIKWTAPESLNKFSIKSDVWAFGVLLWEIATYGMSPYPLMPVMCWRPSFAEIHQFEFKHPNYQEVNAVVLLYMATQISSAEGENHLVKAIHQAFETMFQES, found 16343 unpaired sequences, 50000 paired sequences
+I0620 16:00:53.181620 23089730245760 pipeline.py:40] Getting protein templates for sequence DKWEMERTDITMKHKLGGGQYGEVYEGVWKKYSLTVAVKTLKEDTMEVEEFLKEAAVMKEIKHPNLVQLLGVCTREPPFYIITEFMTYGNLLDYLRECNRQEVNAVVLLYMATQISSAMEYLEKKNFIHRDLAARNCLVGENHLVKVADFGLSRLMTGDTYTAHAGAKFPIKWTAPESLNKFSIKSDVWAFGVLLWEIATYGMSPYPLMPVMCWRPSFAEIHQFEFKHPNYQEVNAVVLLYMATQISSAEGENHLVKAIHQAFETMFQES
+I0620 16:00:53.742141 23089730245760 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/hmmbuild --informat stockholm --hand --amino /tmp/tmplg2tvzwc/output.hmm /tmp/tmplg2tvzwc/query.msa"
+I0620 16:00:54.501667 23089730245760 subprocess_utils.py:97] Finished Hmmbuild in 0.759 seconds
+I0620 16:00:54.507517 23089730245760 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/hmmsearch --noali --cpu 8 --F1 0.1 --F2 0.1 --F3 0.1 -E 100 --incE 100 --domE 100 --incdomE 100 -A /tmp/tmp1sc_n5p8/output.sto /tmp/tmp1sc_n5p8/query.hmm /root/public_databases/pdb_seqres_2022_09_28.fasta"
+I0620 16:01:01.715914 23089730245760 subprocess_utils.py:97] Finished Hmmsearch (pdb_seqres_2022_09_28.fasta) in 7.208 seconds
+I0620 16:01:03.396264 23089730245760 pipeline.py:52] Getting 4 protein templates took 10.21 seconds for sequence DKWEMERTDITMKHKLGGGQYGEVYEGVWKKYSLTVAVKTLKEDTMEVEEFLKEAAVMKEIKHPNLVQLLGVCTREPPFYIITEFMTYGNLLDYLRECNRQEVNAVVLLYMATQISSAMEYLEKKNFIHRDLAARNCLVGENHLVKVADFGLSRLMTGDTYTAHAGAKFPIKWTAPESLNKFSIKSDVWAFGVLLWEIATYGMSPYPLMPVMCWRPSFAEIHQFEFKHPNYQEVNAVVLLYMATQISSAEGENHLVKAIHQAFETMFQES
+Running data pipeline for chain A took 1113.93 seconds
+Writing model input JSON to /root/af_output/abl1/abl1_data.json
+Skipping model inference...
+Fold job abl1 done, output written to /root/af_output/abl1
+
+Done running 1 fold jobs.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c06>
+Subject: Job 435307: <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/abl1/abl1_no_inference.sh> in cluster <sci> Done
+
+Job <bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/abl1/abl1_no_inference.sh> was submitted from host <r640c29> by user <ari.ginsparg-umw> in cluster <sci> at Fri Jun 20 15:42:14 2025
+Job was executed on host(s) <8*c4140c06>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Fri Jun 20 15:42:15 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3> was used as the working directory.
+Started at Fri Jun 20 15:42:15 2025
+Terminated at Fri Jun 20 16:01:13 2025
+Results reported at Fri Jun 20 16:01:13 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash /pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/scripts/alphafold3/../../alphafold3/abl1/abl1_no_inference.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   10260.00 sec.
+    Max Memory :                                 15626 MB
+    Average Memory :                             4957.65 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               758.00 MB
+    Max Swap :                                   -
+    Max Processes :                              7
+    Max Threads :                                105
+    Run time :                                   1117 sec.
+    Turnaround time :                            1139 sec.
+
+The output (if any) is above this job summary.
+
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+I0623 15:43:20.544268 23415355155584 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+I0623 15:43:20.569855 23415355155584 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+Found local devices: [CudaDevice(id=0)], using device 0: cuda:0
+Building model from scratch...
+Checking that model parameters can be loaded...
+
+Running fold job abl1...
+Output will be written in /root/af_output/abl1_20250623_154325 since /root/af_output/abl1 is non-empty.
+Skipping data pipeline...
+Writing model input JSON to /root/af_output/abl1_20250623_154325/abl1_data.json
+Predicting 3D structure for abl1 with 10 seed(s)...
+Featurising data with 10 seed(s)...
+Traceback (most recent call last):
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 829, in <module>
+    app.run(main)
+  File "/alphafold3_venv/lib/python3.11/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+  File "/alphafold3_venv/lib/python3.11/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ^^^^^^^^^^
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 812, in main
+    process_fold_input(
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 657, in process_fold_input
+    all_inference_results = predict_structure(
+                            ^^^^^^^^^^^^^^^^^^
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 411, in predict_structure
+    featurised_examples = featurisation.featurise_input(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/alphafold3_venv/lib/python3.11/site-packages/alphafold3/data/featurisation.py", line 68, in featurise_input
+    validate_fold_input(fold_input)
+  File "/alphafold3_venv/lib/python3.11/site-packages/alphafold3/data/featurisation.py", line 28, in validate_fold_input
+    raise ValueError(f'Protein chain {i + 1} is missing unpaired MSA.')
+ValueError: Protein chain 1 is missing unpaired MSA.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c06>
+Subject: Job 455935: <bash abl1_docking.sh> in cluster <sci> Exited
+
+Job <bash abl1_docking.sh> was submitted from host <r640c58> by user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 15:42:57 2025
+Job was executed on host(s) <8*c4140c06>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 15:43:01 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/alphafold3/abl1> was used as the working directory.
+Started at Mon Jun 23 15:43:01 2025
+Terminated at Mon Jun 23 15:43:52 2025
+Results reported at Mon Jun 23 15:43:52 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash abl1_docking.sh
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   26.38 sec.
+    Max Memory :                                 4284 MB
+    Average Memory :                             2596.60 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               12100.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                222
+    Run time :                                   36 sec.
+    Turnaround time :                            55 sec.
+
+The output (if any) is above this job summary.
+
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+I0623 15:49:27.856930 22892424651904 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+I0623 15:49:27.884005 22892424651904 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+Found local devices: [CudaDevice(id=0)], using device 0: cuda:0
+Building model from scratch...
+Checking that model parameters can be loaded...
+
+Running fold job abl1...
+Output will be written in /root/af_output/abl1_20250623_154933 since /root/af_output/abl1 is non-empty.
+Skipping data pipeline...
+Writing model input JSON to /root/af_output/abl1_20250623_154933/abl1_data.json
+Predicting 3D structure for abl1 with 10 seed(s)...
+Featurising data with 10 seed(s)...
+Traceback (most recent call last):
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 829, in <module>
+    app.run(main)
+  File "/alphafold3_venv/lib/python3.11/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+  File "/alphafold3_venv/lib/python3.11/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ^^^^^^^^^^
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 812, in main
+    process_fold_input(
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 657, in process_fold_input
+    all_inference_results = predict_structure(
+                            ^^^^^^^^^^^^^^^^^^
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 411, in predict_structure
+    featurised_examples = featurisation.featurise_input(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/alphafold3_venv/lib/python3.11/site-packages/alphafold3/data/featurisation.py", line 68, in featurise_input
+    validate_fold_input(fold_input)
+  File "/alphafold3_venv/lib/python3.11/site-packages/alphafold3/data/featurisation.py", line 28, in validate_fold_input
+    raise ValueError(f'Protein chain {i + 1} is missing unpaired MSA.')
+ValueError: Protein chain 1 is missing unpaired MSA.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c08>
+Subject: Job 455958: <bash abl1_docking.sh> in cluster <sci> Exited
+
+Job <bash abl1_docking.sh> was submitted from host <r640c58> by user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 15:49:09 2025
+Job was executed on host(s) <8*c4140c08>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 15:49:13 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/alphafold3/abl1> was used as the working directory.
+Started at Mon Jun 23 15:49:13 2025
+Terminated at Mon Jun 23 15:49:47 2025
+Results reported at Mon Jun 23 15:49:47 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash abl1_docking.sh
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   26.43 sec.
+    Max Memory :                                 504 MB
+    Average Memory :                             379.25 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               15880.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                222
+    Run time :                                   33 sec.
+    Turnaround time :                            38 sec.
+
+The output (if any) is above this job summary.
+
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+I0623 16:06:38.951986 23450012705920 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+I0623 16:06:38.989758 23450012705920 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+Found local devices: [CudaDevice(id=0)], using device 0: cuda:0
+Building model from scratch...
+Checking that model parameters can be loaded...
+
+Running fold job abl1...
+Output will be written in /root/af_output/abl1_20250623_160644 since /root/af_output/abl1 is non-empty.
+Skipping data pipeline...
+Writing model input JSON to /root/af_output/abl1_20250623_160644/abl1_data.json
+Predicting 3D structure for abl1 with 10 seed(s)...
+Featurising data with 10 seed(s)...
+Traceback (most recent call last):
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 829, in <module>
+    app.run(main)
+  File "/alphafold3_venv/lib/python3.11/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+  File "/alphafold3_venv/lib/python3.11/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ^^^^^^^^^^
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 812, in main
+    process_fold_input(
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 657, in process_fold_input
+    all_inference_results = predict_structure(
+                            ^^^^^^^^^^^^^^^^^^
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 411, in predict_structure
+    featurised_examples = featurisation.featurise_input(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/alphafold3_venv/lib/python3.11/site-packages/alphafold3/data/featurisation.py", line 68, in featurise_input
+    validate_fold_input(fold_input)
+  File "/alphafold3_venv/lib/python3.11/site-packages/alphafold3/data/featurisation.py", line 28, in validate_fold_input
+    raise ValueError(f'Protein chain {i + 1} is missing unpaired MSA.')
+ValueError: Protein chain 1 is missing unpaired MSA.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c06>
+Subject: Job 456029: <bash abl1_docking.sh> in cluster <sci> Exited
+
+Job <bash abl1_docking.sh> was submitted from host <r640c58> by user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:06:22 2025
+Job was executed on host(s) <8*c4140c06>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:06:28 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/alphafold3/abl1> was used as the working directory.
+Started at Mon Jun 23 16:06:28 2025
+Terminated at Mon Jun 23 16:06:59 2025
+Results reported at Mon Jun 23 16:06:59 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash abl1_docking.sh
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   26.25 sec.
+    Max Memory :                                 614 MB
+    Average Memory :                             461.75 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               15770.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                222
+    Run time :                                   31 sec.
+    Turnaround time :                            37 sec.
+
+The output (if any) is above this job summary.
+
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+I0623 16:13:50.798119 22379665048704 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+I0623 16:13:50.980412 22379665048704 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+Found local devices: [CudaDevice(id=0)], using device 0: cuda:0
+Building model from scratch...
+Checking that model parameters can be loaded...
+
+Running fold job abl1...
+Output will be written in /root/af_output/abl1_20250623_161357 since /root/af_output/abl1 is non-empty.
+Skipping data pipeline...
+Writing model input JSON to /root/af_output/abl1_20250623_161357/abl1_data.json
+Predicting 3D structure for abl1 with 10 seed(s)...
+Featurising data with 10 seed(s)...
+Traceback (most recent call last):
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 829, in <module>
+    app.run(main)
+  File "/alphafold3_venv/lib/python3.11/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+  File "/alphafold3_venv/lib/python3.11/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ^^^^^^^^^^
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 812, in main
+    process_fold_input(
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 657, in process_fold_input
+    all_inference_results = predict_structure(
+                            ^^^^^^^^^^^^^^^^^^
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 411, in predict_structure
+    featurised_examples = featurisation.featurise_input(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/alphafold3_venv/lib/python3.11/site-packages/alphafold3/data/featurisation.py", line 68, in featurise_input
+    validate_fold_input(fold_input)
+  File "/alphafold3_venv/lib/python3.11/site-packages/alphafold3/data/featurisation.py", line 28, in validate_fold_input
+    raise ValueError(f'Protein chain {i + 1} is missing unpaired MSA.')
+ValueError: Protein chain 1 is missing unpaired MSA.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c09>
+Subject: Job 456041: <bash abl1_docking.sh> in cluster <sci> Exited
+
+Job <bash abl1_docking.sh> was submitted from host <r640c58> by user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:13:39 2025
+Job was executed on host(s) <8*c4140c09>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:13:39 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/alphafold3/abl1> was used as the working directory.
+Started at Mon Jun 23 16:13:39 2025
+Terminated at Mon Jun 23 16:14:12 2025
+Results reported at Mon Jun 23 16:14:12 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash abl1_docking.sh
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   26.16 sec.
+    Max Memory :                                 410 MB
+    Average Memory :                             308.75 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               15974.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                222
+    Run time :                                   33 sec.
+    Turnaround time :                            33 sec.
+
+The output (if any) is above this job summary.
+
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+I0623 16:27:33.256083 23121240659072 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+I0623 16:27:33.280741 23121240659072 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+Found local devices: [CudaDevice(id=0)], using device 0: cuda:0
+Building model from scratch...
+Checking that model parameters can be loaded...
+
+Running fold job abl1...
+Output will be written in /root/af_output/abl1_20250623_162737 since /root/af_output/abl1 is non-empty.
+Skipping data pipeline...
+Writing model input JSON to /root/af_output/abl1_20250623_162737/abl1_data.json
+Predicting 3D structure for abl1 with 10 seed(s)...
+Featurising data with 10 seed(s)...
+Traceback (most recent call last):
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 829, in <module>
+    app.run(main)
+  File "/alphafold3_venv/lib/python3.11/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+  File "/alphafold3_venv/lib/python3.11/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+             ^^^^^^^^^^
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 812, in main
+    process_fold_input(
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 657, in process_fold_input
+    all_inference_results = predict_structure(
+                            ^^^^^^^^^^^^^^^^^^
+  File "/pi/summer.thyme-umw/alphafold3/code/alphafold3/run_alphafold.py", line 411, in predict_structure
+    featurised_examples = featurisation.featurise_input(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/alphafold3_venv/lib/python3.11/site-packages/alphafold3/data/featurisation.py", line 68, in featurise_input
+    validate_fold_input(fold_input)
+  File "/alphafold3_venv/lib/python3.11/site-packages/alphafold3/data/featurisation.py", line 28, in validate_fold_input
+    raise ValueError(f'Protein chain {i + 1} is missing unpaired MSA.')
+ValueError: Protein chain 1 is missing unpaired MSA.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c06>
+Subject: Job 456078: <bash abl1_docking.sh> in cluster <sci> Exited
+
+Job <bash abl1_docking.sh> was submitted from host <r640c58> by user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:27:21 2025
+Job was executed on host(s) <8*c4140c06>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:27:21 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/alphafold3/abl1> was used as the working directory.
+Started at Mon Jun 23 16:27:21 2025
+Terminated at Mon Jun 23 16:27:52 2025
+Results reported at Mon Jun 23 16:27:52 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash abl1_docking.sh
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   26.23 sec.
+    Max Memory :                                 424 MB
+    Average Memory :                             319.25 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               15960.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                222
+    Run time :                                   37 sec.
+    Turnaround time :                            31 sec.
+
+The output (if any) is above this job summary.
+
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+I0623 16:28:45.615171 22874049328256 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+I0623 16:28:45.640249 22874049328256 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+Found local devices: [CudaDevice(id=0)], using device 0: cuda:0
+Building model from scratch...
+Checking that model parameters can be loaded...
+
+Running fold job abl1...
+Output will be written in /root/af_output/abl1_20250623_162850 since /root/af_output/abl1 is non-empty.
+Skipping data pipeline...
+Writing model input JSON to /root/af_output/abl1_20250623_162850/abl1_data.json
+Predicting 3D structure for abl1 with 10 seed(s)...
+Featurising data with 10 seed(s)...
+Featurising data with seed 1.
+I0623 16:28:57.963878 22874049328256 pipeline.py:166] processing abl1, random_seed=1
+I0623 16:28:57.992768 22874049328256 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:28:57.992933 22874049328256 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:29:01.428090 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:29:02.950900 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 1 took 5.09 seconds.
+Featurising data with seed 2.
+I0623 16:29:03.055736 22874049328256 pipeline.py:166] processing abl1, random_seed=2
+I0623 16:29:03.073225 22874049328256 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:29:03.073315 22874049328256 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:29:06.253439 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:29:07.772966 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 2 took 4.78 seconds.
+Featurising data with seed 3.
+I0623 16:29:07.839413 22874049328256 pipeline.py:166] processing abl1, random_seed=3
+I0623 16:29:07.856833 22874049328256 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:29:07.856913 22874049328256 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:29:10.920220 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:29:12.445266 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 3 took 4.67 seconds.
+Featurising data with seed 4.
+I0623 16:29:12.512814 22874049328256 pipeline.py:166] processing abl1, random_seed=4
+I0623 16:29:12.530371 22874049328256 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:29:12.530464 22874049328256 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:29:15.645596 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:29:17.162614 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 4 took 4.72 seconds.
+Featurising data with seed 5.
+I0623 16:29:17.230052 22874049328256 pipeline.py:166] processing abl1, random_seed=5
+I0623 16:29:17.247147 22874049328256 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:29:17.247233 22874049328256 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:29:20.261868 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:29:21.787638 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 5 took 4.62 seconds.
+Featurising data with seed 6.
+I0623 16:29:21.854481 22874049328256 pipeline.py:166] processing abl1, random_seed=6
+I0623 16:29:21.871698 22874049328256 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:29:21.871780 22874049328256 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:29:24.925062 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:29:26.462418 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 6 took 4.68 seconds.
+Featurising data with seed 7.
+I0623 16:29:26.530232 22874049328256 pipeline.py:166] processing abl1, random_seed=7
+I0623 16:29:26.547923 22874049328256 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:29:26.548011 22874049328256 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:29:29.609857 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:29:31.131582 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 7 took 4.67 seconds.
+Featurising data with seed 8.
+I0623 16:29:31.198932 22874049328256 pipeline.py:166] processing abl1, random_seed=8
+I0623 16:29:31.216416 22874049328256 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:29:31.216501 22874049328256 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:29:34.348977 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:29:35.908320 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 8 took 4.78 seconds.
+Featurising data with seed 9.
+I0623 16:29:35.976826 22874049328256 pipeline.py:166] processing abl1, random_seed=9
+I0623 16:29:35.994142 22874049328256 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:29:35.994232 22874049328256 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:29:39.098343 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:29:40.622330 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 9 took 4.71 seconds.
+Featurising data with seed 10.
+I0623 16:29:40.691714 22874049328256 pipeline.py:166] processing abl1, random_seed=10
+I0623 16:29:40.709113 22874049328256 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:29:40.709207 22874049328256 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:29:43.836698 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:29:45.353828 22874049328256 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 10 took 4.73 seconds.
+Featurising data with 10 seed(s) took 54.75 seconds.
+Running model inference and extracting output structure samples with 10 seed(s)...
+Running model inference with seed 1...
+INFO:    gocryptfs not found, will not be able to use gocryptfs
+I0623 16:31:36.083338 22645832746112 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+I0623 16:31:36.109013 22645832746112 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+Found local devices: [CudaDevice(id=0)], using device 0: cuda:0
+Building model from scratch...
+Checking that model parameters can be loaded...
+
+Running fold job abl1...
+Output will be written in /root/af_output/abl1_20250623_163140 since /root/af_output/abl1 is non-empty.
+Skipping data pipeline...
+Writing model input JSON to /root/af_output/abl1_20250623_163140/abl1_data.json
+Predicting 3D structure for abl1 with 10 seed(s)...
+Featurising data with 10 seed(s)...
+Featurising data with seed 1.
+I0623 16:31:48.339646 22645832746112 pipeline.py:166] processing abl1, random_seed=1
+I0623 16:31:48.373033 22645832746112 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:31:48.375568 22645832746112 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+Running model inference with seed 1 took 123.06 seconds.
+Extracting inference results with seed 1...
+Extracting 5 inference samples with seed 1 took 0.40 seconds.
+Running model inference with seed 2...
+I0623 16:31:51.583802 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:31:53.149435 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 1 took 4.89 seconds.
+Featurising data with seed 2.
+I0623 16:31:53.237764 22645832746112 pipeline.py:166] processing abl1, random_seed=2
+I0623 16:31:53.258373 22645832746112 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:31:53.260802 22645832746112 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:31:56.302663 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:31:57.859887 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 2 took 4.69 seconds.
+Featurising data with seed 3.
+I0623 16:31:57.937460 22645832746112 pipeline.py:166] processing abl1, random_seed=3
+I0623 16:31:57.957095 22645832746112 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:31:57.959182 22645832746112 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:32:01.013360 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:32:02.596300 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 3 took 4.74 seconds.
+Featurising data with seed 4.
+I0623 16:32:02.676660 22645832746112 pipeline.py:166] processing abl1, random_seed=4
+I0623 16:32:02.697680 22645832746112 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:32:02.707225 22645832746112 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:32:05.840460 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:32:07.382096 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 4 took 4.80 seconds.
+Featurising data with seed 5.
+I0623 16:32:07.499347 22645832746112 pipeline.py:166] processing abl1, random_seed=5
+I0623 16:32:07.519629 22645832746112 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:32:07.521784 22645832746112 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:32:10.471138 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:32:11.997196 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 5 took 4.60 seconds.
+Featurising data with seed 6.
+I0623 16:32:12.085621 22645832746112 pipeline.py:166] processing abl1, random_seed=6
+I0623 16:32:12.107481 22645832746112 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:32:12.109677 22645832746112 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:32:15.180766 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:32:16.763423 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 6 took 4.75 seconds.
+Featurising data with seed 7.
+I0623 16:32:16.855300 22645832746112 pipeline.py:166] processing abl1, random_seed=7
+I0623 16:32:16.876833 22645832746112 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:32:16.879026 22645832746112 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:32:19.995415 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:32:21.559635 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 7 took 4.85 seconds.
+Featurising data with seed 8.
+I0623 16:32:21.713158 22645832746112 pipeline.py:166] processing abl1, random_seed=8
+I0623 16:32:21.733900 22645832746112 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:32:21.736461 22645832746112 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:32:24.768223 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:32:26.305432 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 8 took 4.70 seconds.
+Featurising data with seed 9.
+I0623 16:32:26.414336 22645832746112 pipeline.py:166] processing abl1, random_seed=9
+I0623 16:32:26.434685 22645832746112 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:32:26.436644 22645832746112 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:32:29.600722 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:32:31.191930 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 9 took 4.85 seconds.
+Featurising data with seed 10.
+I0623 16:32:31.324024 22645832746112 pipeline.py:166] processing abl1, random_seed=10
+I0623 16:32:31.345371 22645832746112 pipeline.py:259] Calculating bucket size for input with 299 tokens.
+I0623 16:32:31.355558 22645832746112 pipeline.py:265] Got bucket size 512 for input with 299 tokens, resulting in 213 padded tokens.
+I0623 16:32:34.516480 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+I0623 16:32:36.039459 22645832746112 features.py:1520] Using SMILES for: LIG_B - Cc1cc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)ccc1F
+Featurising data with seed 10 took 4.80 seconds.
+Featurising data with 10 seed(s) took 55.24 seconds.
+Running model inference and extracting output structure samples with 10 seed(s)...
+Running model inference with seed 1...
+Running model inference with seed 2 took 92.63 seconds.
+Extracting inference results with seed 2...
+Extracting 5 inference samples with seed 2 took 0.49 seconds.
+Running model inference with seed 3...
+Running model inference with seed 1 took 122.62 seconds.
+Extracting inference results with seed 1...
+Extracting 5 inference samples with seed 1 took 0.31 seconds.
+Running model inference with seed 2...
+Running model inference with seed 3 took 92.68 seconds.
+Extracting inference results with seed 3...
+Extracting 5 inference samples with seed 3 took 0.28 seconds.
+Running model inference with seed 4...
+Running model inference with seed 2 took 92.63 seconds.
+Extracting inference results with seed 2...
+Extracting 5 inference samples with seed 2 took 0.50 seconds.
+Running model inference with seed 3...
+Running model inference with seed 4 took 92.66 seconds.
+Extracting inference results with seed 4...
+Extracting 5 inference samples with seed 4 took 0.28 seconds.
+Running model inference with seed 5...
+Running model inference with seed 3 took 92.65 seconds.
+Extracting inference results with seed 3...
+Extracting 5 inference samples with seed 3 took 0.28 seconds.
+Running model inference with seed 4...
+Running model inference with seed 5 took 92.71 seconds.
+Extracting inference results with seed 5...
+Extracting 5 inference samples with seed 5 took 0.33 seconds.
+Running model inference with seed 6...
+Running model inference with seed 4 took 92.52 seconds.
+Extracting inference results with seed 4...
+Extracting 5 inference samples with seed 4 took 0.29 seconds.
+Running model inference with seed 5...
+Running model inference with seed 6 took 92.74 seconds.
+Extracting inference results with seed 6...
+Extracting 5 inference samples with seed 6 took 0.30 seconds.
+Running model inference with seed 7...
+Running model inference with seed 5 took 92.58 seconds.
+Extracting inference results with seed 5...
+Extracting 5 inference samples with seed 5 took 0.29 seconds.
+Running model inference with seed 6...
+Running model inference with seed 7 took 92.73 seconds.
+Extracting inference results with seed 7...
+Extracting 5 inference samples with seed 7 took 0.29 seconds.
+Running model inference with seed 8...
+Running model inference with seed 6 took 92.61 seconds.
+Extracting inference results with seed 6...
+Extracting 5 inference samples with seed 6 took 0.28 seconds.
+Running model inference with seed 7...
+Running model inference with seed 8 took 92.73 seconds.
+Extracting inference results with seed 8...
+Extracting 5 inference samples with seed 8 took 0.29 seconds.
+Running model inference with seed 9...
+Running model inference with seed 7 took 92.63 seconds.
+Extracting inference results with seed 7...
+Extracting 5 inference samples with seed 7 took 0.29 seconds.
+Running model inference with seed 8...
+Running model inference with seed 9 took 92.74 seconds.
+Extracting inference results with seed 9...
+Extracting 5 inference samples with seed 9 took 0.30 seconds.
+Running model inference with seed 10...
+Running model inference with seed 8 took 92.65 seconds.
+Extracting inference results with seed 8...
+Extracting 5 inference samples with seed 8 took 0.29 seconds.
+Running model inference with seed 9...
+Running model inference with seed 10 took 92.75 seconds.
+Extracting inference results with seed 10...
+Extracting 5 inference samples with seed 10 took 0.29 seconds.
+Running model inference and extracting output structures with 10 seed(s) took 960.91 seconds.
+Writing outputs with 10 seed(s)...
+Fold job abl1 done, output written to /root/af_output/abl1_20250623_162850
+
+Done running 1 fold jobs.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c08>
+Subject: Job 456089: <bash abl1_docking.sh> in cluster <sci> Done
+
+Job <bash abl1_docking.sh> was submitted from host <r640c58> by user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:28:32 2025
+Job was executed on host(s) <8*c4140c08>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:28:36 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/alphafold3/abl1> was used as the working directory.
+Started at Mon Jun 23 16:28:36 2025
+Terminated at Mon Jun 23 16:46:18 2025
+Results reported at Mon Jun 23 16:46:18 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash abl1_docking.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1023.88 sec.
+    Max Memory :                                 5108 MB
+    Average Memory :                             4877.30 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               11276.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                342
+    Run time :                                   1039 sec.
+    Turnaround time :                            1066 sec.
+
+The output (if any) is above this job summary.
+
+Running model inference with seed 9 took 92.65 seconds.
+Extracting inference results with seed 9...
+Extracting 5 inference samples with seed 9 took 0.28 seconds.
+Running model inference with seed 10...
+Running model inference with seed 10 took 92.66 seconds.
+Extracting inference results with seed 10...
+Extracting 5 inference samples with seed 10 took 0.29 seconds.
+Running model inference and extracting output structures with 10 seed(s) took 959.53 seconds.
+Writing outputs with 10 seed(s)...
+Fold job abl1 done, output written to /root/af_output/abl1_20250623_163140
+
+Done running 1 fold jobs.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c4140c06>
+Subject: Job 456096: <bash abl1_docking.sh> in cluster <sci> Done
+
+Job <bash abl1_docking.sh> was submitted from host <r640c58> by user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:31:27 2025
+Job was executed on host(s) <8*c4140c06>, in queue <gpu>, as user <ari.ginsparg-umw> in cluster <sci> at Mon Jun 23 16:31:27 2025
+</home/ari.ginsparg-umw> was used as the home directory.
+</pi/summer.thyme-umw/2024_intern_lab_space/thyme_lab_internship_2024/alphafold3/abl1> was used as the working directory.
+Started at Mon Jun 23 16:31:27 2025
+Terminated at Mon Jun 23 16:48:51 2025
+Results reported at Mon Jun 23 16:48:51 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash abl1_docking.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1022.04 sec.
+    Max Memory :                                 5094 MB
+    Average Memory :                             4882.97 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               11290.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                342
+    Run time :                                   1036 sec.
+    Turnaround time :                            1044 sec.
+
+The output (if any) is above this job summary.
+
