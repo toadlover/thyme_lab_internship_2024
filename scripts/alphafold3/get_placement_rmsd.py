@@ -119,7 +119,7 @@ with pymol2.PyMOL() as pymol:
 
 						#make a fixed version of the reference from the original so that the element is regognized
 						old_reference_file = open(r + "/" + dire + "/" + dire + "-lig.pdb", "r")
-						fixed_reference_file = open(r + "/" + dire + "/" + dire + "-lig_fixed.pdb", "r")
+						fixed_reference_file = open(r + "/" + dire + "/" + dire + "-lig_fixed.pdb", "w")
 
 						for line in old_reference_file.readlines():
 							#remove waters
@@ -131,7 +131,7 @@ with pymol2.PyMOL() as pymol:
 
 								#derive element
 								element = re.match(r"[A-Za-z]+", atom_name.strip()).group(0).capitalize()
-								print(element)
+								#print(element)
 
 								fixed_line = line[:76] + element.rjust(2) + line[78:]
 
