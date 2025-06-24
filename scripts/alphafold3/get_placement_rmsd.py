@@ -180,8 +180,16 @@ with pymol2.PyMOL() as pymol:
 
 						#use the get best RMS function to derive the rmsd
 						if reference_ligand and placement_ligand:
-							rmsd = rdMolAlign.GetBestRMS(reference_ligand, placement_ligand)
-							print(r2 + "/" + file_basename + "_aligned_lig.pdb", rmsd)
+							try:
+								rmsd = rdMolAlign.GetBestRMS(reference_ligand, placement_ligand)
+								print(r2 + "/" + file_basename + "_aligned_lig.pdb", rmsd)
+							except RuntimeError as e:
+								print("Alignment failed:", e)
+
+
+						#if the rmsd is X, don't add it
+						if str(rmsd) == "X":
+							continue
 
 						#store the rmsd in the dictionary by the file name
 						placements_data[file] = ["X",rmsd]
