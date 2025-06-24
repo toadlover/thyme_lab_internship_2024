@@ -103,6 +103,13 @@ with pymol2.PyMOL() as pymol:
 						#next, work on getting the rmsd
 						#remove hydrogens
 						reference_ligand = Chem.MolFromPDBFile(r + "/" + dire + "/" + dire + "-lig.pdb", removeHs=True)
+
+						#sanitize the reference in case there are waters in it
+						frags = Chem.GetMolFrags(mol, asMols=True)
+						ligand = max(frags, key=lambda m: m.GetNumAtoms())
+						reference_ligand = ligand
+
+
 						placement_ligand = Chem.MolFromPDBFile(r2 + "/" + file_basename + "_aligned_lig.pdb", removeHs=True)
 
 						rmsd = "X"
