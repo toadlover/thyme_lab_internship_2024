@@ -11,6 +11,7 @@ import numpy as np
 from openbabel import openbabel as ob
 from openbabel import pybel
 import re
+from rdkit.Chem import SanitizeFlags
 
 #this script acts locally, and looks for placement files from alphafold and the native files from DUD-E
 this_script_path = os.path.dirname(os.path.abspath(__file__))
@@ -152,7 +153,7 @@ with pymol2.PyMOL() as pymol:
 
 
 						#reference_ligand = Chem.MolFromPDBFile(r + "/" + dire + "/" + dire + "-lig.pdb", removeHs=True)
-						reference_ligand = Chem.MolFromPDBFile(r + "/" + dire + "/" + dire + "-lig_fixed.pdb", removeHs=True)
+						reference_ligand = Chem.MolFromPDBFile(r + "/" + dire + "/" + dire + "-lig_fixed.pdb", removeHs=True, sanitize=False)
 						#reference_ligand = Chem.MolFromMol2File(r + "/" + dire + "/" + dire + "-lig.mol2", removeHs=True)
 						#reference_ligand = Chem.MolFromMol2File(r + "/" + dire + "/crystal_ligand.mol2", removeHs=True)
 						
@@ -163,7 +164,12 @@ with pymol2.PyMOL() as pymol:
 						#reference_ligand = ligand
 
 
-						placement_ligand = Chem.MolFromPDBFile(r2 + "/" + file_basename + "_aligned_lig.pdb", removeHs=True)
+						placement_ligand = Chem.MolFromPDBFile(r2 + "/" + file_basename + "_aligned_lig.pdb", removeHs=True, sanitize=False)
+
+						try:
+							Chem.SanitizeMol(mol, sanitizeOps=SanitizeFlags.SANITIZE_ALL ^ SanitizeFlags.SANITIZE_PROPERTIES)
+						except Exception as e:
+							print("Sanitization failed:", e)
 
 						ref_smiles = Chem.MolToSmiles(reference_ligand)
 						pla_smiles = Chem.MolToSmiles(placement_ligand)
