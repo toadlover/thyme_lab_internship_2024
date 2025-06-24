@@ -110,10 +110,10 @@ with pymol2.PyMOL() as pymol:
 						mol = next(pybel.readfile("pdb", r + "/" + dire + "/" + dire + "-lig.pdb"))
 						mol.write("mol2", r + "/" + dire + "/" + dire + "-lig.mol2", overwrite=True)
 
-						os.system("cat " + r + "/" + dire + "/" + dire + "-lig.mol2")
+						#os.system("cat " + r + "/" + dire + "/" + dire + "-lig.mol2")
 
 						#reference_ligand = Chem.MolFromPDBFile(r + "/" + dire + "/" + dire + "-lig.pdb", removeHs=True)
-						reference_ligand = Chem.MolFromPDBFile(r + "/" + dire + "/" + dire + "-lig.mol2", removeHs=True)
+						reference_ligand = Chem.MolFromMol2File(r + "/" + dire + "/" + dire + "-lig.mol2", removeHs=True)
 						#reference_ligand = Chem.MolFromMol2File(r + "/" + dire + "/crystal_ligand.mol2", removeHs=True)
 						
 
