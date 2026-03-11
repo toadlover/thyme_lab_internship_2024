@@ -17,6 +17,9 @@ best_rmsds_dict = {}
 for r,d,f in os.walk("../../rosetta_motifs/rmsd_out"):
 	for file in f:
 		if file.endswith("_rmsd_out.txt"):
+
+			print(file)
+
 			#get the system name from the front of the file
 			sys_name = file.split("_")[0]
 
