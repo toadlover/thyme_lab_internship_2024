@@ -86,7 +86,7 @@ for r,d,f in os.walk("../../rosetta_motifs/rmsd_out"):
 
 					#if line_counter % 4 = 2, it is the placement name with the ddg inside, get the ddg and append it to the temp tuple
 					if line_counter % 3 == 1:
-						ddg = float(temp_str.split("_delta_")[1].split("_")[0])
+						ddg = float(temp_str.split("_delta_")[1].split("_")[0].split(".")[0])
 
 						#append the ddg and then temp string
 						temp.append(ddg)
